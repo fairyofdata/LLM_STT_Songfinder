@@ -36,25 +36,6 @@ URFIT은 확장성을 고려하여 세 가지 주요 컴포넌트로 분리된 �
 
 -----
 
-## 🤗 Huggingface Space Files
-
-  * **Backend**: `uvicorn app:app --host 0.0.0.0 --port 7860`
-  * **Dependencies**:
-      * [requirements.txt](https://huggingface.co/spaces/fairyofdata/JPOP_STT_Module/blob/main/requirements.txt)
-  * **Main Service**:
-      * [app.py](https://huggingface.co/spaces/fairyofdata/JPOP_STT_Module/blob/main/app.py)
-  * **Interface**:
-      * [Index.html](https://huggingface.co/spaces/fairyofdata/JPOP_STT_Module/blob/main/static/index.html)
-      * [tag_color.json](https://huggingface.co/spaces/fairyofdata/JPOP_STT_Module/blob/main/static/tag_colors.json)
-  * **Data**:
-      * [song_metadata.json](https://huggingface.co/spaces/fairyofdata/JPOP_STT_Module/blob/main/song_metadata.json)
-      * [line_metadata.json](https://huggingface.co/spaces/fairyofdata/JPOP_STT_Module/blob/main/line_metadata.json)
-      * [line_embeddings.npy](https://huggingface.co/spaces/fairyofdata/JPOP_STT_Module/blob/main/line_embeddings.npy)
-      * [song_embeddings.npy](https://huggingface.co/spaces/fairyofdata/JPOP_STT_Module/blob/main/song_embeddings.npy)
-      * [summary_embeddings.npy](https://huggingface.co/spaces/fairyofdata/JPOP_STT_Module/blob/main/summary_embeddings.npy)
-
------
-
 ## 🖼️ 사용 방법
 
 ### 1\. 검색 시작하기
@@ -88,6 +69,25 @@ URFIT은 확장성을 고려하여 세 가지 주요 컴포넌트로 분리된 �
 ## 🔰 Example of Prototype Execution
 
 ![Example of Prototype Execution](Sample.png)
+
+-----
+
+## 🤗 Huggingface Space Files
+
+  * **Backend**: `uvicorn app:app --host 0.0.0.0 --port 7860`
+  * **Dependencies**:
+      * [requirements.txt](https://huggingface.co/spaces/fairyofdata/JPOP_STT_Module/blob/main/requirements.txt)
+  * **Main Service**:
+      * [app.py](https://huggingface.co/spaces/fairyofdata/JPOP_STT_Module/blob/main/app.py)
+  * **Interface**:
+      * [Index.html](https://huggingface.co/spaces/fairyofdata/JPOP_STT_Module/blob/main/static/index.html)
+      * [tag_color.json](https://huggingface.co/spaces/fairyofdata/JPOP_STT_Module/blob/main/static/tag_colors.json)
+  * **Data**:
+      * [song_metadata.json](https://huggingface.co/spaces/fairyofdata/JPOP_STT_Module/blob/main/song_metadata.json)
+      * [line_metadata.json](https://huggingface.co/spaces/fairyofdata/JPOP_STT_Module/blob/main/line_metadata.json)
+      * [line_embeddings.npy](https://huggingface.co/spaces/fairyofdata/JPOP_STT_Module/blob/main/line_embeddings.npy)
+      * [song_embeddings.npy](https://huggingface.co/spaces/fairyofdata/JPOP_STT_Module/blob/main/song_embeddings.npy)
+      * [summary_embeddings.npy](https://huggingface.co/spaces/fairyofdata/JPOP_STT_Module/blob/main/summary_embeddings.npy)
 
 -----
 

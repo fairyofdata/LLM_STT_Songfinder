@@ -87,7 +87,7 @@ URFIT은 확장성을 고려하여 세 가지 주요 컴포넌트로 분리된 �
 
 ## 🔰 Example of Prototype Execution
 
-![Example of Prototype Execution](sample.png)
+![Example of Prototype Execution](Sample.png)
 
 -----
 

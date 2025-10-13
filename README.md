@@ -1,0 +1,1 @@
+The file has been uploaded and updated in [Huggingface Space](https://huggingface.co/spaces/fairyofdata/JPOP_STT_Module/tree/main). Please understand that the Huggingface Space is a prototype of a core module that also serves as a simple server at the same time, so it has to be uploaded to Huggingface Space instead of Github.

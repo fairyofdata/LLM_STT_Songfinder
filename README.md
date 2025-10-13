@@ -82,6 +82,13 @@ URFIT은 확장성을 고려하여 세 가지 주요 컴포넌트로 분리된 �
 **이 곡들로 플레이리스트 만들기** 버튼을 누르면, AI가 생성한 제목과 설명으로 Spotify에 새로운 플레이리스트가 생성됩니다.
 *플레이리스트 생성 성공을 알리는 토스트 메시지 화면입니다.*
 
+
+-----
+
+## 🔰 Example of Prototype Execution
+
+![Example of Prototype Execution](sample.png)
+
 -----
 
 ## 💡 프로젝트의 가치

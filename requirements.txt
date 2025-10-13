@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+python-multipart
+openai
+sentence-transformers
+faiss-cpu
+numpy
+pandas
+spotipy
+python-jose[cryptography]
+fastapi-sessions
+itsdangerous
+pydub

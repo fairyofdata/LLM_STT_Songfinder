@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UR-FIT AI Service - J-POP Finder</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://sdk.scdn.co/spotify-player.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        /* 스크롤바 스타일링 (선택 사항) */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #2d3748; }
+        ::-webkit-scrollbar-thumb { background: #4a5568; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #718096; }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(236, 72, 153, 0.7); }
+            50% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(236, 72, 153, 0); }
+        }
+        .recording {
+            animation: pulse 1.5s infinite;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- 초기 검색 화면 -->
+    <div id="initial-view" class="min-h-screen flex flex-col items-center justify-center p-4 text-center" style="background: linear-gradient(135deg, #F3F0FF, #E6FCF5)">
+        <div class="max-w-2xl">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-3">UR-FIT J-POP Finder 🎵</h1>
+            <p class="text-lg md:text-xl text-gray-600 mb-8">
+                어떤 노래인지 궁금하세요?<br>마이크 버튼을 누르고 노래를 흥얼거리거나 텍스트로 입력해보세요.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button id="record-button" class="flex items-center justify-center gap-2 px-8 py-4 bg-pink-500 text-white font-bold rounded-full text-lg hover:bg-pink-600 transition-transform transform hover:scale-105 shadow-lg">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0a5 5 0 01-5 5V2a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 01-2 0V4a1 1 0 10-2 0v10.93zM3 8a5 5 0 015-5v2a3 3 0 00-3 3a1 1 0 102 0a1 1 0 011-1V2a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 01-2 0V4a1 1 0 00-1-1a3 3 0 00-3 3v1.07A7.001 7.001 0 003 8z" clip-rule="evenodd"></path></svg>
+                    <span>음성으로 찾기</span>
+                </button>
+                <button id="text-button" class="flex items-center justify-center gap-2 px-8 py-4 bg-violet-500 text-white font-bold rounded-full text-lg hover:bg-violet-600 transition-transform transform hover:scale-105 shadow-lg">
+                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
+                    <span>텍스트로 찾기</span>
+                </button>
+            </div>
+            <div id="status" class="mt-6 text-gray-700 min-h-[24px]"></div>
+        </div>
+    </div>
+
+    <!-- 결과 화면 -->
+    <main id="results-view" class="hidden mx-auto max-w-7xl p-4 sm:p-6 lg:p-8 font-sans">
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-12">
+            <!-- 오른쪽 사이드바: 플레이어 -->
+            <aside class="lg:col-span-2 order-1 lg:order-2">
+                <div id="playlist-player-container" class="sticky top-6"></div>
+            </aside>
+            <!-- 왼쪽 메인 콘텐츠: 검색 결과 -->
+            <section id="main-content" class="lg:col-span-3 order-2 lg:order-1 flex flex-col gap-6">
+                 <div class="flex justify-between items-center">
+                    <h2 class="text-2xl font-bold text-gray-800">검색 결과</h2>
+                    <button id="back-to-search" class="px-4 py-2 text-sm font-semibold text-violet-600 bg-violet-100 rounded-lg hover:bg-violet-200 transition">새로 검색하기</button>
+                </div>
+                <div id="results-container"></div>
+                <div id="action-buttons-container" class="flex flex-wrap gap-3 items-center justify-end mt-4"></div>
+            </section>
+        </div>
+    </main>
+    
+    <!-- 텍스트 입력 모달 -->
+    <div id="textModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black bg-opacity-60">
+        <div class="bg-white rounded-xl shadow-2xl p-8 w-full max-w-lg m-4">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-2xl font-bold text-gray-800">가사로 찾기</h2>
+                <button class="modal-close text-gray-400 hover:text-gray-600 text-3xl">&times;</button>
+            </div>
+            <p class="text-gray-600 mb-4">노래의 가사, 제목, 또는 분위기를 입력해 보세요.</p>
+            <textarea id="textInput" rows="5" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500 focus:border-violet-500 transition" placeholder="예: '꽃잎이 흩날리는 멜로디', '신나는 J-ROCK', '오렌지색 노을'"></textarea>
+            <button id="submitTextButton" class="w-full mt-4 px-6 py-3 bg-violet-600 text-white font-bold rounded-lg text-lg hover:bg-violet-700 transition shadow-md">검색</button>
+        </div>
+    </div>
+
+    <!-- Toast 알림 컨테이너 -->
+    <div id="toast-container" class="fixed top-6 left-1/2 -translate-x-1/2 z-50 flex flex-col gap-3"></div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // --- DOM Elements ---
+        const initialView = document.getElementById('initial-view');
+        const resultsView = document.getElementById('results-view');
+        const backToSearchBtn = document.getElementById('back-to-search');
+        
+        const recordButton = document.getElementById('record-button');
+        const textButton = document.getElementById('text-button');
+        const statusDiv = document.getElementById('status');
+        
+        const resultsContainer = document.getElementById('results-container');
+        const playerContainerDiv = document.getElementById('playlist-player-container');
+        const actionButtonsContainer = document.getElementById('action-buttons-container');
+
+        const textModal = document.getElementById('textModal');
+        const modalClose = document.querySelector('.modal-close');
+        const submitTextButton = document.getElementById('submitTextButton');
+        const textInput = document.getElementById('textInput');
+
+        // --- State Variables ---
+        let mediaRecorder;
+        let audioChunks = [];
+        let tagColorMap = {};
+        let currentSongData = [];
+        let spotifyPlayer;
+        let isPlayerReady = false;
+        let recordingTimer;
+        let recordingStartTime;
+        let currentPlaylistId = null;
+        let deviceId = null;
+
+        // --- Spotify SDK ---
+        window.onSpotifyWebPlaybackSDKReady = () => console.log("Spotify SDK is ready.");
+        
+        async function initializePlayer(token) {
+            if (spotifyPlayer) {
+                spotifyPlayer.disconnect();
+                spotifyPlayer = null;
+                isPlayerReady = false;
+                deviceId = null;
+            }
+
+            return new Promise((resolve, reject) => {
+                spotifyPlayer = new Spotify.Player({
+                    name: 'UR-FIT J-POP Player',
+                    getOAuthToken: cb => { cb(token); },
+                    volume: 0.5
+                });
+
+                spotifyPlayer.addListener('ready', ({ device_id }) => {
+                    console.log('Ready with Device ID', device_id);
+                    deviceId = device_id;
+                    isPlayerReady = true;
+                    resolve(spotifyPlayer);
+                });
+                
+                spotifyPlayer.addListener('player_state_changed', state => {
+                    if (!state) return;
+                    updatePlayerUI(state);
+                });
+
+                spotifyPlayer.addListener('authentication_error', ({ message }) => {
+                    console.error('Authentication Error:', message);
+                    sessionStorage.removeItem('spotify-access-token');
+                    isPlayerReady = false;
+                    deviceId = null;
+                    reject(new Error(message));
+                });
+                
+                ['initialization_error', 'account_error', 'playback_error'].forEach(errorType => {
+                     spotifyPlayer.addListener(errorType, ({ message }) => {
+                        console.error(`${errorType}: ${message}`);
+                        reject(new Error(message));
+                     });
+                });
+
+                spotifyPlayer.connect();
+            });
+        }
+        
+        // --- UI Control ---
+        function showResultsView() {
+            initialView.classList.add('hidden');
+            resultsView.classList.remove('hidden');
+        }
+
+        function showInitialView() {
+            resultsView.classList.add('hidden');
+            initialView.classList.remove('hidden');
+            // Reset UI
+            statusDiv.innerHTML = '';
+            resultsContainer.innerHTML = '';
+            actionButtonsContainer.innerHTML = '';
+            playerContainerDiv.innerHTML = '';
+        }
+
+        backToSearchBtn.addEventListener('click', showInitialView);
+
+        function showToast(message, isSuccess = true) {
+            const toastContainer = document.getElementById('toast-container');
+            const toast = document.createElement('div');
+            toast.className = `flex items-center gap-4 px-5 py-3 rounded-xl shadow-lg text-white ${isSuccess ? 'bg-gray-900' : 'bg-red-600'}`;
+            toast.innerHTML = message;
+            
+            toastContainer.appendChild(toast);
+
+            setTimeout(() => {
+                toast.style.transition = 'opacity 0.5s ease-out';
+                toast.style.opacity = '0';
+                setTimeout(() => toast.remove(), 500);
+            }, 3000);
+        }
+
+        // --- API & Data Handling ---
+        fetch('/static/tag_colors.json')
+            .then(response => response.ok ? response.json() : Promise.reject('tag_colors.json not found'))
+            .then(data => tagColorMap = data)
+            .catch(error => console.error('태그 색상 맵 로드 실패:', error));
+
+        async function sendDataToServer(data, type) {
+            try {
+                const formData = new FormData();
+                let endpoint = '';
+                
+                if (type === 'audio') {
+                    formData.append('audio_file', data, 'recording.webm');
+                    endpoint = '/stt';
+                } else if (type === 'text') {
+                    formData.append('query_text', data);
+                    endpoint = '/text-search';
+                }
+                
+                const response = await fetch(endpoint, { method: 'POST', body: formData });
+                
+                if (!response.ok) {
+                    const errorData = await response.json();
+                    throw new Error(errorData.detail || '서버 오류 발생');
+                }
+                const resultData = await response.json();
+                displayResults(resultData);
+            } catch (error) {
+                statusDiv.innerHTML = '';
+                showToast(`오류: ${error.message}`, false);
+                showInitialView();
+            }
+        }
+
+        // --- Result Display & Player Rendering ---
+        function displayResults(data) {
+            showResultsView();
+            statusDiv.innerHTML = '';
+            resultsContainer.innerHTML = '';
+            actionButtonsContainer.innerHTML = '';
+            
+            if (!data.song) {
+                let failureMessage = `<p class="p-4 bg-gray-100 rounded-lg">아쉽지만 일치하는 곡을 찾지 못했어요. 😥 다른 검색어로 다시 시도해 보세요!</p>`;
+                if (data.song && data.song.userQuery) {
+                    failureMessage = `
+                        <div class="p-4 bg-violet-50 border border-violet-200 rounded-xl">
+                            <p class="text-sm text-gray-500">${data.song.userQuery ? '음성 인식 결과' : '입력한 검색어'}</p>
+                            <p class="font-semibold text-violet-700 text-lg">“${data.song.userQuery}”</p>
+                        </div>
+                        <p class="mt-4 p-4 bg-gray-100 rounded-lg">위 검색어와 일치하는 곡을 찾지 못했어요. 😥</p>
+                    `;
+                }
+                resultsContainer.innerHTML = failureMessage;
+                return;
+            }
+
+            const { song, lyrics, recommendations } = data;
+            currentSongData = [song, ...(recommendations || [])];
+            
+            let resultsHtml = '<div><h2 class="text-xl font-bold text-gray-800 mb-3">AI가 찾은 노래</h2>';
+            resultsHtml += createSongCard(song, true, lyrics, song.userQuery);
+            resultsHtml += '</div>';
+
+            if (recommendations && recommendations.length > 0) {
+                resultsHtml += '<div><h2 class="text-xl font-bold text-gray-800 mb-3">이런 노래는 어때요?</h2><div class="flex flex-col gap-3">';
+                recommendations.forEach(recSong => {
+                    resultsHtml += createSongCard(recSong, false);
+                });
+                resultsHtml += '</div></div>';
+            }
+            resultsContainer.innerHTML = resultsHtml;
+            
+            if (currentSongData.length > 0 && currentSongData.some(s => s.songId)) {
+                actionButtonsContainer.innerHTML = `
+                    <button id="create-playlist-button" class="px-5 py-3 rounded-xl text-white bg-violet-600 hover:bg-violet-700 font-semibold transition shadow-sm">이 곡들로 플레이리스트 만들기</button>
+                    <button id="play-on-spotify-button" class="pl-3 pr-4 py-3 rounded-xl border border-gray-300 bg-white text-gray-800 hover:bg-gray-50 font-semibold transition flex items-center gap-2 shadow-sm">
+                        <svg class="w-6 h-6 text-green-500" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><title>Spotify</title><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.922 17.537c-.195.31-.57.417-.88.222-2.587-1.58-5.83-1.93-9.743-1.05-.38.087-.777-.14-.864-.522-.086-.38.14-.777.52-.865 4.223-.95 7.717-.566 10.542 1.156.31.196.416.572.22.88zm.49-3.21c-.245.38-.7.49-1.08.242-2.88-1.75-7.23-2.24-11.02-1.22-.456.12-.91-.18-1.03-.636-.12-.456.18-.91.636-1.03 4.14-.11 8.77.42 11.94 2.37.38.24.49.7.24 1.08zm.13-3.413C15.15 8.973 9.42 8.76 5.474 9.92c-.522.15-1.08-.19-1.23-.71-.15-.52.19-1.08.71-1.23C9.42 6.51 15.66 6.73 20.08 8.1c.52.16.84.71.68 1.23-.16.52-.71.84-1.23.68z"/></svg>
+                        <span>Spotify에서 재생하기</span>
+                    </button>
+                `;
+                document.getElementById('create-playlist-button').addEventListener('click', handleCreatePlaylistClick);
+                document.getElementById('play-on-spotify-button').addEventListener('click', () => handlePlayHereClick(true)); // 직접 재생
+            }
+        }
+        
+        function createSongCard(song, isIdentified, lyrics = null, userQuery = null) {
+            const tagsHtml = (song.tagName || []).map(tag => {
+                const bgColor = tagColorMap[tag] || '#6D28D9';
+                const textColor = '#FFFFFF';
+                return `<span class="px-2 py-0.5 text-xs font-semibold rounded-full" style="background-color:${bgColor}; color:${textColor};">${tag}</span>`;
+            }).join('');
+
+            let lyricHtml = '';
+            if (isIdentified && lyrics) {
+                let userQueryHtml = '';
+                if (userQuery) {
+                    userQueryHtml = `<div class="mb-2"><p class="text-xs text-gray-500">입력한 가사</p><p class="font-semibold text-violet-700">“${userQuery}”</p></div>`;
+                }
+                lyricHtml = `<div class="mt-3 border-t pt-3">
+                    ${userQueryHtml}
+                    <div><p class="text-xs text-gray-500">일치하는 부분</p><p class="font-semibold text-gray-800">“${lyrics}”</p></div>
+                </div>`;
+            } else if (song.matchLine) {
+                 lyricHtml = `<div class="mt-3 border-t pt-3">
+                    <div><p class="text-xs text-gray-500">맥락이 비슷한 가사</p><p class="font-semibold text-gray-800">“${song.matchLine}”</p></div>
+                </div>`;
+            }
+            
+            const reasonHtml = song.recommendationReason ? `<p class="mt-2 text-xs text-violet-600 bg-violet-100 p-2 rounded-md"><b>추천 이유:</b> ${song.recommendationReason}</p>` : '';
+
+            return `
+                <div class="relative p-4 border rounded-xl transition-all ${isIdentified ? 'bg-violet-50 border-violet-200 shadow-md' : 'bg-white'}">
+                    <div class="absolute top-4 right-4 z-10 flex flex-wrap gap-1 justify-end">${tagsHtml}</div>
+                    <div class="flex items-start gap-4">
+                        <img src="${song.albumCoverUrl || 'https://placehold.co/100x100'}" alt="${song.songTitle}" class="w-20 h-20 sm:w-24 sm:h-24 rounded-lg object-cover flex-shrink-0" />
+                        <div class="flex-1 min-w-0 pr-4">
+                            <h3 class="text-lg sm:text-xl font-bold text-gray-900 truncate">${song.songTitle}</h3>
+                            <p class="text-md text-gray-500">${song.artist}</p>
+                            <p class="text-sm text-gray-600 mt-1">${song.songDescription || ''}</p>
+                            ${reasonHtml}
+                        </div>
+                    </div>
+                    ${lyricHtml}
+                </div>`;
+        }
+        
+        function renderModernPlayerUI(playlistInfo = null) {
+            const playlistTitle = playlistInfo ? playlistInfo.title : "AI 추천 J-POP";
+            const playlistDescription = playlistInfo ? playlistInfo.description : "선택한 곡들을 재생합니다.";
+            
+            let playlistCoverGrid = '';
+            if (playlistInfo && currentSongData.length > 0) {
+                const covers = currentSongData.map(s => s.albumCoverUrl || 'https://placehold.co/100x100').slice(0, 4);
+                while(covers.length > 0 && covers.length < 4) covers.push(...covers.slice(0, 4 - covers.length));
+                playlistCoverGrid = covers.map(src => `<img src="${src}" class="w-full h-full object-cover">`).join('');
+            }
+            
+            playerContainerDiv.innerHTML = `
+                <div class="p-4 rounded-lg bg-black text-white shadow-lg">
+                    <div class="text-center mb-4">
+                        <div id="player-album-art-container" class="flex justify-center mb-4">
+                            ${playlistInfo ? `<div class="grid grid-cols-2 grid-rows-2 overflow-hidden w-48 h-48 rounded-lg shadow-2xl">${playlistCoverGrid}</div>` : ''}
+                        </div>
+                        <h3 id="player-title" class="text-xl font-bold mt-4">${playlistTitle}</h3>
+                        <p id="player-artist" class="text-sm text-gray-400 truncate px-4">${playlistDescription}</p>
+                    </div>
+                    <div class="h-2 bg-gray-700 rounded-full mb-4 cursor-pointer" id="playback-bar">
+                        <div class="h-2 bg-green-500 rounded-full" id="playback-progress" style="width: 0%;"></div>
+                    </div>
+                    <div class="flex items-center justify-center gap-6 mb-4">
+                        <button id="prev-button" class="text-gray-400 hover:text-white transition"><svg viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"></path></svg></button>
+                        <button id="play-pause-button" class="w-14 h-14 bg-green-500 text-black rounded-full flex items-center justify-center hover:bg-green-400 transition">
+                            <svg viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8"><path d="M8 5v14l11-7z"></path></svg>
+                        </button>
+                        <button id="next-button" class="text-gray-400 hover:text-white transition"><svg viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"></path></svg></button>
+                    </div>
+                    <div class="flex flex-col gap-2 mt-6 border-t border-gray-700 pt-4">
+                        <p class="text-sm font-semibold text-gray-300 px-2 mb-2">수록곡</p>
+                        <div id="player-playlist-list">
+                            ${currentSongData.map(track => `
+                                <div class="flex items-center gap-3 p-2 rounded-md" data-track-id="${track.songId}">
+                                    <img src="${track.albumCoverUrl}" alt="${track.songTitle}" class="w-10 h-10 rounded-sm" />
+                                    <div>
+                                        <p class="font-semibold">${track.songTitle}</p>
+                                        <p class="text-xs text-gray-400">${track.artist}</p>
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            // Add event listeners
+            document.getElementById('play-pause-button').addEventListener('click', () => spotifyPlayer.togglePlay());
+            document.getElementById('next-button').addEventListener('click', () => spotifyPlayer.nextTrack());
+            document.getElementById('prev-button').addEventListener('click', () => spotifyPlayer.previousTrack());
+            document.getElementById('playback-bar').addEventListener('click', (e) => {
+                const barWidth = e.currentTarget.offsetWidth;
+                const clickX = e.offsetX;
+                spotifyPlayer.getCurrentState().then(state => {
+                    if (state) {
+                        const newPosition = (clickX / barWidth) * state.duration;
+                        spotifyPlayer.seek(newPosition);
+                    }
+                });
+            });
+        }
+        
+        function updatePlayerUI(state) {
+            const playPauseButton = document.getElementById('play-pause-button');
+            const progress = document.getElementById('playback-progress');
+            const albumArtContainer = document.getElementById('player-album-art-container');
+            const titleEl = document.getElementById('player-title');
+            const artistEl = document.getElementById('player-artist');
+            
+            if (!playPauseButton || !progress) return;
+
+            playPauseButton.innerHTML = state.paused 
+                ? `<svg viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8"><path d="M8 5v14l11-7z"></path></svg>`
+                : `<svg viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"></path></svg>`;
+            
+            progress.style.width = `${(state.position / state.duration) * 100}%`;
+
+            if (state.track_window.current_track) {
+                const currentTrack = state.track_window.current_track;
+                if (!albumArtContainer.querySelector('.grid')) { // Not a playlist view
+                    albumArtContainer.innerHTML = `<img src="${currentTrack.album.images[0].url}" class="w-48 h-48 mx-auto rounded-lg shadow-2xl"/>`;
+                }
+                titleEl.textContent = currentTrack.name;
+                artistEl.textContent = currentTrack.artists.map(a => a.name).join(', ');
+
+                // Highlight playing track
+                document.querySelectorAll('#player-playlist-list > div').forEach(item => {
+                    const isPlaying = item.dataset.trackId === currentTrack.id;
+                    item.classList.toggle('bg-gray-700', isPlaying);
+                    item.querySelector('p:first-child').classList.toggle('text-green-400', isPlaying);
+                });
+            }
+        }
+
+        async function playPlaylist(playlistUri) {
+            const token = sessionStorage.getItem('spotify-access-token');
+            if (!token || !isPlayerReady || !deviceId) {
+                showToast('플레이어 준비 안됨. 다시 시도해주세요.', false);
+                return;
+            }
+
+            try {
+                await fetch(`https://api.spotify.com/v1/me/player/play?device_id=${deviceId}`, {
+                    method: 'PUT',
+                    headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${token}` },
+                    body: JSON.stringify({ context_uri: playlistUri })
+                });
+            } catch (error) {
+                showToast(`재생 실패: ${error.message}`, false);
+                console.error('Playback Error:', error);
+            }
+        }
+        
+        async function playTracks(trackUris) {
+            const token = sessionStorage.getItem('spotify-access-token');
+             if (!token || !isPlayerReady || !deviceId) {
+                showToast('플레이어 준비 안됨. 다시 시도해주세요.', false); return;
+            }
+             try {
+                await fetch(`https://api.spotify.com/v1/me/player/play?device_id=${deviceId}`, {
+                    method: 'PUT',
+                    headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${token}` },
+                    body: JSON.stringify({ uris: trackUris })
+                });
+            } catch (error) {
+                showToast(`재생 실패: ${error.message}`, false);
+            }
+        }
+
+        // --- Event Listeners & Handlers ---
+        window.addEventListener('message', async (event) => {
+            if (event.data.type === 'SPOTIFY_LOGIN_SUCCESS') {
+                try {
+                    const tokenResponse = await fetch('/access-token');
+                    const tokenData = await tokenResponse.json();
+                    if (tokenData.accessToken) {
+                        sessionStorage.setItem('spotify-access-token', tokenData.accessToken);
+                        showToast('Spotify 로그인 완료!');
+                        const createBtn = document.getElementById('create-playlist-button');
+                        if (createBtn) createBtn.click();
+                        else {
+                            const playBtn = document.getElementById('play-on-spotify-button');
+                            if(playBtn) playBtn.click();
+                        }
+                    } else {
+                        throw new Error('토큰을 가져올 수 없습니다.');
+                    }
+                } catch (e) {
+                    showToast(`로그인 오류: ${e.message}`, false);
+                }
+            }
+        });
+        
+        recordButton.addEventListener('click', async () => {
+            if (mediaRecorder && mediaRecorder.state === 'recording') {
+                clearTimeout(recordingTimer);
+                mediaRecorder.stop();
+            } else {
+                try {
+                    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                    mediaRecorder = new MediaRecorder(stream);
+                    audioChunks = [];
+                    
+                    mediaRecorder.ondataavailable = event => audioChunks.push(event.data);
+                    mediaRecorder.onstop = async () => {
+                        recordButton.classList.remove('recording');
+                        recordButton.querySelector('span').textContent = '음성으로 찾기';
+                        
+                        if ((Date.now() - recordingStartTime) < 5000) {
+                            statusDiv.textContent = '오류: 최소 5초 이상 녹음해주세요.'; return;
+                        }
+                        
+                        statusDiv.innerHTML = '음성 처리 중... <div class="inline-block ml-2 w-4 h-4 border-2 border-t-transparent border-white rounded-full animate-spin"></div>';
+                        const audioBlob = new Blob(audioChunks, { type: 'audio/webm' });
+                        await sendDataToServer(audioBlob, 'audio');
+                        stream.getTracks().forEach(track => track.stop());
+                    };
+
+                    mediaRecorder.start();
+                    recordingStartTime = Date.now();
+                    recordButton.classList.add('recording');
+                    recordButton.querySelector('span').textContent = '녹음 중지';
+                    statusDiv.textContent = '노래를 흥얼거려주세요... (최대 15초)';
+                    
+                    recordingTimer = setTimeout(() => {
+                        if (mediaRecorder.state === 'recording') mediaRecorder.stop();
+                    }, 15000);
+                } catch(err) {
+                    statusDiv.textContent = '마이크 접근 권한이 필요합니다.';
+                }
+            }
+        });
+
+        textButton.addEventListener('click', () => { textModal.style.display = 'flex'; textInput.focus(); });
+        modalClose.addEventListener('click', () => { textModal.style.display = 'none'; });
+        window.addEventListener('click', (event) => { if (event.target == textModal) textModal.style.display = 'none'; });
+
+        submitTextButton.addEventListener('click', async () => {
+            const text = textInput.value.trim();
+            if (text === '') { showToast('오류: 검색어를 입력해주세요.', false); return; }
+            textModal.style.display = 'none';
+            textInput.value = '';
+            
+            statusDiv.innerHTML = '텍스트 처리 중... <div class="inline-block ml-2 w-4 h-4 border-2 border-t-transparent border-white rounded-full animate-spin"></div>';
+            await sendDataToServer(text, 'text');
+        });
+
+        async function handlePlayHereClick(isDirectPlay = false) {
+             try {
+                const meResponse = await fetch('/me');
+                if (!meResponse.ok) throw new Error('인증 상태 확인 실패');
+                const meData = await meResponse.json();
+
+                if (!meData.loggedIn) {
+                    window.open('/login', 'SpotifyLogin', 'width=500,height=600');
+                    return;
+                }
+
+                const token = sessionStorage.getItem('spotify-access-token');
+                if (!token) {
+                    window.open('/login', 'SpotifyLogin', 'width=500,height=600');
+                    return;
+                }
+                
+                await initializePlayer(token);
+                
+                if (!isPlayerReady || !deviceId) {
+                    showToast('플레이어 기기를 찾을 수 없습니다. Spotify 앱이 활성화되어 있는지 확인 후 다시 시도해주세요.', false);
+                    return;
+                }
+
+                if(isDirectPlay){
+                    const trackUris = currentSongData
+                        .map(s => s.songId ? `spotify:track:${s.songId}` : null)
+                        .filter(uri => uri !== null);
+                    if (trackUris.length > 0) {
+                        renderModernPlayerUI();
+                        await playTracks(trackUris);
+                    } else {
+                        showToast('재생할 수 있는 Spotify 트랙이 없습니다.', false);
+                    }
+                } else {
+                    renderModernPlayerUI({ title: currentPlaylistTitle, description: currentPlaylistDesc });
+                    await playPlaylist(`spotify:playlist:${currentPlaylistId}`);
+                }
+
+            } catch (initError) {
+                showToast(`플레이어 오류: ${initError.message}`, false);
+                if (initError.message.toLowerCase().includes('authentication')) {
+                    sessionStorage.removeItem('spotify-access-token');
+                    window.open('/login', 'SpotifyLogin', 'width=500,height=600');
+                }
+            }
+        }
+        
+        let currentPlaylistTitle = '';
+        let currentPlaylistDesc = '';
+
+        async function handleCreatePlaylistClick() {
+            const createBtn = document.getElementById('create-playlist-button');
+            createBtn.disabled = true;
+            createBtn.innerHTML = '<div class="inline-block w-5 h-5 border-2 border-t-transparent rounded-full animate-spin"></div>';
+
+            try {
+                const meResponse = await fetch('/me');
+                const meData = await meResponse.json();
+                if (!meData.loggedIn) {
+                    window.open('/login', 'SpotifyLogin', 'width=500,height=600');
+                    createBtn.disabled = false;
+                    createBtn.textContent = '이 곡들로 플레이리스트 만들기';
+                    return;
+                }
+
+                createBtn.textContent = 'AI로 플레이리스트 정보 생성 중... 🤖';
+                const songsForLLM = currentSongData.map(s => ({
+                    artist: s.artist, songTitle: s.songTitle, songDescription: s.songDescription, tagName: s.tagName || []
+                }));
+                
+                const detailsResponse = await fetch('/generate-playlist-details', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({ songs: songsForLLM })
+                });
+                
+                if (!detailsResponse.ok) throw new Error('AI 정보 생성 실패');
+                const playlistDetails = await detailsResponse.json();
+                await createPlaylistOnSpotify(playlistDetails.title, playlistDetails.description);
+            } catch (e) {
+                showToast(`오류: ${e.message}. 기본 정보로 생성합니다.`, false);
+                await createPlaylistOnSpotify("AI 추천 J-POP", "AI가 당신의 흥얼거림을 듣고 찾아낸 J-POP 추천곡 모음.");
+            }
+        }
+
+        async function createPlaylistOnSpotify(title, description) {
+            currentPlaylistTitle = title;
+            currentPlaylistDesc = description;
+            const createBtn = document.getElementById('create-playlist-button');
+            if(createBtn) createBtn.textContent = 'Spotify에 저장 중...';
+
+            try {
+                const songIds = currentSongData.map(s => s.songId).filter(id => id);
+                const response = await fetch('/create-playlist', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({ songIds: songIds, title, description })
+                });
+                if (!response.ok) throw new Error((await response.json()).detail || '플레이리스트 생성 실패');
+                
+                const playlistData = await response.json();
+                currentPlaylistId = playlistData.playlistId;
+                
+                showToast(`
+                    <div class="grid grid-cols-2 grid-rows-2 w-16 h-16 rounded-md overflow-hidden flex-shrink-0 shadow-md">
+                        ${currentSongData.slice(0, 4).map(s => `<img src="${s.albumCoverUrl}" class="w-full h-full object-cover">`).join('')}
+                    </div>
+                    <div><p class="font-bold text-white">“${title}”</p><p class="text-sm text-gray-300">플레이리스트에 추가 완료!</p></div>
+                `);
+
+                actionButtonsContainer.innerHTML = `<button id="play-here-button" class="px-5 py-3 rounded-xl text-white bg-green-500 hover:bg-green-600 font-semibold transition shadow-sm">방금 만든 플레이리스트 재생하기</button>`;
+                document.getElementById('play-here-button').addEventListener('click', () => handlePlayHereClick(false));
+
+            } catch (e) {
+                showToast(`생성 실패: ${e.message}`, false);
+                if (createBtn) {
+                    createBtn.disabled = false;
+                    createBtn.textContent = '이 곡들로 플레이리스트 만들기';
+                }
+            }
+        }
+    });
+    </script>
+</body>
+</html>
+

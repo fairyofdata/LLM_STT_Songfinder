@@ -1,8 +1,11 @@
-# URFIT (음성인식 기반 AI 플레이리스트 생성 커뮤니티)
+> ⚠️ **알림**: 이 레포지토리는 프로젝트 전체가 아닌 본 프로젝트의 핵심 모듈의 체험 가능한 프로토타입으로, [Huggingface Space](https://huggingface.co/spaces/fairyofdata/JPOP_STT_Module/tree/main)에 업로드되어 있으며 해당 플랫폼이 서버 역할을 제공하고 있습니다. 각 파일은 동일하게 본 Github 레포지토리에서도 볼 수 있지만, [Huggingface Space](https://huggingface.co/spaces/fairyofdata/JPOP_STT_Module/tree/main)에서 확인하시면 코드 및 데이터셋 등 파일과 함께 서비스 핵심 모듈의 실행을 체험할 수 있는 점 참고하시기 바랍니다.  
 
-> ⚠️ **알림**: 본 프로젝트의 핵심 모듈 프로토타입은 [Huggingface Space](https://huggingface.co/spaces/fairyofdata/JPOP_STT_Module/tree/main)에 업로드되어 서버 역할을 겸하고 있어 Github 대신 [Huggingface Space](https://huggingface.co/spaces/fairyofdata/JPOP_STT_Module/tree/main)를 통해 제공됩니다.
+# URFIT : LLM 음성인식(STT) 기반 플레이리스트 생성 커뮤니티
 
-URFIT은 "음성인식 기반 AI 플레이리스트 생성 커뮤니티"로, 머릿속에 맴도는 희미한 가사나 흥얼거리는 멜로디만으로도 원하는 J-POP을 찾아주는 서비스입니다. 기존 노래 검색 서비스의 한계인 '부정확한 가사로는 검색 불가'와 '단순 검색 이후의 확장성 부족'을 해결하기 위해 기획되었습니다.
+URFIT은 "음성인식 기반 AI 플레이리스트 생성 커뮤니티"로, 머릿속에 맴도는 희미한 가사나 흥얼거리는 멜로디만으로도 원하는 J-POP을 찾아주는 서비스입니다. 기존 노래 검색 서비스의 한계인 '부정확한 가사로는 검색 불가'와 '단순 검색 이후의 확장성 부족'을 해결하기 위해 기획되었습니다. UR-FIT은 아래를 중의적으로 함축하여 모두 프로젝트의 목적과 정체성을 담아 지어진 프로젝트명입니다. 
+>  * 한국어: 얼핏 듣다 (얼핏 들은 노래를 찾아주고, 해당 노래를 듣고 공유할 수 있는 플랫폼)
+>  * 영어: Your(UR) Fit (Music Recognition & Recommendation),
+>  * 일본어: 運命のリズム、触れ合う意味の繋がり。
 
 ## 🎵 주요 기능
 

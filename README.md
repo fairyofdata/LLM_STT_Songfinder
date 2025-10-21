@@ -124,7 +124,7 @@ URFIT은 확장성을 고려하여 세 가지 주요 컴포넌트로 분리된 �
 
 * **황문규** (Team Leader & Back-End Leader)
 * **임수빈** (Technical PM & Front-End Leader)
-* **백지헌** (LLM & RecSys & PPT)
+* **백지헌** (Dataset & LLM & RecSys & PPT)
 * **유승철** (Back-End & Presenter)
 * **이한석** (Front-End)
 * **부경원** (Official PM)

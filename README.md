@@ -1,10 +1,10 @@
-> ⚠️ **알림**: 이 레포지토리는 프로젝트 전체가 아닌 본 프로젝트의 핵심 모듈의 체험 가능한 프로토타입으로, [Huggingface Space](https://huggingface.co/spaces/fairyofdata/JPOP_STT_Module/tree/main)에 업로드되어 있으며 해당 플랫폼이 서버 역할을 제공하고 있습니다. 각 파일은 동일하게 본 Github 레포지토리에서도 볼 수 있지만, [Huggingface Space](https://huggingface.co/spaces/fairyofdata/JPOP_STT_Module/tree/main)에서 확인하시면 코드 및 데이터셋 등 파일과 함께 서비스 핵심 모듈의 실행을 체험할 수 있는 점 참고하시기 바랍니다.  
+# URFIT : LLM 음성인식(STT) 기반 플레이리스트 생성 커뮤니티 (리팩토링 버전)
 
-# URFIT : LLM 음성인식(STT) 기반 플레이리스트 생성 커뮤니티
+> ⚠️ **알림**: 본 레포지토리는 기존 [Huggingface Space](https://huggingface.co/spaces/fairyofdata/JPOP_STT_Module/tree/main)에서 구동되던 프로토타입을 **모던 웹 애플리케이션 아키텍처(Angular + FastAPI)** 로 완벽히 분리 및 리팩토링한 버전입니다. 이제 로컬 환경은 물론 Firebase, Cloud Run 등 다양한 클라우드 환경에 유연하게 배포할 수 있습니다.
 
 URFIT은 "음성인식 기반 AI 플레이리스트 생성 커뮤니티"로, 머릿속에 맴도는 희미한 가사나 흥얼거리는 멜로디만으로도 원하는 J-POP을 찾아주는 서비스입니다. 기존 노래 검색 서비스의 한계인 '부정확한 가사로는 검색 불가'와 '단순 검색 이후의 확장성 부족'을 해결하기 위해 기획되었습니다. UR-FIT은 아래를 중의적으로 함축하여 모두 프로젝트의 목적과 정체성을 담아 지어진 프로젝트명입니다. 
 >  * 한국어: 얼핏 듣다 (얼핏 들은 노래를 찾아주고, 해당 노래를 듣고 공유할 수 있는 플랫폼)
->  * 영어: Your(UR) Fit (Music Recognition & Recommendation),
+>  * 영어: Your(UR) Fit (Music Recognition & Recommendation)
 >  * 일본어: 運命のリズム、触れ合う意味の繋がり。
 
 ## 🎵 주요 기능
@@ -17,120 +17,85 @@ URFIT은 "음성인식 기반 AI 플레이리스트 생성 커뮤니티"로, 머
 
 -----
 
-## 🛠 아키텍처 및 기술 스택
+## 🛠 아키텍처 및 기술 스택 (리팩토링 적용)
 
-### 전체 시스템 아키텍처
+기존 단일 애플리케이션 구조에서 확장성과 유지보수성을 위해 프론트엔드와 백엔드를 완벽히 분리했습니다.
 
-URFIT은 확장성을 고려하여 세 가지 주요 컴포넌트로 분리된 마이크로서비스 아키텍처로 설계되었습니다:
+### 1. Frontend (Angular)
+  * **Framework**: Angular 17+ (기존 Vanilla JS/HTML 기반 코드 포팅)
+  * **Styling**: TailwindCSS, SCSS
+  * **주요 기능**: Spotify Web Playback SDK 연동, 마이크 오디오 스트림(MediaRecorder) 캡처 및 전송
 
-  * **Frontend**: 사용자 인터페이스를 담당하며, **React**로 구현됩니다.
-  * **Main Server**: 백엔드 로직을 처리하는 메인 서버로, **Spring** 프레임워크 기반으로 구축됩니다.
-  * **AI Server**: 음성 인식 및 AI 기반 추천 로직을 담당하는 서버로, **Python**과 **FastAPI**를 활용한 프로토타입 형태로 개발되었습니다.
-
-### 기술 상세
-
-  * **Frontend**: **React**, **Vite**, **TypeScript**를 사용하며, **Axios**를 통해 API 통신을 최적화하고 **React Query**로 캐싱 및 낙관적 업데이트를 적용해 사용자 경험을 향상시켰습니다.
-  * **Backend**: **Spring Framework**를 사용하여 RESTful API를 구현했으며, **AWS**를 클라우드 인프라로 활용합니다. 데이터베이스는 **MySQL**, 캐시 및 세션 관리는 **Redis**를 사용합니다. 또한, 음성 파일 변환을 위해 **FFmpeg**이 사용됩니다.
+### 2. Backend (FastAPI)
+  * **Framework**: FastAPI (Python 3.10+)
   * **AI/ML**:
-      * **음성-텍스트 변환 (STT)**: OpenAI의 **Whisper** API를 사용하여 사용자의 음성을 텍스트로 변환합니다.
-      * **의미 기반 음악 검색**: **SentenceTransformer** 모델을 기반으로 가사 데이터를 벡터화하고, **FAISS**를 활용한 벡터 검색을 통해 사용자의 입력(텍스트)과 가장 유사한 곡을 찾아냅니다.
-      * **플레이리스트 정보 생성**: OpenAI의 **GPT-3.5-turbo** 모델을 호출하여 추천된 곡의 특징을 분석하고, 플레이리스트 제목과 설명을 생성합니다.
-      * **외부 서비스 연동**: **Spotify API & SDK**를 연동하여 플레이리스트 생성부터 웹 플레이어 재생까지의 전 과정을 자동화합니다.
+      * OpenAI **Whisper** (STT 변환)
+      * **SentenceTransformer** (`paraphrase-multilingual-MiniLM-L12-v2`) 및 **FAISS** (가사 벡터 유사도 검색)
+      * OpenAI **GPT-3.5-turbo** (플레이리스트 제목 및 설명 자동 생성)
+  * **주요 기능**: Spotify OAuth 인증, STT 분석, 벡터 검색 API 제공, CORS 완벽 지원
 
 -----
 
-## 🖼️ 사용 방법
+## 🚀 로컬 실행 방법 (How to Run)
 
-### 1\. 검색 시작하기
+프론트엔드와 백엔드 서버를 각각 실행해야 합니다.
 
-메인 화면에서 **음성으로 찾기** 또는 **텍스트로 찾기** 버튼을 클릭하여 검색을 시작합니다.
- * *초기 검색 화면: "음성으로 찾기"와 "텍스트로 찾기" 버튼이 보입니다.*
+### 사전 준비사항
+1. Python 3.10+ 설치 (오류 시 `audioop-lts` 등 추가 확인)
+2. Node.js (v18+) 및 npm 설치
+3. [Spotify Developer Dashboard](https://developer.spotify.com/dashboard)에서 앱 생성 및 `Client ID`, `Client Secret` 획득
+   * **Redirect URI** 설정 필수: `http://localhost:7860/callback` (주의: https가 아닌 http 사용)
+4. `.env` 파일 (또는 환경변수) 설정: `OPENAI_API_KEY`, `SPOTIPY_CLIENT_ID`, `SPOTIPY_CLIENT_SECRET`, `SPOTIPY_REDIRECT_URI=http://localhost:7860/callback`
 
-### 2\. 음성으로 검색하기 (STT)
+### 원클릭 실행 (Windows 전용)
+바탕화면 등에 제공된 `Start_JPOP_Finder.bat` 파일을 더블클릭하면 프론트엔드와 백엔드가 동시에 실행됩니다. (최초 실행 시 AI 모델 다운로드로 인해 1~2분 소요될 수 있습니다.)
 
-마이크 버튼을 누르고 노래를 흥얼거리거나 가사를 말해보세요. 서비스가 음성을 텍스트로 변환하고, 그 텍스트를 기반으로 노래를 찾아줍니다.
- * *마이크 버튼을 눌러 음성 검색을 시작하고, 녹음이 진행 중임을 보여줍니다.*
+### 수동 실행
+**1. Backend 서버 실행**
+```bash
+pip install -r requirements.txt
+# 파이썬 3.13 이상 환경에서 오류 시: pip install audioop-lts
+python app.py
+```
+* 서버가 `http://localhost:7860`에서 구동됩니다. (첫 실행 시 수백 MB 모델이 캐시 다운로드됩니다.)
 
-### 3\. 텍스트로 검색하기
-
-**텍스트로 찾기** 버튼을 누르면 검색창이 나타납니다. 가사나 곡의 분위기를 입력하고 검색 버튼을 누르면 됩니다.
- * *텍스트 입력 모달 창: "가사로 찾기" 제목과 텍스트 입력창이 보입니다.*
-
-### 4\. 검색 결과 확인 및 재생
-
-검색 결과 화면에서 찾은 곡과 추천 곡 목록을 확인할 수 있습니다. Spotify Web Player가 활성화되면 바로 재생할 수 있습니다.
- * *검색 결과 화면: 찾은 노래와 추천 노래 목록, 그리고 Spotify Web Player가 있는 화면입니다.*
-
-### 5\. 플레이리스트 생성 (Spotify 연동)
-
-**이 곡들로 플레이리스트 만들기** 버튼을 누르면, AI가 생성한 제목과 설명으로 Spotify에 새로운 플레이리스트가 생성됩니다.
- * *플레이리스트 생성 성공을 알리는 토스트 메시지 화면입니다.*
-
-
------
-
-## 🔰 Example of Prototype Execution
-
-![Example of Prototype Execution](Sample.png)
+**2. Frontend 서버 실행**
+새 터미널을 열고 다음을 실행합니다.
+```bash
+cd frontend
+npm install
+npm start
+```
+* 서버가 `http://localhost:4200`에서 구동됩니다. 브라우저로 해당 주소에 접속하세요.
 
 -----
 
-## 🤗 Huggingface Space Files
+## 🖼️ 사용 가이드
 
-  * **Backend**: `uvicorn app:app --host 0.0.0.0 --port 7860`
-  * **Dependencies**:
-      * [requirements.txt](https://huggingface.co/spaces/fairyofdata/JPOP_STT_Module/blob/main/requirements.txt)
-  * **Main Service**:
-      * [app.py](https://huggingface.co/spaces/fairyofdata/JPOP_STT_Module/blob/main/app.py)
-  * **Interface**:
-      * [Index.html](https://huggingface.co/spaces/fairyofdata/JPOP_STT_Module/blob/main/static/index.html)
-      * [tag_color.json](https://huggingface.co/spaces/fairyofdata/JPOP_STT_Module/blob/main/static/tag_colors.json)
-  * **Data**:
-      * [song_metadata.json](https://huggingface.co/spaces/fairyofdata/JPOP_STT_Module/blob/main/song_metadata.json)
-      * [line_metadata.json](https://huggingface.co/spaces/fairyofdata/JPOP_STT_Module/blob/main/line_metadata.json)
-      * [line_embeddings.npy](https://huggingface.co/spaces/fairyofdata/JPOP_STT_Module/blob/main/line_embeddings.npy)
-      * [song_embeddings.npy](https://huggingface.co/spaces/fairyofdata/JPOP_STT_Module/blob/main/song_embeddings.npy)
-      * [summary_embeddings.npy](https://huggingface.co/spaces/fairyofdata/JPOP_STT_Module/blob/main/summary_embeddings.npy)
+1. **검색 시작**: 메인 화면에서 **음성으로 찾기** 또는 **텍스트로 찾기** 버튼을 클릭합니다.
+2. **STT 검색**: 마이크 권한을 허용하고 5~15초간 콧노래를 흥얼거리거나 가사를 말해보세요.
+3. **결과 확인 및 재생**: FAISS 기반 검색 결과와 유사 곡들이 출력됩니다. Spotify 연동 후 Web Player로 바로 감상 가능합니다.
+4. **플레이리스트 생성**: "이 곡들로 플레이리스트 만들기"를 누르면 AI가 제목/설명을 생성하여 내 Spotify 계정에 직접 저장해줍니다.
 
 -----
 
-## 💡 프로젝트의 가치
+## 💡 프로젝트의 가치 및 향후 계획
 
   * **AI 기술의 실용적 응용**: 사용자의 불편함을 해결하는 실용적인 서비스에 최신 AI 기술을 응용했습니다.
-  * **도메인 문제 해결**: '부정확한 가사로 특정 노래 탐색'이라는 기존 시장의 한계를 극복하고 차별화된 경쟁력을 확보했습니다.
-  * **확장 가능한 서비스 설계**: 마이크로서비스 아키텍처를 통해 향후 기능 확장이 용이하도록 설계했습니다.
-
-## 📌 한계 및 해결 과제
-
-  * **의존성 및 비용 문제**: Whisper, GPT 등 외부 유료 API에 대한 의존성과 그에 따른 비용 문제가 있습니다.
-  * **데이터 저작권 이슈**: 가사 데이터의 저작권 문제 해결이 필요합니다.
-  * **추천 정교화**: 유사한 곡을 분별하는 더 정교한 추천 방법이 필요합니다.
-
-## 🛣️ 향후 계획
-
-  * 음원 라이선스를 확보하여 서비스 확장
-  * 청취 기록 기반의 개인화 추천 기능 도입
-  * 모바일 앱 버전 출시를 통한 접근성 강화
+  * **확장 가능한 서비스 설계**: 마이크로서비스 아키텍처(분리형 구조)를 통해 향후 기능 확장이 용이하도록 설계했습니다.
+  * **향후 계획**: 
+    - 청취 기록 기반의 개인화 추천 기능 도입
+    - Firebase Hosting (Frontend) + Cloud Run (Backend) 클라우드 배포 완전 자동화
+    - 모바일 앱 버전 (Ionic / React Native) 출시를 통한 접근성 강화
 
 -----
 
 ### 프로젝트 개요
 
 * **프로젝트명**: URFIT (음성인식 기반 AI 플레이리스트 생성 커뮤니티)
-* **개발 과정**: 한국무역협회 무역아카데미 Smart Cloud IT 과정 47기 프로젝트
-* **개발 기간**: 2025년 7월 29일 ~ 2025년 9월 29일
+* **개발 과정**: 한국무역협회 무역아카데미 Smart Cloud IT 과정 47기 프로젝트 (이후 모던 아키텍처 리팩토링)
+* **개발 기간**: 2025년 7월 29일 ~ 2025년 9월 29일 (초기), 2026년 리팩토링 진행
 
-### 팀 구성원
-
-* **황문규** (Team Leader & Back-End Leader)
-* **임수빈** (Technical PM & Front-End Leader)
-* **백지헌** (Dataset & LLM & RecSys & PPT)
-* **유승철** (Back-End & Presenter)
-* **이한석** (Front-End)
-* **부경원** (Official PM)
-  
 ### 저작권 고지
 
 이 자료의 저작권은 한국무역협회 무역아카데미 Smart Cloud IT 과정 47기 팀 "노래불러조"에게 있으며, 허가 없이 복제, 배포, 전송, 전시 등의 행위를 금지합니다.
-
------

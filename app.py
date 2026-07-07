@@ -7,7 +7,7 @@ import openai
 from sentence_transformers import SentenceTransformer
 from fastapi import FastAPI, UploadFile, File, HTTPException, Request, Depends, Response, Form
 from fastapi.responses import FileResponse, RedirectResponse, HTMLResponse
-from fastapi.staticfiles import StaticFiles
+from fastapi.middleware.cors import CORSMiddleware
 from logging import getLogger, basicConfig, INFO
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
@@ -73,7 +73,7 @@ except Exception as e:
     logger.error(f"DB 로딩 실패: {e}", exc_info=True)
     line_index, song_index, summary_index = None, None, None
 
-REDIRECT_URI = "https://fairyofdata-jpop-stt-module.hf.space/callback"
+REDIRECT_URI = os.getenv("SPOTIPY_REDIRECT_URI", "http://localhost:7860/callback")
 sp_oauth = SpotifyOAuth(
     client_id=os.getenv("SPOTIPY_CLIENT_ID"),
     client_secret=os.getenv("SPOTIPY_CLIENT_SECRET"),
@@ -84,7 +84,14 @@ api_key = os.getenv("openai")
 client = openai.OpenAI(api_key=api_key) if api_key else None
 
 app = FastAPI()
-app.mount("/static", StaticFiles(directory="static"), name="static")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:4200", "http://localhost:5173", "http://127.0.0.1:4200", "http://127.0.0.1:5173"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 def parse_tags(tags_str: str) -> List[str]:
     if not isinstance(tags_str, str) or not tags_str.startswith('['):
@@ -293,7 +300,7 @@ def search_pipeline_from_audio(query_text: str) -> (Dict[str, Any], str, List[Di
     return identified_song, matched_lyric, similar_songs
 
 @app.get("/")
-def read_root(): return FileResponse('static/index.html')
+def read_root(): return {"message": "API is running."}
 
 @app.get("/login")
 def login():

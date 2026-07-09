@@ -1,3 +1,14 @@
+---
+title: URFIT - LLM STT based J-POP Playlist Community
+emoji: 🎵
+colorFrom: indigo
+colorTo: yellow
+sdk: gradio
+sdk_version: 5.41.0
+app_file: app.py
+pinned: false
+---
+
 # URFIT : LLM 음성인식(STT) 기반 플레이리스트 생성 커뮤니티 (리팩토링 버전)
 
 > ⚠️ **알림**: 본 레포지토리는 기존 [Huggingface Space](https://huggingface.co/spaces/fairyofdata/JPOP_STT_Module/tree/main)에서 구동되던 프로토타입을 **모던 웹 애플리케이션 아키텍처(Angular + FastAPI)** 로 완벽히 분리 및 리팩토링한 버전입니다. 이제 로컬 환경은 물론 Firebase, Cloud Run 등 다양한 클라우드 환경에 유연하게 배포할 수 있습니다.

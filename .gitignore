@@ -1,0 +1,34 @@
+# Local archive (prototype backup — not committed intentionally)
+_archive/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+*.env.local
+venv/
+.venv/
+
+# Node / Angular
+node_modules/
+dist/
+.angular/
+frontend/node_modules/
+frontend/dist/
+
+# Logs
+*.log
+app_log.txt
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Firebase
+.firebase/
+firebase-debug.log

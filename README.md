@@ -9,9 +9,10 @@ app_file: app.py
 pinned: false
 ---
 
-# URFIT : LLM 음성인식(STT) 기반 플레이리스트 생성 커뮤니티 (리팩토링 버전)
+# Songfinder : URFIT 팀 프로젝트의 음성·음악 매칭 모듈 (리팩토링 버전)
 
-> 🏆 **한국무역협회 제47기 SCIT Master 프로젝트 발표회 우수상 (2위)**  
+> 🏆 **한국무역협회 제47기 SCIT Master 프로젝트 발표회 우수상 (2위)** — 6인 팀 프로젝트 URFIT으로 수상  
+> 👤 이 레포는 URFIT 중 백지헌이 혼자 맡은 음성 인식·검색·추천·Spotify 연동 모듈이며, 2026년 리팩토링도 혼자 진행했습니다.  
 > ⚠️ **알림**: 본 레포지토리는 기존 [Huggingface Space](https://huggingface.co/spaces/fairyofdata/JPOP_STT_Module/tree/main)에서 구동되던 프로토타입을 **모던 웹 애플리케이션 아키텍처(Angular + FastAPI)** 로 완벽히 분리 및 리팩토링한 버전입니다. 이제 로컬 환경은 물론 Firebase, Cloud Run 등 다양한 클라우드 환경에 유연하게 배포할 수 있습니다.
 
 ![URFIT UI Preview](./Sample.png)

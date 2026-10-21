@@ -1,0 +1,192 @@
+{
+ "index": {
+  "lines": 22806,
+  "kinds": {
+   "normal": 19630,
+   "short_le6": 1809,
+   "bracket_only": 189,
+   "punct_only": 1177,
+   "unsplit": 1
+  },
+  "unsplit_lines": [
+   {
+    "line_idx": 15946,
+    "song": 319,
+    "nonspace_chars": 620
+   }
+  ],
+  "songs_with_one_line": [
+   319,
+   455
+  ],
+  "songs_without_lines": [
+   11,
+   126,
+   175,
+   204,
+   211,
+   214,
+   272,
+   273,
+   395,
+   397,
+   458
+  ]
+ },
+ "top1_hit_line_kinds": {
+  "index_share": {
+   "normal": 0.8607,
+   "short_le6": 0.0793,
+   "bracket_only": 0.0083,
+   "punct_only": 0.0516,
+   "unsplit": 0.0
+  },
+  "wrong_top1": {
+   "normal": 0.744,
+   "short_le6": 0.2504,
+   "punct_only": 0.0006,
+   "bracket_only": 0.005
+  },
+  "correct_top1": {
+   "normal": 0.9809,
+   "bracket_only": 0.0111,
+   "short_le6": 0.0065,
+   "unsplit": 0.0015
+  },
+  "n_wrong": 8642,
+  "n_correct": 13311
+ },
+ "top_wrong_hit_lines": [
+  {
+   "line_idx": 4056,
+   "wrong_hits": 25,
+   "kind": "short_le6",
+   "nonspace_chars": 3
+  },
+  {
+   "line_idx": 7190,
+   "wrong_hits": 23,
+   "kind": "short_le6",
+   "nonspace_chars": 5
+  },
+  {
+   "line_idx": 8668,
+   "wrong_hits": 21,
+   "kind": "short_le6",
+   "nonspace_chars": 3
+  },
+  {
+   "line_idx": 19407,
+   "wrong_hits": 20,
+   "kind": "short_le6",
+   "nonspace_chars": 6
+  },
+  {
+   "line_idx": 15237,
+   "wrong_hits": 18,
+   "kind": "normal",
+   "nonspace_chars": 9
+  },
+  {
+   "line_idx": 1326,
+   "wrong_hits": 17,
+   "kind": "short_le6",
+   "nonspace_chars": 5
+  },
+  {
+   "line_idx": 15886,
+   "wrong_hits": 17,
+   "kind": "bracket_only",
+   "nonspace_chars": 15
+  },
+  {
+   "line_idx": 17325,
+   "wrong_hits": 16,
+   "kind": "short_le6",
+   "nonspace_chars": 5
+  },
+  {
+   "line_idx": 16595,
+   "wrong_hits": 16,
+   "kind": "short_le6",
+   "nonspace_chars": 6
+  },
+  {
+   "line_idx": 6354,
+   "wrong_hits": 16,
+   "kind": "short_le6",
+   "nonspace_chars": 4
+  }
+ ],
+ "queries_from_unsplit_lines": 20,
+ "filtered_index_seed0": {
+  "full": {
+   "lines_kept": 22806,
+   "songs_kept": 450,
+   "recall@1": 0.605,
+   "recall@1_by_type": {
+    "exact": 1.0,
+    "half": 0.322,
+    "word_drop": 0.5203,
+    "typo": 0.7915,
+    "concat": 0.3737
+   },
+   "negatives_lyric_score_above_0.4": 0.9333
+  },
+  "drop_punct_and_le2": {
+   "lines_kept": 21584,
+   "songs_kept": 450,
+   "recall@1": 0.605,
+   "recall@1_by_type": {
+    "exact": 1.0,
+    "half": 0.3209,
+    "word_drop": 0.5214,
+    "typo": 0.7915,
+    "concat": 0.3737
+   },
+   "negatives_lyric_score_above_0.4": 0.9333,
+   "vs_full_index": {
+    "only_a": 1,
+    "only_b": 1,
+    "p_value": 1.0
+   }
+  },
+  "drop_punct_and_le4": {
+   "lines_kept": 21126,
+   "songs_kept": 450,
+   "recall@1": 0.6086,
+   "recall@1_by_type": {
+    "exact": 1.0,
+    "half": 0.3333,
+    "word_drop": 0.5259,
+    "typo": 0.7926,
+    "concat": 0.3737
+   },
+   "negatives_lyric_score_above_0.4": 0.9333,
+   "vs_full_index": {
+    "only_a": 20,
+    "only_b": 4,
+    "p_value": 0.001543879508972168
+   }
+  },
+  "drop_punct_and_le6": {
+   "lines_kept": 19820,
+   "songs_kept": 450,
+   "recall@1": 0.6177,
+   "recall@1_by_type": {
+    "exact": 1.0,
+    "half": 0.3605,
+    "word_drop": 0.5383,
+    "typo": 0.796,
+    "concat": 0.376
+   },
+   "negatives_lyric_score_above_0.4": 0.9333,
+   "vs_full_index": {
+    "only_a": 70,
+    "only_b": 14,
+    "p_value": 4.067956402779855e-10
+   }
+  },
+  "note": "base lines of the queries have >= 8 non-space chars, so filtering never removes a query's own line; a user who remembers only a short line would lose it"
+ }
+}

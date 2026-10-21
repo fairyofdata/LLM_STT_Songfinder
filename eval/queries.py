@@ -36,6 +36,15 @@ def script_of(ch):
     return 'other'
 
 
+def script_class(text):
+    """'latin', 'kana' (Japanese without kanji) or 'kanji' (Japanese with kanji); by majority of letters."""
+    latin = sum(1 for c in text if c.isascii() and c.isalpha())
+    ja = sum(1 for c in text if '぀' <= c <= 'ヿ' or '一' <= c <= '鿿')
+    if latin > ja:
+        return 'latin'
+    return 'kanji' if any('一' <= c <= '鿿' for c in text) else 'kana'
+
+
 def nonspace_len(text):
     return len(re.sub(r'\s', '', text))
 
@@ -166,6 +175,7 @@ def generate(db, seed):
                     'song': song,
                     'src_lines': src,
                     'ambiguous': ambiguous,
+                    'script': script_class(base_text),
                     'text': text,  # in-memory only; stripped before saving
                 })
     return queries

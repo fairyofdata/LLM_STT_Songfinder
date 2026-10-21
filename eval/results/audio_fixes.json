@@ -1,0 +1,477 @@
+{
+ "ko_to_ja_fallback": {
+  "A|clean": {
+   "n": 449,
+   "app_auto": 0.47216035634743875,
+   "fallback": 0.47216035634743875,
+   "extra_stt_calls_share": 0.004454342984409799,
+   "fallback_vs_app": {
+    "only_a": 0,
+    "only_b": 0,
+    "p_value": 1.0
+   }
+  },
+  "A|phone_reverb_noise": {
+   "n": 449,
+   "app_auto": 0.42538975501113585,
+   "fallback": 0.42538975501113585,
+   "extra_stt_calls_share": 0.0022271714922048997,
+   "fallback_vs_app": {
+    "only_a": 0,
+    "only_b": 0,
+    "p_value": 1.0
+   }
+  },
+  "B|clean": {
+   "n": 449,
+   "app_auto": 0.35634743875278396,
+   "fallback": 0.4521158129175947,
+   "extra_stt_calls_share": 0.34521158129175944,
+   "fallback_vs_app": {
+    "only_a": 49,
+    "only_b": 6,
+    "p_value": 1.822834494458192e-09
+   }
+  },
+  "B|phone_reverb_noise": {
+   "n": 449,
+   "app_auto": 0.4365256124721604,
+   "fallback": 0.46770601336302897,
+   "extra_stt_calls_share": 0.08685968819599109,
+   "fallback_vs_app": {
+    "only_a": 14,
+    "only_b": 0,
+    "p_value": 0.0001220703125
+   }
+  },
+  "C|clean": {
+   "n": 449,
+   "app_auto": 0.30066815144766146,
+   "fallback": 0.30066815144766146,
+   "extra_stt_calls_share": 0.004454342984409799,
+   "fallback_vs_app": {
+    "only_a": 0,
+    "only_b": 0,
+    "p_value": 1.0
+   }
+  },
+  "C|phone_reverb_noise": {
+   "n": 449,
+   "app_auto": 0.267260579064588,
+   "fallback": 0.267260579064588,
+   "extra_stt_calls_share": 0.0,
+   "fallback_vs_app": {
+    "only_a": 0,
+    "only_b": 0,
+    "p_value": 1.0
+   }
+  },
+  "D|clean": {
+   "n": 449,
+   "app_auto": 0.1915367483296214,
+   "fallback": 0.2739420935412027,
+   "extra_stt_calls_share": 0.43207126948775054,
+   "fallback_vs_app": {
+    "only_a": 43,
+    "only_b": 6,
+    "p_value": 5.7277652842913085e-08
+   }
+  },
+  "D|phone_reverb_noise": {
+   "n": 449,
+   "app_auto": 0.24498886414253898,
+   "fallback": 0.2561247216035635,
+   "extra_stt_calls_share": 0.10022271714922049,
+   "fallback_vs_app": {
+    "only_a": 5,
+    "only_b": 0,
+    "p_value": 0.0625
+   }
+  },
+  "S|clean": {
+   "n": 449,
+   "app_auto": 0.7616926503340757,
+   "fallback": 0.7616926503340757,
+   "extra_stt_calls_share": 0.004454342984409799,
+   "fallback_vs_app": {
+    "only_a": 0,
+    "only_b": 0,
+    "p_value": 1.0
+   }
+  },
+  "S|phone_reverb_noise": {
+   "n": 449,
+   "app_auto": 0.6792873051224945,
+   "fallback": 0.6792873051224945,
+   "extra_stt_calls_share": 0.0066815144766146995,
+   "fallback_vs_app": {
+    "only_a": 0,
+    "only_b": 0,
+    "p_value": 1.0
+   }
+  }
+ },
+ "windowed_search": {
+  "A|clean|auto": {
+   "n": 449,
+   "app_whole_transcript": 0.47216035634743875,
+   "windowed_vote": 0.7260579064587973,
+   "hybrid": 0.7438752783964365,
+   "hybrid_ci": [
+    0.7038,
+    0.784
+   ],
+   "windowed_vs_app": {
+    "only_a": 163,
+    "only_b": 49,
+    "p_value": 1.6746639692232597e-15
+   },
+   "hybrid_vs_app": {
+    "only_a": 123,
+    "only_b": 1,
+    "p_value": 1.1754943508222875e-35
+   }
+  },
+  "B|clean|auto": {
+   "n": 449,
+   "app_whole_transcript": 0.35634743875278396,
+   "windowed_vote": 0.44766146993318484,
+   "hybrid": 0.5100222717149221,
+   "hybrid_ci": [
+    0.4655,
+    0.5546
+   ],
+   "windowed_vs_app": {
+    "only_a": 109,
+    "only_b": 68,
+    "p_value": 0.0025430157789314827
+   },
+   "hybrid_vs_app": {
+    "only_a": 76,
+    "only_b": 7,
+    "p_value": 9.43054794183671e-16
+   }
+  },
+  "C|clean|auto": {
+   "n": 449,
+   "app_whole_transcript": 0.30066815144766146,
+   "windowed_vote": 0.43207126948775054,
+   "hybrid": 0.41870824053452116,
+   "hybrid_ci": [
+    0.3742,
+    0.4655
+   ],
+   "windowed_vs_app": {
+    "only_a": 113,
+    "only_b": 54,
+    "p_value": 5.814051587630789e-06
+   },
+   "hybrid_vs_app": {
+    "only_a": 56,
+    "only_b": 3,
+    "p_value": 1.189326415129699e-13
+   }
+  },
+  "D|clean|auto": {
+   "n": 449,
+   "app_whole_transcript": 0.1915367483296214,
+   "windowed_vote": 0.21380846325167038,
+   "hybrid": 0.22048997772828507,
+   "hybrid_ci": [
+    0.1849,
+    0.2584
+   ],
+   "windowed_vs_app": {
+    "only_a": 51,
+    "only_b": 41,
+    "p_value": 0.3481412903192065
+   },
+   "hybrid_vs_app": {
+    "only_a": 17,
+    "only_b": 4,
+    "p_value": 0.007197380065917969
+   }
+  },
+  "S|clean|auto": {
+   "n": 449,
+   "app_whole_transcript": 0.7616926503340757,
+   "windowed_vote": 0.6659242761692651,
+   "hybrid": 0.7572383073496659,
+   "hybrid_ci": [
+    0.7194,
+    0.7951
+   ],
+   "windowed_vs_app": {
+    "only_a": 1,
+    "only_b": 44,
+    "p_value": 2.6147972675971687e-12
+   },
+   "hybrid_vs_app": {
+    "only_a": 1,
+    "only_b": 3,
+    "p_value": 0.625
+   }
+  },
+  "typed_exact": {
+   "n": 449,
+   "app_whole_text": 0.6703786191536748,
+   "windowed_vote": 0.8507795100222717,
+   "hybrid": 0.9309576837416481,
+   "windowed_vs_app": {
+    "only_a": 134,
+    "only_b": 53,
+    "p_value": 2.7964192198544406e-09
+   },
+   "hybrid_vs_app": {
+    "only_a": 118,
+    "only_b": 1,
+    "p_value": 3.6111186457260672e-34
+   }
+  },
+  "typed_blurred": {
+   "n": 449,
+   "app_whole_text": 0.47884187082405344,
+   "windowed_vote": 0.576837416481069,
+   "hybrid": 0.643652561247216,
+   "windowed_vs_app": {
+    "only_a": 126,
+    "only_b": 82,
+    "p_value": 0.0027798977824853993
+   },
+   "hybrid_vs_app": {
+    "only_a": 76,
+    "only_b": 2,
+    "p_value": 2.039496518310745e-20
+   }
+  },
+  "heldout_seed1_typed_exact": {
+   "n": 449,
+   "app_whole_text": 0.6102449888641426,
+   "hybrid": 0.9131403118040089,
+   "hybrid_vs_app": {
+    "only_a": 138,
+    "only_b": 2,
+    "p_value": 1.4164190352742676e-38
+   }
+  },
+  "heldout_seed1_typed_blurred": {
+   "n": 449,
+   "app_whole_text": 0.42316258351893093,
+   "hybrid": 0.5902004454342984,
+   "hybrid_vs_app": {
+    "only_a": 77,
+    "only_b": 2,
+    "p_value": 1.0458871665120482e-20
+   }
+  },
+  "heldout_seed2_typed_exact": {
+   "n": 449,
+   "app_whole_text": 0.6525612472160356,
+   "hybrid": 0.9465478841870824,
+   "hybrid_vs_app": {
+    "only_a": 133,
+    "only_b": 1,
+    "p_value": 1.2397791981328814e-38
+   }
+  },
+  "heldout_seed2_typed_blurred": {
+   "n": 449,
+   "app_whole_text": 0.4209354120267261,
+   "hybrid": 0.5902004454342984,
+   "hybrid_vs_app": {
+    "only_a": 79,
+    "only_b": 3,
+    "p_value": 3.803541892641332e-20
+   }
+  }
+ },
+ "both_fixes": {
+  "A|clean": {
+   "n": 449,
+   "app": 0.47216035634743875,
+   "both_fixes": 0.7438752783964365,
+   "app_ci": [
+    0.4254,
+    0.5189
+   ],
+   "both_fixes_ci": [
+    0.7038,
+    0.784
+   ],
+   "both_vs_app": {
+    "only_a": 123,
+    "only_b": 1,
+    "p_value": 1.1754943508222875e-35
+   }
+  },
+  "B|clean": {
+   "n": 449,
+   "app": 0.35634743875278396,
+   "both_fixes": 0.6926503340757239,
+   "app_ci": [
+    0.3118,
+    0.4009
+   ],
+   "both_fixes_ci": [
+    0.6503,
+    0.735
+   ],
+   "both_vs_app": {
+    "only_a": 156,
+    "only_b": 5,
+    "p_value": 5.982465784963322e-40
+   }
+  },
+  "C|clean": {
+   "n": 449,
+   "app": 0.30066815144766146,
+   "both_fixes": 0.41870824053452116,
+   "app_ci": [
+    0.2584,
+    0.343
+   ],
+   "both_fixes_ci": [
+    0.3742,
+    0.4655
+   ],
+   "both_vs_app": {
+    "only_a": 56,
+    "only_b": 3,
+    "p_value": 1.189326415129699e-13
+   }
+  },
+  "D|clean": {
+   "n": 449,
+   "app": 0.1915367483296214,
+   "both_fixes": 0.34743875278396436,
+   "app_ci": [
+    0.1581,
+    0.2294
+   ],
+   "both_fixes_ci": [
+    0.3029,
+    0.3898
+   ],
+   "both_vs_app": {
+    "only_a": 76,
+    "only_b": 6,
+    "p_value": 1.5686991122453906e-16
+   }
+  },
+  "S|clean": {
+   "n": 449,
+   "app": 0.7616926503340757,
+   "both_fixes": 0.7572383073496659,
+   "app_ci": [
+    0.7238,
+    0.7996
+   ],
+   "both_fixes_ci": [
+    0.7194,
+    0.7951
+   ],
+   "both_vs_app": {
+    "only_a": 1,
+    "only_b": 3,
+    "p_value": 0.625
+   }
+  },
+  "A|phone_reverb_noise": {
+   "n": 449,
+   "app": 0.42538975501113585,
+   "both_fixes": 0.6792873051224945,
+   "app_ci": [
+    0.3808,
+    0.4699
+   ],
+   "both_fixes_ci": [
+    0.6347,
+    0.7216
+   ],
+   "both_vs_app": {
+    "only_a": 116,
+    "only_b": 2,
+    "p_value": 4.2262125217147407e-32
+   }
+  },
+  "B|phone_reverb_noise": {
+   "n": 449,
+   "app": 0.4365256124721604,
+   "both_fixes": 0.6971046770601337,
+   "app_ci": [
+    0.392,
+    0.4833
+   ],
+   "both_fixes_ci": [
+    0.6526,
+    0.7394
+   ],
+   "both_vs_app": {
+    "only_a": 121,
+    "only_b": 4,
+    "p_value": 4.709971235072482e-31
+   }
+  },
+  "C|phone_reverb_noise": {
+   "n": 449,
+   "app": 0.267260579064588,
+   "both_fixes": 0.37193763919821826,
+   "app_ci": [
+    0.2272,
+    0.3096
+   ],
+   "both_fixes_ci": [
+    0.3296,
+    0.4165
+   ],
+   "both_vs_app": {
+    "only_a": 48,
+    "only_b": 1,
+    "p_value": 1.7763568394002505e-13
+   }
+  },
+  "D|phone_reverb_noise": {
+   "n": 449,
+   "app": 0.24498886414253898,
+   "both_fixes": 0.33184855233853006,
+   "app_ci": [
+    0.2049,
+    0.2851
+   ],
+   "both_fixes_ci": [
+    0.2895,
+    0.3764
+   ],
+   "both_vs_app": {
+    "only_a": 41,
+    "only_b": 2,
+    "p_value": 2.1532287064474076e-10
+   }
+  },
+  "S|phone_reverb_noise": {
+   "n": 449,
+   "app": 0.6792873051224945,
+   "both_fixes": 0.6726057906458798,
+   "app_ci": [
+    0.637,
+    0.7238
+   ],
+   "both_fixes_ci": [
+    0.6303,
+    0.7149
+   ],
+   "both_vs_app": {
+    "only_a": 1,
+    "only_b": 4,
+    "p_value": 0.375
+   }
+  }
+ },
+ "design": {
+  "window_chars": 14,
+  "stride_chars": 7,
+  "vote": "sum of top-1 lyric-line cosine per song across windows",
+  "hybrid": "plus the whole-text top-1 cosine x sqrt(n windows); weight picked on these data",
+  "note": "estimates from existing transcripts; app.py unchanged"
+ }
+}

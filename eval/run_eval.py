@@ -16,6 +16,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common import RANK_DEPTH, TEXT_THRESHOLD, MODEL_NAME, SongDB, normalize  # noqa: E402
 from negatives import NEGATIVES  # noqa: E402
+from stats import cluster_bootstrap_ci  # noqa: E402
 import queries as Q  # noqa: E402
 
 RESULTS_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'results')
@@ -28,7 +29,7 @@ def record(q, hit, db):
     rank = ranking.index(q['song']) + 1 if q['song'] in ranking else None
     return {
         'id': q['id'], 'type': q['type'], 'song': q['song'], 'src_lines': q['src_lines'],
-        'ambiguous': q['ambiguous'], 'rank': rank,
+        'ambiguous': q['ambiguous'], 'script': q['script'], 'rank': rank,
         'lyric_score': round(hit['lyric_score'], 6), 'lyric_line_idx': hit['lyric_line_idx'],
         'summary_score': round(hit['summary_score'], 6), 'summary_idx': hit['summary_idx'],
         'audio_path_pred': db.identify_audio(hit),
@@ -217,6 +218,23 @@ def main():
         'negatives_summary_score': quantiles([r['summary_score'] for r in neg]),
     }
 
+    def hit_at(k):
+        return lambda r: 1.0 if r['rank'] is not None and r['rank'] <= k else 0.0
+
+    bootstrap = {}
+    for t in Q.QUERY_TYPES + ['pooled']:
+        rs = [r for r in pos if t == 'pooled' or r['type'] == t]
+        bootstrap[t] = {f'recall@{k}': cluster_bootstrap_ci(rs, hit_at(k)) for k in (1, 5, 10)}
+    by_script = {}
+    for sc in ('kana', 'kanji', 'latin'):
+        by_script[sc] = {}
+        for t in Q.QUERY_TYPES + ['pooled']:
+            rs = [r for r in pos if r['script'] == sc and (t == 'pooled' or r['type'] == t)]
+            by_script[sc][t] = {'n_all_seeds': len(rs),
+                                'recall@1': sum(map(hit_at(1), rs)) / len(rs) if rs else None,
+                                'recall@1_ci': cluster_bootstrap_ci(rs, hit_at(1)),
+                                'recall@10': sum(map(hit_at(10), rs)) / len(rs) if rs else None}
+
     sweep = []
     for t in THRESHOLDS:
         entry = {'threshold': t, 'negative_false_accept_rate': false_accept(neg, t)}
@@ -243,6 +261,8 @@ def main():
                 'concat': 'second half of a line + first half of the adjacent line in the same song',
             },
             'ambiguous': 'a source line, or the query itself, matches (normalized) a line of another song',
+            'uncertainty': 'mean +- SD over seeds (line sampling); bootstrap_ci: 95% CI resampling songs (2000x) over all seeds pooled',
+            'script': 'base line letters: latin majority, else Japanese with kanji (kanji) or without (kana)',
             'ranking': f'top-{RANK_DEPTH} lyric-line hits grouped by song, first occurrence order; MRR counts songs beyond that as 0',
             'text_path': 'app.py search_pipeline_from_text: summary top-1 vs lyric top-1, accept if either > threshold',
             'text_path_variants': {
@@ -253,6 +273,8 @@ def main():
         },
         'queries_per_seed': {str(s): len(raw_by_seed[s]) for s in args.seeds},
         'metrics': aggregate(per_seed),
+        'bootstrap_ci_unambiguous_all_seeds': bootstrap,
+        'by_script_unambiguous_all_seeds': by_script,
         'negatives': negatives_summary,
         'summary_probe': probe_summary,
         'score_quantiles': score_quantiles,

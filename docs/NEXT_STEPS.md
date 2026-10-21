@@ -4,7 +4,9 @@
 
 ## 현재 상태
 
-- **Songfinder:** 평가 코드, 결과, README 평가 절, 포트폴리오 초안, 기록 문서를 모두 **로컬 커밋**했습니다. push는 하지 않았습니다.
+- **Songfinder:** 평가 코드, 결과, README, 포트폴리오 초안, 기록 문서를 모두 커밋했습니다.
+  - **GitHub에 push 완료** (2026-10-22, `origin/master`).
+  - **Hugging Face Space에는 아직 반영 전**입니다(아래 「사용자가 할 일」).
 - **LocalTTS** (`C:\Users\fairy\LocalTTS`): 별도 git 저장소이고 원격이 없습니다. 로컬 커밋만 했습니다.
 - **앱 코드** (`app.py`, `frontend/`)와 데이터 파일: 수정하지 않았습니다.
 - **OpenAI API 사용:** 약 $0.50(`whisper-1` 음성 시험 1회)이 전부입니다.
@@ -14,7 +16,6 @@
 
 | 항목 | 근거 | 선택지 |
 |---|---|---|
-| push | 커밋 `f460410`, `c601fbf`, `411dfeb`와 이후 기록 커밋 | 검토 후 push |
 | 요약 분기 버그 (`search_pipeline_from_text`) | [ADR-0004](adr/0004-report-bug-without-fixing.md), 탐침 0.2% vs 100% | 한 줄 수정 / 그대로 |
 | 텍스트 판정선 0.4 | DB에 없는 문장의 93%를 통과시킴, 0.8이면 7.8% | 올림 / 대조군을 늘려 다시 정함 |
 | 음성: 한국어 감지 시 일본어 재전사 | 한국인 발음 35.6 → 45.2%, 원어민 변화 없음 | 적용 / 보류 |
@@ -24,6 +25,16 @@
 | 기존 README의 콧노래·흥얼거림 문구 | 앱은 가사를 받아 적어 검색하므로 성립하지 않는 주장 | 2026-10-22 「가사를 말하거나 입력」으로 정정함. 되돌릴지만 결정 |
 | `whisper-1` 교차 확인 | 로컬 Whisper와 앱 STT의 차이 확인. 일부 표본으로 약 $0.7 | 실행 / 생략 |
 | 공개 레포의 가사 메타데이터 | 이번 작업 범위 밖 (사용자가 따로 처리하기로 함) | — |
+
+## 사용자가 할 일: Hugging Face Space 반영
+
+Space(`fairyofdata/JPOP_STT_Module`)는 이 레포의 사본입니다. Space의 커밋(`df8e601`)이 현재 `master`의 조상이라, 기존 기록 위에 그대로 이어 붙는 push가 됩니다. 이번 변경은 `eval/`, `docs/`, README뿐이고 `app.py`와 Space 설정은 같으므로, 다시 빌드돼도 앱 동작은 같습니다.
+
+자동 실행 권한에서 막혀 아래 명령은 직접 실행해야 합니다. Hugging Face 로그인(쓰기 토큰)이 필요합니다.
+
+```bash
+git push https://huggingface.co/spaces/fairyofdata/JPOP_STT_Module master:main
+```
 
 ## 사용자가 할 일: 사람 검수
 

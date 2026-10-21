@@ -394,7 +394,7 @@ def main():
         'rows': rows,
     }
     with open(RESULT, 'w', encoding='utf-8') as f:
-        json.dump(out, f, ensure_ascii=False, indent=1)
+        json.dump(out, f, ensure_ascii=False, separators=(',', ':'))  # per-clip rows: keep compact
     for k, v in summary['cells'].items():
         print(f"{k}: acc {v['accuracy']:.3f} {v['accuracy_ci']} typed {v['typed_accuracy']:.3f} "
               f"hangul {v['transcript_mostly_hangul']:.2f} n={v['n']}")

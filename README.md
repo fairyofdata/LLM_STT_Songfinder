@@ -38,6 +38,8 @@ URFIT은 "음성인식 기반 AI 플레이리스트 생성 커뮤니티"로, 머
 
 ![Recall by query type](./eval/results/recall_by_query_type.png)
 
+자세한 기록: [연구개발 기록](docs/RESEARCH_LOG.md) · [결정 기록(ADR)](docs/adr/README.md) · [이어서 할 일](docs/NEXT_STEPS.md) · [포트폴리오용 요약](docs/PORTFOLIO.md)
+
 ### 방법
 - **정답 단위는 곡**(`original_song_index`)입니다. 가사 줄 FAISS 검색 결과(top-2048줄)를 곡으로 묶어 중복을 없앤 순위로 Recall@1/5/10과 MRR을 셉니다.
 - **질의 생성**: 가사 줄이 있는 450곡마다 공백 제외 8자 이상인 줄을 2개씩 무작위로 뽑고(전체 줄의 81.6%가 해당), 줄마다 아래 다섯 유형을 만듭니다. 시드당 4,488개, 시드 5개(0~4)이므로 질의는 모두 22,440개입니다.

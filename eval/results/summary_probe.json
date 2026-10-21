@@ -1,0 +1,6474 @@
+{
+ "metrics": {
+  "full": {
+   "n": 461,
+   "summary_win_share": 1.0,
+   "accuracy_current": 0.0021691973969631237,
+   "accuracy_fixed": 1.0,
+   "distinct_songs_returned_current": 7
+  },
+  "half": {
+   "n": 461,
+   "summary_win_share": 0.7570498915401301,
+   "accuracy_current": 0.010845986984815618,
+   "accuracy_fixed": 0.37093275488069416,
+   "distinct_songs_returned_current": 66
+  }
+ },
+ "queries": [
+  {
+   "id": "sum-song0-full",
+   "song": 0,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 0
+  },
+  {
+   "id": "sum-song0-half",
+   "song": 0,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 263
+  },
+  {
+   "id": "sum-song1-full",
+   "song": 1,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 1
+  },
+  {
+   "id": "sum-song1-half",
+   "song": 1,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 1
+  },
+  {
+   "id": "sum-song2-full",
+   "song": 2,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 2
+  },
+  {
+   "id": "sum-song2-half",
+   "song": 2,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 113
+  },
+  {
+   "id": "sum-song3-full",
+   "song": 3,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 3
+  },
+  {
+   "id": "sum-song3-half",
+   "song": 3,
+   "summary_wins": false,
+   "text_path_pred_current": 241,
+   "text_path_pred_fixed": 241
+  },
+  {
+   "id": "sum-song4-full",
+   "song": 4,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 4
+  },
+  {
+   "id": "sum-song4-half",
+   "song": 4,
+   "summary_wins": false,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 4
+  },
+  {
+   "id": "sum-song5-full",
+   "song": 5,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 5
+  },
+  {
+   "id": "sum-song5-half",
+   "song": 5,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 238
+  },
+  {
+   "id": "sum-song6-full",
+   "song": 6,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 6
+  },
+  {
+   "id": "sum-song6-half",
+   "song": 6,
+   "summary_wins": false,
+   "text_path_pred_current": 184,
+   "text_path_pred_fixed": 184
+  },
+  {
+   "id": "sum-song7-full",
+   "song": 7,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 7
+  },
+  {
+   "id": "sum-song7-half",
+   "song": 7,
+   "summary_wins": false,
+   "text_path_pred_current": 434,
+   "text_path_pred_fixed": 434
+  },
+  {
+   "id": "sum-song8-full",
+   "song": 8,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 8
+  },
+  {
+   "id": "sum-song8-half",
+   "song": 8,
+   "summary_wins": false,
+   "text_path_pred_current": 49,
+   "text_path_pred_fixed": 49
+  },
+  {
+   "id": "sum-song9-full",
+   "song": 9,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 9
+  },
+  {
+   "id": "sum-song9-half",
+   "song": 9,
+   "summary_wins": false,
+   "text_path_pred_current": 184,
+   "text_path_pred_fixed": 184
+  },
+  {
+   "id": "sum-song10-full",
+   "song": 10,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 10
+  },
+  {
+   "id": "sum-song10-half",
+   "song": 10,
+   "summary_wins": false,
+   "text_path_pred_current": 421,
+   "text_path_pred_fixed": 421
+  },
+  {
+   "id": "sum-song11-full",
+   "song": 11,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 11
+  },
+  {
+   "id": "sum-song11-half",
+   "song": 11,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 410
+  },
+  {
+   "id": "sum-song12-full",
+   "song": 12,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 12
+  },
+  {
+   "id": "sum-song12-half",
+   "song": 12,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 385
+  },
+  {
+   "id": "sum-song13-full",
+   "song": 13,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 13
+  },
+  {
+   "id": "sum-song13-half",
+   "song": 13,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 262
+  },
+  {
+   "id": "sum-song14-full",
+   "song": 14,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 14
+  },
+  {
+   "id": "sum-song14-half",
+   "song": 14,
+   "summary_wins": false,
+   "text_path_pred_current": 336,
+   "text_path_pred_fixed": 336
+  },
+  {
+   "id": "sum-song15-full",
+   "song": 15,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 15
+  },
+  {
+   "id": "sum-song15-half",
+   "song": 15,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 410
+  },
+  {
+   "id": "sum-song16-full",
+   "song": 16,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 16
+  },
+  {
+   "id": "sum-song16-half",
+   "song": 16,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 178
+  },
+  {
+   "id": "sum-song17-full",
+   "song": 17,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 17
+  },
+  {
+   "id": "sum-song17-half",
+   "song": 17,
+   "summary_wins": false,
+   "text_path_pred_current": 128,
+   "text_path_pred_fixed": 128
+  },
+  {
+   "id": "sum-song18-full",
+   "song": 18,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 18
+  },
+  {
+   "id": "sum-song18-half",
+   "song": 18,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 18
+  },
+  {
+   "id": "sum-song19-full",
+   "song": 19,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 19
+  },
+  {
+   "id": "sum-song19-half",
+   "song": 19,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 19
+  },
+  {
+   "id": "sum-song20-full",
+   "song": 20,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 20
+  },
+  {
+   "id": "sum-song20-half",
+   "song": 20,
+   "summary_wins": false,
+   "text_path_pred_current": 213,
+   "text_path_pred_fixed": 213
+  },
+  {
+   "id": "sum-song21-full",
+   "song": 21,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 21
+  },
+  {
+   "id": "sum-song21-half",
+   "song": 21,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 21
+  },
+  {
+   "id": "sum-song22-full",
+   "song": 22,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 22
+  },
+  {
+   "id": "sum-song22-half",
+   "song": 22,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 369
+  },
+  {
+   "id": "sum-song23-full",
+   "song": 23,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 23
+  },
+  {
+   "id": "sum-song23-half",
+   "song": 23,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 23
+  },
+  {
+   "id": "sum-song24-full",
+   "song": 24,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 24
+  },
+  {
+   "id": "sum-song24-half",
+   "song": 24,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 335
+  },
+  {
+   "id": "sum-song25-full",
+   "song": 25,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 25
+  },
+  {
+   "id": "sum-song25-half",
+   "song": 25,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 410
+  },
+  {
+   "id": "sum-song26-full",
+   "song": 26,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 26
+  },
+  {
+   "id": "sum-song26-half",
+   "song": 26,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 26
+  },
+  {
+   "id": "sum-song27-full",
+   "song": 27,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 27
+  },
+  {
+   "id": "sum-song27-half",
+   "song": 27,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 383
+  },
+  {
+   "id": "sum-song28-full",
+   "song": 28,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 28
+  },
+  {
+   "id": "sum-song28-half",
+   "song": 28,
+   "summary_wins": false,
+   "text_path_pred_current": 130,
+   "text_path_pred_fixed": 130
+  },
+  {
+   "id": "sum-song29-full",
+   "song": 29,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 29
+  },
+  {
+   "id": "sum-song29-half",
+   "song": 29,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 119
+  },
+  {
+   "id": "sum-song30-full",
+   "song": 30,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 30
+  },
+  {
+   "id": "sum-song30-half",
+   "song": 30,
+   "summary_wins": false,
+   "text_path_pred_current": 275,
+   "text_path_pred_fixed": 275
+  },
+  {
+   "id": "sum-song31-full",
+   "song": 31,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 31
+  },
+  {
+   "id": "sum-song31-half",
+   "song": 31,
+   "summary_wins": false,
+   "text_path_pred_current": 234,
+   "text_path_pred_fixed": 234
+  },
+  {
+   "id": "sum-song32-full",
+   "song": 32,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 32
+  },
+  {
+   "id": "sum-song32-half",
+   "song": 32,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 32
+  },
+  {
+   "id": "sum-song33-full",
+   "song": 33,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 33
+  },
+  {
+   "id": "sum-song33-half",
+   "song": 33,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 193
+  },
+  {
+   "id": "sum-song34-full",
+   "song": 34,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 34
+  },
+  {
+   "id": "sum-song34-half",
+   "song": 34,
+   "summary_wins": false,
+   "text_path_pred_current": 284,
+   "text_path_pred_fixed": 284
+  },
+  {
+   "id": "sum-song35-full",
+   "song": 35,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 35
+  },
+  {
+   "id": "sum-song35-half",
+   "song": 35,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 263
+  },
+  {
+   "id": "sum-song36-full",
+   "song": 36,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 36
+  },
+  {
+   "id": "sum-song36-half",
+   "song": 36,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 36
+  },
+  {
+   "id": "sum-song37-full",
+   "song": 37,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 37
+  },
+  {
+   "id": "sum-song37-half",
+   "song": 37,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 37
+  },
+  {
+   "id": "sum-song38-full",
+   "song": 38,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 38
+  },
+  {
+   "id": "sum-song38-half",
+   "song": 38,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 38
+  },
+  {
+   "id": "sum-song39-full",
+   "song": 39,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 39
+  },
+  {
+   "id": "sum-song39-half",
+   "song": 39,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 387
+  },
+  {
+   "id": "sum-song40-full",
+   "song": 40,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 40
+  },
+  {
+   "id": "sum-song40-half",
+   "song": 40,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 40
+  },
+  {
+   "id": "sum-song41-full",
+   "song": 41,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 41
+  },
+  {
+   "id": "sum-song41-half",
+   "song": 41,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 410
+  },
+  {
+   "id": "sum-song42-full",
+   "song": 42,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 42
+  },
+  {
+   "id": "sum-song42-half",
+   "song": 42,
+   "summary_wins": false,
+   "text_path_pred_current": 267,
+   "text_path_pred_fixed": 267
+  },
+  {
+   "id": "sum-song43-full",
+   "song": 43,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 43
+  },
+  {
+   "id": "sum-song43-half",
+   "song": 43,
+   "summary_wins": false,
+   "text_path_pred_current": 318,
+   "text_path_pred_fixed": 318
+  },
+  {
+   "id": "sum-song44-full",
+   "song": 44,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 44
+  },
+  {
+   "id": "sum-song44-half",
+   "song": 44,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 104
+  },
+  {
+   "id": "sum-song45-full",
+   "song": 45,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 45
+  },
+  {
+   "id": "sum-song45-half",
+   "song": 45,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 250
+  },
+  {
+   "id": "sum-song46-full",
+   "song": 46,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 46
+  },
+  {
+   "id": "sum-song46-half",
+   "song": 46,
+   "summary_wins": false,
+   "text_path_pred_current": 168,
+   "text_path_pred_fixed": 168
+  },
+  {
+   "id": "sum-song47-full",
+   "song": 47,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 47
+  },
+  {
+   "id": "sum-song47-half",
+   "song": 47,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 444
+  },
+  {
+   "id": "sum-song48-full",
+   "song": 48,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 48
+  },
+  {
+   "id": "sum-song48-half",
+   "song": 48,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 262
+  },
+  {
+   "id": "sum-song49-full",
+   "song": 49,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 49
+  },
+  {
+   "id": "sum-song49-half",
+   "song": 49,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 353
+  },
+  {
+   "id": "sum-song50-full",
+   "song": 50,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 50
+  },
+  {
+   "id": "sum-song50-half",
+   "song": 50,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 410
+  },
+  {
+   "id": "sum-song51-full",
+   "song": 51,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 51
+  },
+  {
+   "id": "sum-song51-half",
+   "song": 51,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 113
+  },
+  {
+   "id": "sum-song52-full",
+   "song": 52,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 52
+  },
+  {
+   "id": "sum-song52-half",
+   "song": 52,
+   "summary_wins": false,
+   "text_path_pred_current": 234,
+   "text_path_pred_fixed": 234
+  },
+  {
+   "id": "sum-song53-full",
+   "song": 53,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 53
+  },
+  {
+   "id": "sum-song53-half",
+   "song": 53,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 53
+  },
+  {
+   "id": "sum-song54-full",
+   "song": 54,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 54
+  },
+  {
+   "id": "sum-song54-half",
+   "song": 54,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 54
+  },
+  {
+   "id": "sum-song55-full",
+   "song": 55,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 55
+  },
+  {
+   "id": "sum-song55-half",
+   "song": 55,
+   "summary_wins": false,
+   "text_path_pred_current": 312,
+   "text_path_pred_fixed": 312
+  },
+  {
+   "id": "sum-song56-full",
+   "song": 56,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 56
+  },
+  {
+   "id": "sum-song56-half",
+   "song": 56,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 410
+  },
+  {
+   "id": "sum-song57-full",
+   "song": 57,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 57
+  },
+  {
+   "id": "sum-song57-half",
+   "song": 57,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 57
+  },
+  {
+   "id": "sum-song58-full",
+   "song": 58,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 58
+  },
+  {
+   "id": "sum-song58-half",
+   "song": 58,
+   "summary_wins": false,
+   "text_path_pred_current": 119,
+   "text_path_pred_fixed": 119
+  },
+  {
+   "id": "sum-song59-full",
+   "song": 59,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 59
+  },
+  {
+   "id": "sum-song59-half",
+   "song": 59,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 59
+  },
+  {
+   "id": "sum-song60-full",
+   "song": 60,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 60
+  },
+  {
+   "id": "sum-song60-half",
+   "song": 60,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 421
+  },
+  {
+   "id": "sum-song61-full",
+   "song": 61,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 61
+  },
+  {
+   "id": "sum-song61-half",
+   "song": 61,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 383
+  },
+  {
+   "id": "sum-song62-full",
+   "song": 62,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 62
+  },
+  {
+   "id": "sum-song62-half",
+   "song": 62,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 62
+  },
+  {
+   "id": "sum-song63-full",
+   "song": 63,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 63
+  },
+  {
+   "id": "sum-song63-half",
+   "song": 63,
+   "summary_wins": false,
+   "text_path_pred_current": 234,
+   "text_path_pred_fixed": 234
+  },
+  {
+   "id": "sum-song64-full",
+   "song": 64,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 64
+  },
+  {
+   "id": "sum-song64-half",
+   "song": 64,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 64
+  },
+  {
+   "id": "sum-song65-full",
+   "song": 65,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 65
+  },
+  {
+   "id": "sum-song65-half",
+   "song": 65,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 113
+  },
+  {
+   "id": "sum-song66-full",
+   "song": 66,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 66
+  },
+  {
+   "id": "sum-song66-half",
+   "song": 66,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 66
+  },
+  {
+   "id": "sum-song67-full",
+   "song": 67,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 67
+  },
+  {
+   "id": "sum-song67-half",
+   "song": 67,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 335
+  },
+  {
+   "id": "sum-song68-full",
+   "song": 68,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 68
+  },
+  {
+   "id": "sum-song68-half",
+   "song": 68,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 113
+  },
+  {
+   "id": "sum-song69-full",
+   "song": 69,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 69
+  },
+  {
+   "id": "sum-song69-half",
+   "song": 69,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 153
+  },
+  {
+   "id": "sum-song70-full",
+   "song": 70,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 70
+  },
+  {
+   "id": "sum-song70-half",
+   "song": 70,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 38
+  },
+  {
+   "id": "sum-song71-full",
+   "song": 71,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 71
+  },
+  {
+   "id": "sum-song71-half",
+   "song": 71,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 371
+  },
+  {
+   "id": "sum-song72-full",
+   "song": 72,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 72
+  },
+  {
+   "id": "sum-song72-half",
+   "song": 72,
+   "summary_wins": false,
+   "text_path_pred_current": 350,
+   "text_path_pred_fixed": 350
+  },
+  {
+   "id": "sum-song73-full",
+   "song": 73,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 73
+  },
+  {
+   "id": "sum-song73-half",
+   "song": 73,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 73
+  },
+  {
+   "id": "sum-song74-full",
+   "song": 74,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 74
+  },
+  {
+   "id": "sum-song74-half",
+   "song": 74,
+   "summary_wins": false,
+   "text_path_pred_current": 125,
+   "text_path_pred_fixed": 125
+  },
+  {
+   "id": "sum-song75-full",
+   "song": 75,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 75
+  },
+  {
+   "id": "sum-song75-half",
+   "song": 75,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 38
+  },
+  {
+   "id": "sum-song76-full",
+   "song": 76,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 76
+  },
+  {
+   "id": "sum-song76-half",
+   "song": 76,
+   "summary_wins": false,
+   "text_path_pred_current": 160,
+   "text_path_pred_fixed": 160
+  },
+  {
+   "id": "sum-song77-full",
+   "song": 77,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 77
+  },
+  {
+   "id": "sum-song77-half",
+   "song": 77,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 410
+  },
+  {
+   "id": "sum-song78-full",
+   "song": 78,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 78
+  },
+  {
+   "id": "sum-song78-half",
+   "song": 78,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 250
+  },
+  {
+   "id": "sum-song79-full",
+   "song": 79,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 79
+  },
+  {
+   "id": "sum-song79-half",
+   "song": 79,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 308
+  },
+  {
+   "id": "sum-song80-full",
+   "song": 80,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 80
+  },
+  {
+   "id": "sum-song80-half",
+   "song": 80,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 393
+  },
+  {
+   "id": "sum-song81-full",
+   "song": 81,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 81
+  },
+  {
+   "id": "sum-song81-half",
+   "song": 81,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 81
+  },
+  {
+   "id": "sum-song82-full",
+   "song": 82,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 82
+  },
+  {
+   "id": "sum-song82-half",
+   "song": 82,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 262
+  },
+  {
+   "id": "sum-song83-full",
+   "song": 83,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 83
+  },
+  {
+   "id": "sum-song83-half",
+   "song": 83,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 83
+  },
+  {
+   "id": "sum-song84-full",
+   "song": 84,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 84
+  },
+  {
+   "id": "sum-song84-half",
+   "song": 84,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 410
+  },
+  {
+   "id": "sum-song85-full",
+   "song": 85,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 85
+  },
+  {
+   "id": "sum-song85-half",
+   "song": 85,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 85
+  },
+  {
+   "id": "sum-song86-full",
+   "song": 86,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 86
+  },
+  {
+   "id": "sum-song86-half",
+   "song": 86,
+   "summary_wins": false,
+   "text_path_pred_current": 443,
+   "text_path_pred_fixed": 443
+  },
+  {
+   "id": "sum-song87-full",
+   "song": 87,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 87
+  },
+  {
+   "id": "sum-song87-half",
+   "song": 87,
+   "summary_wins": false,
+   "text_path_pred_current": 88,
+   "text_path_pred_fixed": 88
+  },
+  {
+   "id": "sum-song88-full",
+   "song": 88,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 88
+  },
+  {
+   "id": "sum-song88-half",
+   "song": 88,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 410
+  },
+  {
+   "id": "sum-song89-full",
+   "song": 89,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 89
+  },
+  {
+   "id": "sum-song89-half",
+   "song": 89,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 410
+  },
+  {
+   "id": "sum-song90-full",
+   "song": 90,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 90
+  },
+  {
+   "id": "sum-song90-half",
+   "song": 90,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 90
+  },
+  {
+   "id": "sum-song91-full",
+   "song": 91,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 91
+  },
+  {
+   "id": "sum-song91-half",
+   "song": 91,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 91
+  },
+  {
+   "id": "sum-song92-full",
+   "song": 92,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 92
+  },
+  {
+   "id": "sum-song92-half",
+   "song": 92,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 383
+  },
+  {
+   "id": "sum-song93-full",
+   "song": 93,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 93
+  },
+  {
+   "id": "sum-song93-half",
+   "song": 93,
+   "summary_wins": false,
+   "text_path_pred_current": 302,
+   "text_path_pred_fixed": 302
+  },
+  {
+   "id": "sum-song94-full",
+   "song": 94,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 94
+  },
+  {
+   "id": "sum-song94-half",
+   "song": 94,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 94
+  },
+  {
+   "id": "sum-song95-full",
+   "song": 95,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 95
+  },
+  {
+   "id": "sum-song95-half",
+   "song": 95,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 243
+  },
+  {
+   "id": "sum-song96-full",
+   "song": 96,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 96
+  },
+  {
+   "id": "sum-song96-half",
+   "song": 96,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 410
+  },
+  {
+   "id": "sum-song97-full",
+   "song": 97,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 97
+  },
+  {
+   "id": "sum-song97-half",
+   "song": 97,
+   "summary_wins": false,
+   "text_path_pred_current": 36,
+   "text_path_pred_fixed": 36
+  },
+  {
+   "id": "sum-song98-full",
+   "song": 98,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 98
+  },
+  {
+   "id": "sum-song98-half",
+   "song": 98,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 98
+  },
+  {
+   "id": "sum-song99-full",
+   "song": 99,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 99
+  },
+  {
+   "id": "sum-song99-half",
+   "song": 99,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 410
+  },
+  {
+   "id": "sum-song100-full",
+   "song": 100,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 100
+  },
+  {
+   "id": "sum-song100-half",
+   "song": 100,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 100
+  },
+  {
+   "id": "sum-song101-full",
+   "song": 101,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 101
+  },
+  {
+   "id": "sum-song101-half",
+   "song": 101,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 101
+  },
+  {
+   "id": "sum-song102-full",
+   "song": 102,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 102
+  },
+  {
+   "id": "sum-song102-half",
+   "song": 102,
+   "summary_wins": false,
+   "text_path_pred_current": 386,
+   "text_path_pred_fixed": 386
+  },
+  {
+   "id": "sum-song103-full",
+   "song": 103,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 103
+  },
+  {
+   "id": "sum-song103-half",
+   "song": 103,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 103
+  },
+  {
+   "id": "sum-song104-full",
+   "song": 104,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 104
+  },
+  {
+   "id": "sum-song104-half",
+   "song": 104,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 104
+  },
+  {
+   "id": "sum-song105-full",
+   "song": 105,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 105
+  },
+  {
+   "id": "sum-song105-half",
+   "song": 105,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 219
+  },
+  {
+   "id": "sum-song106-full",
+   "song": 106,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 106
+  },
+  {
+   "id": "sum-song106-half",
+   "song": 106,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 145
+  },
+  {
+   "id": "sum-song107-full",
+   "song": 107,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 107
+  },
+  {
+   "id": "sum-song107-half",
+   "song": 107,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 107
+  },
+  {
+   "id": "sum-song108-full",
+   "song": 108,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 108
+  },
+  {
+   "id": "sum-song108-half",
+   "song": 108,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 383
+  },
+  {
+   "id": "sum-song109-full",
+   "song": 109,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 109
+  },
+  {
+   "id": "sum-song109-half",
+   "song": 109,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 109
+  },
+  {
+   "id": "sum-song110-full",
+   "song": 110,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 110
+  },
+  {
+   "id": "sum-song110-half",
+   "song": 110,
+   "summary_wins": false,
+   "text_path_pred_current": 151,
+   "text_path_pred_fixed": 151
+  },
+  {
+   "id": "sum-song111-full",
+   "song": 111,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 111
+  },
+  {
+   "id": "sum-song111-half",
+   "song": 111,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 118
+  },
+  {
+   "id": "sum-song112-full",
+   "song": 112,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 112
+  },
+  {
+   "id": "sum-song112-half",
+   "song": 112,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 112
+  },
+  {
+   "id": "sum-song113-full",
+   "song": 113,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 113
+  },
+  {
+   "id": "sum-song113-half",
+   "song": 113,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 410
+  },
+  {
+   "id": "sum-song114-full",
+   "song": 114,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 114
+  },
+  {
+   "id": "sum-song114-half",
+   "song": 114,
+   "summary_wins": false,
+   "text_path_pred_current": 416,
+   "text_path_pred_fixed": 416
+  },
+  {
+   "id": "sum-song115-full",
+   "song": 115,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 115
+  },
+  {
+   "id": "sum-song115-half",
+   "song": 115,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 193
+  },
+  {
+   "id": "sum-song116-full",
+   "song": 116,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 116
+  },
+  {
+   "id": "sum-song116-half",
+   "song": 116,
+   "summary_wins": false,
+   "text_path_pred_current": 52,
+   "text_path_pred_fixed": 52
+  },
+  {
+   "id": "sum-song117-full",
+   "song": 117,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 117
+  },
+  {
+   "id": "sum-song117-half",
+   "song": 117,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 117
+  },
+  {
+   "id": "sum-song118-full",
+   "song": 118,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 118
+  },
+  {
+   "id": "sum-song118-half",
+   "song": 118,
+   "summary_wins": false,
+   "text_path_pred_current": 119,
+   "text_path_pred_fixed": 119
+  },
+  {
+   "id": "sum-song119-full",
+   "song": 119,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 119
+  },
+  {
+   "id": "sum-song119-half",
+   "song": 119,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 302
+  },
+  {
+   "id": "sum-song120-full",
+   "song": 120,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 120
+  },
+  {
+   "id": "sum-song120-half",
+   "song": 120,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 459
+  },
+  {
+   "id": "sum-song121-full",
+   "song": 121,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 121
+  },
+  {
+   "id": "sum-song121-half",
+   "song": 121,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 121
+  },
+  {
+   "id": "sum-song122-full",
+   "song": 122,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 122
+  },
+  {
+   "id": "sum-song122-half",
+   "song": 122,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 459
+  },
+  {
+   "id": "sum-song123-full",
+   "song": 123,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 123
+  },
+  {
+   "id": "sum-song123-half",
+   "song": 123,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 123
+  },
+  {
+   "id": "sum-song124-full",
+   "song": 124,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 124
+  },
+  {
+   "id": "sum-song124-half",
+   "song": 124,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 145
+  },
+  {
+   "id": "sum-song125-full",
+   "song": 125,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 125
+  },
+  {
+   "id": "sum-song125-half",
+   "song": 125,
+   "summary_wins": false,
+   "text_path_pred_current": 275,
+   "text_path_pred_fixed": 275
+  },
+  {
+   "id": "sum-song126-full",
+   "song": 126,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 126
+  },
+  {
+   "id": "sum-song126-half",
+   "song": 126,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 126
+  },
+  {
+   "id": "sum-song127-full",
+   "song": 127,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 127
+  },
+  {
+   "id": "sum-song127-half",
+   "song": 127,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 410
+  },
+  {
+   "id": "sum-song128-full",
+   "song": 128,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 128
+  },
+  {
+   "id": "sum-song128-half",
+   "song": 128,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 128
+  },
+  {
+   "id": "sum-song129-full",
+   "song": 129,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 129
+  },
+  {
+   "id": "sum-song129-half",
+   "song": 129,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 129
+  },
+  {
+   "id": "sum-song130-full",
+   "song": 130,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 130
+  },
+  {
+   "id": "sum-song130-half",
+   "song": 130,
+   "summary_wins": false,
+   "text_path_pred_current": 88,
+   "text_path_pred_fixed": 88
+  },
+  {
+   "id": "sum-song131-full",
+   "song": 131,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 131
+  },
+  {
+   "id": "sum-song131-half",
+   "song": 131,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 410
+  },
+  {
+   "id": "sum-song132-full",
+   "song": 132,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 132
+  },
+  {
+   "id": "sum-song132-half",
+   "song": 132,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 410
+  },
+  {
+   "id": "sum-song133-full",
+   "song": 133,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 133
+  },
+  {
+   "id": "sum-song133-half",
+   "song": 133,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 245
+  },
+  {
+   "id": "sum-song134-full",
+   "song": 134,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 134
+  },
+  {
+   "id": "sum-song134-half",
+   "song": 134,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 134
+  },
+  {
+   "id": "sum-song135-full",
+   "song": 135,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 135
+  },
+  {
+   "id": "sum-song135-half",
+   "song": 135,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 135
+  },
+  {
+   "id": "sum-song136-full",
+   "song": 136,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 136
+  },
+  {
+   "id": "sum-song136-half",
+   "song": 136,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 136
+  },
+  {
+   "id": "sum-song137-full",
+   "song": 137,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 137
+  },
+  {
+   "id": "sum-song137-half",
+   "song": 137,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 425
+  },
+  {
+   "id": "sum-song138-full",
+   "song": 138,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 138
+  },
+  {
+   "id": "sum-song138-half",
+   "song": 138,
+   "summary_wins": false,
+   "text_path_pred_current": 357,
+   "text_path_pred_fixed": 357
+  },
+  {
+   "id": "sum-song139-full",
+   "song": 139,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 139
+  },
+  {
+   "id": "sum-song139-half",
+   "song": 139,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 139
+  },
+  {
+   "id": "sum-song140-full",
+   "song": 140,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 140
+  },
+  {
+   "id": "sum-song140-half",
+   "song": 140,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 140
+  },
+  {
+   "id": "sum-song141-full",
+   "song": 141,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 141
+  },
+  {
+   "id": "sum-song141-half",
+   "song": 141,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 410
+  },
+  {
+   "id": "sum-song142-full",
+   "song": 142,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 142
+  },
+  {
+   "id": "sum-song142-half",
+   "song": 142,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 444
+  },
+  {
+   "id": "sum-song143-full",
+   "song": 143,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 143
+  },
+  {
+   "id": "sum-song143-half",
+   "song": 143,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 143
+  },
+  {
+   "id": "sum-song144-full",
+   "song": 144,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 144
+  },
+  {
+   "id": "sum-song144-half",
+   "song": 144,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 410
+  },
+  {
+   "id": "sum-song145-full",
+   "song": 145,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 145
+  },
+  {
+   "id": "sum-song145-half",
+   "song": 145,
+   "summary_wins": false,
+   "text_path_pred_current": 412,
+   "text_path_pred_fixed": 412
+  },
+  {
+   "id": "sum-song146-full",
+   "song": 146,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 146
+  },
+  {
+   "id": "sum-song146-half",
+   "song": 146,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 146
+  },
+  {
+   "id": "sum-song147-full",
+   "song": 147,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 147
+  },
+  {
+   "id": "sum-song147-half",
+   "song": 147,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 147
+  },
+  {
+   "id": "sum-song148-full",
+   "song": 148,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 148
+  },
+  {
+   "id": "sum-song148-half",
+   "song": 148,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 148
+  },
+  {
+   "id": "sum-song149-full",
+   "song": 149,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 149
+  },
+  {
+   "id": "sum-song149-half",
+   "song": 149,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 38
+  },
+  {
+   "id": "sum-song150-full",
+   "song": 150,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 150
+  },
+  {
+   "id": "sum-song150-half",
+   "song": 150,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 150
+  },
+  {
+   "id": "sum-song151-full",
+   "song": 151,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 151
+  },
+  {
+   "id": "sum-song151-half",
+   "song": 151,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 151
+  },
+  {
+   "id": "sum-song152-full",
+   "song": 152,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 152
+  },
+  {
+   "id": "sum-song152-half",
+   "song": 152,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 152
+  },
+  {
+   "id": "sum-song153-full",
+   "song": 153,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 153
+  },
+  {
+   "id": "sum-song153-half",
+   "song": 153,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 410
+  },
+  {
+   "id": "sum-song154-full",
+   "song": 154,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 154
+  },
+  {
+   "id": "sum-song154-half",
+   "song": 154,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 154
+  },
+  {
+   "id": "sum-song155-full",
+   "song": 155,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 155
+  },
+  {
+   "id": "sum-song155-half",
+   "song": 155,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 155
+  },
+  {
+   "id": "sum-song156-full",
+   "song": 156,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 156
+  },
+  {
+   "id": "sum-song156-half",
+   "song": 156,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 291
+  },
+  {
+   "id": "sum-song157-full",
+   "song": 157,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 157
+  },
+  {
+   "id": "sum-song157-half",
+   "song": 157,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 410
+  },
+  {
+   "id": "sum-song158-full",
+   "song": 158,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 158
+  },
+  {
+   "id": "sum-song158-half",
+   "song": 158,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 158
+  },
+  {
+   "id": "sum-song159-full",
+   "song": 159,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 159
+  },
+  {
+   "id": "sum-song159-half",
+   "song": 159,
+   "summary_wins": false,
+   "text_path_pred_current": 63,
+   "text_path_pred_fixed": 63
+  },
+  {
+   "id": "sum-song160-full",
+   "song": 160,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 160
+  },
+  {
+   "id": "sum-song160-half",
+   "song": 160,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 160
+  },
+  {
+   "id": "sum-song161-full",
+   "song": 161,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 161
+  },
+  {
+   "id": "sum-song161-half",
+   "song": 161,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 374
+  },
+  {
+   "id": "sum-song162-full",
+   "song": 162,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 162
+  },
+  {
+   "id": "sum-song162-half",
+   "song": 162,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 162
+  },
+  {
+   "id": "sum-song163-full",
+   "song": 163,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 163
+  },
+  {
+   "id": "sum-song163-half",
+   "song": 163,
+   "summary_wins": false,
+   "text_path_pred_current": 49,
+   "text_path_pred_fixed": 49
+  },
+  {
+   "id": "sum-song164-full",
+   "song": 164,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 164
+  },
+  {
+   "id": "sum-song164-half",
+   "song": 164,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 38
+  },
+  {
+   "id": "sum-song165-full",
+   "song": 165,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 165
+  },
+  {
+   "id": "sum-song165-half",
+   "song": 165,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 448
+  },
+  {
+   "id": "sum-song166-full",
+   "song": 166,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 166
+  },
+  {
+   "id": "sum-song166-half",
+   "song": 166,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 166
+  },
+  {
+   "id": "sum-song167-full",
+   "song": 167,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 167
+  },
+  {
+   "id": "sum-song167-half",
+   "song": 167,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 267
+  },
+  {
+   "id": "sum-song168-full",
+   "song": 168,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 168
+  },
+  {
+   "id": "sum-song168-half",
+   "song": 168,
+   "summary_wins": false,
+   "text_path_pred_current": 53,
+   "text_path_pred_fixed": 53
+  },
+  {
+   "id": "sum-song169-full",
+   "song": 169,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 169
+  },
+  {
+   "id": "sum-song169-half",
+   "song": 169,
+   "summary_wins": false,
+   "text_path_pred_current": 63,
+   "text_path_pred_fixed": 63
+  },
+  {
+   "id": "sum-song170-full",
+   "song": 170,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 170
+  },
+  {
+   "id": "sum-song170-half",
+   "song": 170,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 170
+  },
+  {
+   "id": "sum-song171-full",
+   "song": 171,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 171
+  },
+  {
+   "id": "sum-song171-half",
+   "song": 171,
+   "summary_wins": false,
+   "text_path_pred_current": 133,
+   "text_path_pred_fixed": 133
+  },
+  {
+   "id": "sum-song172-full",
+   "song": 172,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 172
+  },
+  {
+   "id": "sum-song172-half",
+   "song": 172,
+   "summary_wins": false,
+   "text_path_pred_current": 234,
+   "text_path_pred_fixed": 234
+  },
+  {
+   "id": "sum-song173-full",
+   "song": 173,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 173
+  },
+  {
+   "id": "sum-song173-half",
+   "song": 173,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 173
+  },
+  {
+   "id": "sum-song174-full",
+   "song": 174,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 174
+  },
+  {
+   "id": "sum-song174-half",
+   "song": 174,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 253
+  },
+  {
+   "id": "sum-song175-full",
+   "song": 175,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 175
+  },
+  {
+   "id": "sum-song175-half",
+   "song": 175,
+   "summary_wins": false,
+   "text_path_pred_current": 182,
+   "text_path_pred_fixed": 182
+  },
+  {
+   "id": "sum-song176-full",
+   "song": 176,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 176
+  },
+  {
+   "id": "sum-song176-half",
+   "song": 176,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 176
+  },
+  {
+   "id": "sum-song177-full",
+   "song": 177,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 177
+  },
+  {
+   "id": "sum-song177-half",
+   "song": 177,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 177
+  },
+  {
+   "id": "sum-song178-full",
+   "song": 178,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 178
+  },
+  {
+   "id": "sum-song178-half",
+   "song": 178,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 178
+  },
+  {
+   "id": "sum-song179-full",
+   "song": 179,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 179
+  },
+  {
+   "id": "sum-song179-half",
+   "song": 179,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 410
+  },
+  {
+   "id": "sum-song180-full",
+   "song": 180,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 180
+  },
+  {
+   "id": "sum-song180-half",
+   "song": 180,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 180
+  },
+  {
+   "id": "sum-song181-full",
+   "song": 181,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 181
+  },
+  {
+   "id": "sum-song181-half",
+   "song": 181,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 181
+  },
+  {
+   "id": "sum-song182-full",
+   "song": 182,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 182
+  },
+  {
+   "id": "sum-song182-half",
+   "song": 182,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 182
+  },
+  {
+   "id": "sum-song183-full",
+   "song": 183,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 183
+  },
+  {
+   "id": "sum-song183-half",
+   "song": 183,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 383
+  },
+  {
+   "id": "sum-song184-full",
+   "song": 184,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 184
+  },
+  {
+   "id": "sum-song184-half",
+   "song": 184,
+   "summary_wins": false,
+   "text_path_pred_current": 45,
+   "text_path_pred_fixed": 45
+  },
+  {
+   "id": "sum-song185-full",
+   "song": 185,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 185
+  },
+  {
+   "id": "sum-song185-half",
+   "song": 185,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 178
+  },
+  {
+   "id": "sum-song186-full",
+   "song": 186,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 186
+  },
+  {
+   "id": "sum-song186-half",
+   "song": 186,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 410
+  },
+  {
+   "id": "sum-song187-full",
+   "song": 187,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 187
+  },
+  {
+   "id": "sum-song187-half",
+   "song": 187,
+   "summary_wins": false,
+   "text_path_pred_current": 184,
+   "text_path_pred_fixed": 184
+  },
+  {
+   "id": "sum-song188-full",
+   "song": 188,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 188
+  },
+  {
+   "id": "sum-song188-half",
+   "song": 188,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 410
+  },
+  {
+   "id": "sum-song189-full",
+   "song": 189,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 189
+  },
+  {
+   "id": "sum-song189-half",
+   "song": 189,
+   "summary_wins": false,
+   "text_path_pred_current": 49,
+   "text_path_pred_fixed": 49
+  },
+  {
+   "id": "sum-song190-full",
+   "song": 190,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 190
+  },
+  {
+   "id": "sum-song190-half",
+   "song": 190,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 190
+  },
+  {
+   "id": "sum-song191-full",
+   "song": 191,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 191
+  },
+  {
+   "id": "sum-song191-half",
+   "song": 191,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 191
+  },
+  {
+   "id": "sum-song192-full",
+   "song": 192,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 192
+  },
+  {
+   "id": "sum-song192-half",
+   "song": 192,
+   "summary_wins": false,
+   "text_path_pred_current": 184,
+   "text_path_pred_fixed": 184
+  },
+  {
+   "id": "sum-song193-full",
+   "song": 193,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 193
+  },
+  {
+   "id": "sum-song193-half",
+   "song": 193,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 161
+  },
+  {
+   "id": "sum-song194-full",
+   "song": 194,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 194
+  },
+  {
+   "id": "sum-song194-half",
+   "song": 194,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 194
+  },
+  {
+   "id": "sum-song195-full",
+   "song": 195,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 195
+  },
+  {
+   "id": "sum-song195-half",
+   "song": 195,
+   "summary_wins": false,
+   "text_path_pred_current": 184,
+   "text_path_pred_fixed": 184
+  },
+  {
+   "id": "sum-song196-full",
+   "song": 196,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 196
+  },
+  {
+   "id": "sum-song196-half",
+   "song": 196,
+   "summary_wins": false,
+   "text_path_pred_current": 184,
+   "text_path_pred_fixed": 184
+  },
+  {
+   "id": "sum-song197-full",
+   "song": 197,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 197
+  },
+  {
+   "id": "sum-song197-half",
+   "song": 197,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 448
+  },
+  {
+   "id": "sum-song198-full",
+   "song": 198,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 198
+  },
+  {
+   "id": "sum-song198-half",
+   "song": 198,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 198
+  },
+  {
+   "id": "sum-song199-full",
+   "song": 199,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 199
+  },
+  {
+   "id": "sum-song199-half",
+   "song": 199,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 410
+  },
+  {
+   "id": "sum-song200-full",
+   "song": 200,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 200
+  },
+  {
+   "id": "sum-song200-half",
+   "song": 200,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 143
+  },
+  {
+   "id": "sum-song201-full",
+   "song": 201,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 201
+  },
+  {
+   "id": "sum-song201-half",
+   "song": 201,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 405
+  },
+  {
+   "id": "sum-song202-full",
+   "song": 202,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 202
+  },
+  {
+   "id": "sum-song202-half",
+   "song": 202,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 125
+  },
+  {
+   "id": "sum-song203-full",
+   "song": 203,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 203
+  },
+  {
+   "id": "sum-song203-half",
+   "song": 203,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 203
+  },
+  {
+   "id": "sum-song204-full",
+   "song": 204,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 204
+  },
+  {
+   "id": "sum-song204-half",
+   "song": 204,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 204
+  },
+  {
+   "id": "sum-song205-full",
+   "song": 205,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 205
+  },
+  {
+   "id": "sum-song205-half",
+   "song": 205,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 404
+  },
+  {
+   "id": "sum-song206-full",
+   "song": 206,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 206
+  },
+  {
+   "id": "sum-song206-half",
+   "song": 206,
+   "summary_wins": false,
+   "text_path_pred_current": 49,
+   "text_path_pred_fixed": 49
+  },
+  {
+   "id": "sum-song207-full",
+   "song": 207,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 207
+  },
+  {
+   "id": "sum-song207-half",
+   "song": 207,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 207
+  },
+  {
+   "id": "sum-song208-full",
+   "song": 208,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 208
+  },
+  {
+   "id": "sum-song208-half",
+   "song": 208,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 208
+  },
+  {
+   "id": "sum-song209-full",
+   "song": 209,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 209
+  },
+  {
+   "id": "sum-song209-half",
+   "song": 209,
+   "summary_wins": false,
+   "text_path_pred_current": 412,
+   "text_path_pred_fixed": 412
+  },
+  {
+   "id": "sum-song210-full",
+   "song": 210,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 210
+  },
+  {
+   "id": "sum-song210-half",
+   "song": 210,
+   "summary_wins": false,
+   "text_path_pred_current": 312,
+   "text_path_pred_fixed": 312
+  },
+  {
+   "id": "sum-song211-full",
+   "song": 211,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 211
+  },
+  {
+   "id": "sum-song211-half",
+   "song": 211,
+   "summary_wins": false,
+   "text_path_pred_current": 243,
+   "text_path_pred_fixed": 243
+  },
+  {
+   "id": "sum-song212-full",
+   "song": 212,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 212
+  },
+  {
+   "id": "sum-song212-half",
+   "song": 212,
+   "summary_wins": false,
+   "text_path_pred_current": 213,
+   "text_path_pred_fixed": 213
+  },
+  {
+   "id": "sum-song213-full",
+   "song": 213,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 213
+  },
+  {
+   "id": "sum-song213-half",
+   "song": 213,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 410
+  },
+  {
+   "id": "sum-song214-full",
+   "song": 214,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 214
+  },
+  {
+   "id": "sum-song214-half",
+   "song": 214,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 214
+  },
+  {
+   "id": "sum-song215-full",
+   "song": 215,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 215
+  },
+  {
+   "id": "sum-song215-half",
+   "song": 215,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 215
+  },
+  {
+   "id": "sum-song216-full",
+   "song": 216,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 216
+  },
+  {
+   "id": "sum-song216-half",
+   "song": 216,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 216
+  },
+  {
+   "id": "sum-song217-full",
+   "song": 217,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 217
+  },
+  {
+   "id": "sum-song217-half",
+   "song": 217,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 119
+  },
+  {
+   "id": "sum-song218-full",
+   "song": 218,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 218
+  },
+  {
+   "id": "sum-song218-half",
+   "song": 218,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 417
+  },
+  {
+   "id": "sum-song219-full",
+   "song": 219,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 219
+  },
+  {
+   "id": "sum-song219-half",
+   "song": 219,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 410
+  },
+  {
+   "id": "sum-song220-full",
+   "song": 220,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 220
+  },
+  {
+   "id": "sum-song220-half",
+   "song": 220,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 410
+  },
+  {
+   "id": "sum-song221-full",
+   "song": 221,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 221
+  },
+  {
+   "id": "sum-song221-half",
+   "song": 221,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 221
+  },
+  {
+   "id": "sum-song222-full",
+   "song": 222,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 222
+  },
+  {
+   "id": "sum-song222-half",
+   "song": 222,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 222
+  },
+  {
+   "id": "sum-song223-full",
+   "song": 223,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 223
+  },
+  {
+   "id": "sum-song223-half",
+   "song": 223,
+   "summary_wins": false,
+   "text_path_pred_current": 253,
+   "text_path_pred_fixed": 253
+  },
+  {
+   "id": "sum-song224-full",
+   "song": 224,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 224
+  },
+  {
+   "id": "sum-song224-half",
+   "song": 224,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 224
+  },
+  {
+   "id": "sum-song225-full",
+   "song": 225,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 225
+  },
+  {
+   "id": "sum-song225-half",
+   "song": 225,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 225
+  },
+  {
+   "id": "sum-song226-full",
+   "song": 226,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 226
+  },
+  {
+   "id": "sum-song226-half",
+   "song": 226,
+   "summary_wins": false,
+   "text_path_pred_current": 184,
+   "text_path_pred_fixed": 184
+  },
+  {
+   "id": "sum-song227-full",
+   "song": 227,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 227
+  },
+  {
+   "id": "sum-song227-half",
+   "song": 227,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 335
+  },
+  {
+   "id": "sum-song228-full",
+   "song": 228,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 228
+  },
+  {
+   "id": "sum-song228-half",
+   "song": 228,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 410
+  },
+  {
+   "id": "sum-song229-full",
+   "song": 229,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 229
+  },
+  {
+   "id": "sum-song229-half",
+   "song": 229,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 229
+  },
+  {
+   "id": "sum-song230-full",
+   "song": 230,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 230
+  },
+  {
+   "id": "sum-song230-half",
+   "song": 230,
+   "summary_wins": false,
+   "text_path_pred_current": 230,
+   "text_path_pred_fixed": 230
+  },
+  {
+   "id": "sum-song231-full",
+   "song": 231,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 231
+  },
+  {
+   "id": "sum-song231-half",
+   "song": 231,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 231
+  },
+  {
+   "id": "sum-song232-full",
+   "song": 232,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 232
+  },
+  {
+   "id": "sum-song232-half",
+   "song": 232,
+   "summary_wins": false,
+   "text_path_pred_current": 45,
+   "text_path_pred_fixed": 45
+  },
+  {
+   "id": "sum-song233-full",
+   "song": 233,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 233
+  },
+  {
+   "id": "sum-song233-half",
+   "song": 233,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 233
+  },
+  {
+   "id": "sum-song234-full",
+   "song": 234,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 234
+  },
+  {
+   "id": "sum-song234-half",
+   "song": 234,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 234
+  },
+  {
+   "id": "sum-song235-full",
+   "song": 235,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 235
+  },
+  {
+   "id": "sum-song235-half",
+   "song": 235,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 335
+  },
+  {
+   "id": "sum-song236-full",
+   "song": 236,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 236
+  },
+  {
+   "id": "sum-song236-half",
+   "song": 236,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 236
+  },
+  {
+   "id": "sum-song237-full",
+   "song": 237,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 237
+  },
+  {
+   "id": "sum-song237-half",
+   "song": 237,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 360
+  },
+  {
+   "id": "sum-song238-full",
+   "song": 238,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 238
+  },
+  {
+   "id": "sum-song238-half",
+   "song": 238,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 410
+  },
+  {
+   "id": "sum-song239-full",
+   "song": 239,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 239
+  },
+  {
+   "id": "sum-song239-half",
+   "song": 239,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 239
+  },
+  {
+   "id": "sum-song240-full",
+   "song": 240,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 240
+  },
+  {
+   "id": "sum-song240-half",
+   "song": 240,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 240
+  },
+  {
+   "id": "sum-song241-full",
+   "song": 241,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 241
+  },
+  {
+   "id": "sum-song241-half",
+   "song": 241,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 241
+  },
+  {
+   "id": "sum-song242-full",
+   "song": 242,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 242
+  },
+  {
+   "id": "sum-song242-half",
+   "song": 242,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 221
+  },
+  {
+   "id": "sum-song243-full",
+   "song": 243,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 243
+  },
+  {
+   "id": "sum-song243-half",
+   "song": 243,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 243
+  },
+  {
+   "id": "sum-song244-full",
+   "song": 244,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 244
+  },
+  {
+   "id": "sum-song244-half",
+   "song": 244,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 244
+  },
+  {
+   "id": "sum-song245-full",
+   "song": 245,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 245
+  },
+  {
+   "id": "sum-song245-half",
+   "song": 245,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 245
+  },
+  {
+   "id": "sum-song246-full",
+   "song": 246,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 246
+  },
+  {
+   "id": "sum-song246-half",
+   "song": 246,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 246
+  },
+  {
+   "id": "sum-song247-full",
+   "song": 247,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 247
+  },
+  {
+   "id": "sum-song247-half",
+   "song": 247,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 247
+  },
+  {
+   "id": "sum-song248-full",
+   "song": 248,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 248
+  },
+  {
+   "id": "sum-song248-half",
+   "song": 248,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 248
+  },
+  {
+   "id": "sum-song249-full",
+   "song": 249,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 249
+  },
+  {
+   "id": "sum-song249-half",
+   "song": 249,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 410
+  },
+  {
+   "id": "sum-song250-full",
+   "song": 250,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 250
+  },
+  {
+   "id": "sum-song250-half",
+   "song": 250,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 410
+  },
+  {
+   "id": "sum-song251-full",
+   "song": 251,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 251
+  },
+  {
+   "id": "sum-song251-half",
+   "song": 251,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 383
+  },
+  {
+   "id": "sum-song252-full",
+   "song": 252,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 252
+  },
+  {
+   "id": "sum-song252-half",
+   "song": 252,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 252
+  },
+  {
+   "id": "sum-song253-full",
+   "song": 253,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 253
+  },
+  {
+   "id": "sum-song253-half",
+   "song": 253,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 430
+  },
+  {
+   "id": "sum-song254-full",
+   "song": 254,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 254
+  },
+  {
+   "id": "sum-song254-half",
+   "song": 254,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 254
+  },
+  {
+   "id": "sum-song255-full",
+   "song": 255,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 255
+  },
+  {
+   "id": "sum-song255-half",
+   "song": 255,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 255
+  },
+  {
+   "id": "sum-song256-full",
+   "song": 256,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 256
+  },
+  {
+   "id": "sum-song256-half",
+   "song": 256,
+   "summary_wins": false,
+   "text_path_pred_current": 45,
+   "text_path_pred_fixed": 45
+  },
+  {
+   "id": "sum-song257-full",
+   "song": 257,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 257
+  },
+  {
+   "id": "sum-song257-half",
+   "song": 257,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 410
+  },
+  {
+   "id": "sum-song258-full",
+   "song": 258,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 258
+  },
+  {
+   "id": "sum-song258-half",
+   "song": 258,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 258
+  },
+  {
+   "id": "sum-song259-full",
+   "song": 259,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 259
+  },
+  {
+   "id": "sum-song259-half",
+   "song": 259,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 353
+  },
+  {
+   "id": "sum-song260-full",
+   "song": 260,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 260
+  },
+  {
+   "id": "sum-song260-half",
+   "song": 260,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 260
+  },
+  {
+   "id": "sum-song261-full",
+   "song": 261,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 261
+  },
+  {
+   "id": "sum-song261-half",
+   "song": 261,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 380
+  },
+  {
+   "id": "sum-song262-full",
+   "song": 262,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 262
+  },
+  {
+   "id": "sum-song262-half",
+   "song": 262,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 262
+  },
+  {
+   "id": "sum-song263-full",
+   "song": 263,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 263
+  },
+  {
+   "id": "sum-song263-half",
+   "song": 263,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 263
+  },
+  {
+   "id": "sum-song264-full",
+   "song": 264,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 264
+  },
+  {
+   "id": "sum-song264-half",
+   "song": 264,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 215
+  },
+  {
+   "id": "sum-song265-full",
+   "song": 265,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 265
+  },
+  {
+   "id": "sum-song265-half",
+   "song": 265,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 265
+  },
+  {
+   "id": "sum-song266-full",
+   "song": 266,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 266
+  },
+  {
+   "id": "sum-song266-half",
+   "song": 266,
+   "summary_wins": false,
+   "text_path_pred_current": 128,
+   "text_path_pred_fixed": 128
+  },
+  {
+   "id": "sum-song267-full",
+   "song": 267,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 267
+  },
+  {
+   "id": "sum-song267-half",
+   "song": 267,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 267
+  },
+  {
+   "id": "sum-song268-full",
+   "song": 268,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 268
+  },
+  {
+   "id": "sum-song268-half",
+   "song": 268,
+   "summary_wins": false,
+   "text_path_pred_current": 153,
+   "text_path_pred_fixed": 153
+  },
+  {
+   "id": "sum-song269-full",
+   "song": 269,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 269
+  },
+  {
+   "id": "sum-song269-half",
+   "song": 269,
+   "summary_wins": false,
+   "text_path_pred_current": 351,
+   "text_path_pred_fixed": 351
+  },
+  {
+   "id": "sum-song270-full",
+   "song": 270,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 270
+  },
+  {
+   "id": "sum-song270-half",
+   "song": 270,
+   "summary_wins": false,
+   "text_path_pred_current": 184,
+   "text_path_pred_fixed": 184
+  },
+  {
+   "id": "sum-song271-full",
+   "song": 271,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 271
+  },
+  {
+   "id": "sum-song271-half",
+   "song": 271,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 271
+  },
+  {
+   "id": "sum-song272-full",
+   "song": 272,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 272
+  },
+  {
+   "id": "sum-song272-half",
+   "song": 272,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 459
+  },
+  {
+   "id": "sum-song273-full",
+   "song": 273,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 273
+  },
+  {
+   "id": "sum-song273-half",
+   "song": 273,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 273
+  },
+  {
+   "id": "sum-song274-full",
+   "song": 274,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 274
+  },
+  {
+   "id": "sum-song274-half",
+   "song": 274,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 72
+  },
+  {
+   "id": "sum-song275-full",
+   "song": 275,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 275
+  },
+  {
+   "id": "sum-song275-half",
+   "song": 275,
+   "summary_wins": false,
+   "text_path_pred_current": 420,
+   "text_path_pred_fixed": 420
+  },
+  {
+   "id": "sum-song276-full",
+   "song": 276,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 276
+  },
+  {
+   "id": "sum-song276-half",
+   "song": 276,
+   "summary_wins": false,
+   "text_path_pred_current": 14,
+   "text_path_pred_fixed": 14
+  },
+  {
+   "id": "sum-song277-full",
+   "song": 277,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 277
+  },
+  {
+   "id": "sum-song277-half",
+   "song": 277,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 444
+  },
+  {
+   "id": "sum-song278-full",
+   "song": 278,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 278
+  },
+  {
+   "id": "sum-song278-half",
+   "song": 278,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 38
+  },
+  {
+   "id": "sum-song279-full",
+   "song": 279,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 279
+  },
+  {
+   "id": "sum-song279-half",
+   "song": 279,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 193
+  },
+  {
+   "id": "sum-song280-full",
+   "song": 280,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 280
+  },
+  {
+   "id": "sum-song280-half",
+   "song": 280,
+   "summary_wins": false,
+   "text_path_pred_current": 151,
+   "text_path_pred_fixed": 151
+  },
+  {
+   "id": "sum-song281-full",
+   "song": 281,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 281
+  },
+  {
+   "id": "sum-song281-half",
+   "song": 281,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 281
+  },
+  {
+   "id": "sum-song282-full",
+   "song": 282,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 282
+  },
+  {
+   "id": "sum-song282-half",
+   "song": 282,
+   "summary_wins": false,
+   "text_path_pred_current": 412,
+   "text_path_pred_fixed": 412
+  },
+  {
+   "id": "sum-song283-full",
+   "song": 283,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 283
+  },
+  {
+   "id": "sum-song283-half",
+   "song": 283,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 366
+  },
+  {
+   "id": "sum-song284-full",
+   "song": 284,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 284
+  },
+  {
+   "id": "sum-song284-half",
+   "song": 284,
+   "summary_wins": false,
+   "text_path_pred_current": 304,
+   "text_path_pred_fixed": 304
+  },
+  {
+   "id": "sum-song285-full",
+   "song": 285,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 285
+  },
+  {
+   "id": "sum-song285-half",
+   "song": 285,
+   "summary_wins": false,
+   "text_path_pred_current": 184,
+   "text_path_pred_fixed": 184
+  },
+  {
+   "id": "sum-song286-full",
+   "song": 286,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 286
+  },
+  {
+   "id": "sum-song286-half",
+   "song": 286,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 286
+  },
+  {
+   "id": "sum-song287-full",
+   "song": 287,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 287
+  },
+  {
+   "id": "sum-song287-half",
+   "song": 287,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 287
+  },
+  {
+   "id": "sum-song288-full",
+   "song": 288,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 288
+  },
+  {
+   "id": "sum-song288-half",
+   "song": 288,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 288
+  },
+  {
+   "id": "sum-song289-full",
+   "song": 289,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 289
+  },
+  {
+   "id": "sum-song289-half",
+   "song": 289,
+   "summary_wins": false,
+   "text_path_pred_current": 76,
+   "text_path_pred_fixed": 76
+  },
+  {
+   "id": "sum-song290-full",
+   "song": 290,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 290
+  },
+  {
+   "id": "sum-song290-half",
+   "song": 290,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 410
+  },
+  {
+   "id": "sum-song291-full",
+   "song": 291,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 291
+  },
+  {
+   "id": "sum-song291-half",
+   "song": 291,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 410
+  },
+  {
+   "id": "sum-song292-full",
+   "song": 292,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 292
+  },
+  {
+   "id": "sum-song292-half",
+   "song": 292,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 410
+  },
+  {
+   "id": "sum-song293-full",
+   "song": 293,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 293
+  },
+  {
+   "id": "sum-song293-half",
+   "song": 293,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 293
+  },
+  {
+   "id": "sum-song294-full",
+   "song": 294,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 294
+  },
+  {
+   "id": "sum-song294-half",
+   "song": 294,
+   "summary_wins": false,
+   "text_path_pred_current": 234,
+   "text_path_pred_fixed": 234
+  },
+  {
+   "id": "sum-song295-full",
+   "song": 295,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 295
+  },
+  {
+   "id": "sum-song295-half",
+   "song": 295,
+   "summary_wins": false,
+   "text_path_pred_current": 412,
+   "text_path_pred_fixed": 412
+  },
+  {
+   "id": "sum-song296-full",
+   "song": 296,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 296
+  },
+  {
+   "id": "sum-song296-half",
+   "song": 296,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 296
+  },
+  {
+   "id": "sum-song297-full",
+   "song": 297,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 297
+  },
+  {
+   "id": "sum-song297-half",
+   "song": 297,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 459
+  },
+  {
+   "id": "sum-song298-full",
+   "song": 298,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 298
+  },
+  {
+   "id": "sum-song298-half",
+   "song": 298,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 386
+  },
+  {
+   "id": "sum-song299-full",
+   "song": 299,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 299
+  },
+  {
+   "id": "sum-song299-half",
+   "song": 299,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 299
+  },
+  {
+   "id": "sum-song300-full",
+   "song": 300,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 300
+  },
+  {
+   "id": "sum-song300-half",
+   "song": 300,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 300
+  },
+  {
+   "id": "sum-song301-full",
+   "song": 301,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 301
+  },
+  {
+   "id": "sum-song301-half",
+   "song": 301,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 410
+  },
+  {
+   "id": "sum-song302-full",
+   "song": 302,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 302
+  },
+  {
+   "id": "sum-song302-half",
+   "song": 302,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 113
+  },
+  {
+   "id": "sum-song303-full",
+   "song": 303,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 303
+  },
+  {
+   "id": "sum-song303-half",
+   "song": 303,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 410
+  },
+  {
+   "id": "sum-song304-full",
+   "song": 304,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 304
+  },
+  {
+   "id": "sum-song304-half",
+   "song": 304,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 304
+  },
+  {
+   "id": "sum-song305-full",
+   "song": 305,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 305
+  },
+  {
+   "id": "sum-song305-half",
+   "song": 305,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 305
+  },
+  {
+   "id": "sum-song306-full",
+   "song": 306,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 306
+  },
+  {
+   "id": "sum-song306-half",
+   "song": 306,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 306
+  },
+  {
+   "id": "sum-song307-full",
+   "song": 307,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 307
+  },
+  {
+   "id": "sum-song307-half",
+   "song": 307,
+   "summary_wins": false,
+   "text_path_pred_current": 71,
+   "text_path_pred_fixed": 71
+  },
+  {
+   "id": "sum-song308-full",
+   "song": 308,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 308
+  },
+  {
+   "id": "sum-song308-half",
+   "song": 308,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 410
+  },
+  {
+   "id": "sum-song309-full",
+   "song": 309,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 309
+  },
+  {
+   "id": "sum-song309-half",
+   "song": 309,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 309
+  },
+  {
+   "id": "sum-song310-full",
+   "song": 310,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 310
+  },
+  {
+   "id": "sum-song310-half",
+   "song": 310,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 410
+  },
+  {
+   "id": "sum-song311-full",
+   "song": 311,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 311
+  },
+  {
+   "id": "sum-song311-half",
+   "song": 311,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 311
+  },
+  {
+   "id": "sum-song312-full",
+   "song": 312,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 312
+  },
+  {
+   "id": "sum-song312-half",
+   "song": 312,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 312
+  },
+  {
+   "id": "sum-song313-full",
+   "song": 313,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 313
+  },
+  {
+   "id": "sum-song313-half",
+   "song": 313,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 383
+  },
+  {
+   "id": "sum-song314-full",
+   "song": 314,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 314
+  },
+  {
+   "id": "sum-song314-half",
+   "song": 314,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 410
+  },
+  {
+   "id": "sum-song315-full",
+   "song": 315,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 315
+  },
+  {
+   "id": "sum-song315-half",
+   "song": 315,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 315
+  },
+  {
+   "id": "sum-song316-full",
+   "song": 316,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 316
+  },
+  {
+   "id": "sum-song316-half",
+   "song": 316,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 316
+  },
+  {
+   "id": "sum-song317-full",
+   "song": 317,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 317
+  },
+  {
+   "id": "sum-song317-half",
+   "song": 317,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 459
+  },
+  {
+   "id": "sum-song318-full",
+   "song": 318,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 318
+  },
+  {
+   "id": "sum-song318-half",
+   "song": 318,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 318
+  },
+  {
+   "id": "sum-song319-full",
+   "song": 319,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 319
+  },
+  {
+   "id": "sum-song319-half",
+   "song": 319,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 319
+  },
+  {
+   "id": "sum-song320-full",
+   "song": 320,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 320
+  },
+  {
+   "id": "sum-song320-half",
+   "song": 320,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 320
+  },
+  {
+   "id": "sum-song321-full",
+   "song": 321,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 321
+  },
+  {
+   "id": "sum-song321-half",
+   "song": 321,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 124
+  },
+  {
+   "id": "sum-song322-full",
+   "song": 322,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 322
+  },
+  {
+   "id": "sum-song322-half",
+   "song": 322,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 322
+  },
+  {
+   "id": "sum-song323-full",
+   "song": 323,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 323
+  },
+  {
+   "id": "sum-song323-half",
+   "song": 323,
+   "summary_wins": false,
+   "text_path_pred_current": 151,
+   "text_path_pred_fixed": 151
+  },
+  {
+   "id": "sum-song324-full",
+   "song": 324,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 324
+  },
+  {
+   "id": "sum-song324-half",
+   "song": 324,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 250
+  },
+  {
+   "id": "sum-song325-full",
+   "song": 325,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 325
+  },
+  {
+   "id": "sum-song325-half",
+   "song": 325,
+   "summary_wins": false,
+   "text_path_pred_current": 49,
+   "text_path_pred_fixed": 49
+  },
+  {
+   "id": "sum-song326-full",
+   "song": 326,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 326
+  },
+  {
+   "id": "sum-song326-half",
+   "song": 326,
+   "summary_wins": false,
+   "text_path_pred_current": 163,
+   "text_path_pred_fixed": 163
+  },
+  {
+   "id": "sum-song327-full",
+   "song": 327,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 327
+  },
+  {
+   "id": "sum-song327-half",
+   "song": 327,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 327
+  },
+  {
+   "id": "sum-song328-full",
+   "song": 328,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 328
+  },
+  {
+   "id": "sum-song328-half",
+   "song": 328,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 328
+  },
+  {
+   "id": "sum-song329-full",
+   "song": 329,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 329
+  },
+  {
+   "id": "sum-song329-half",
+   "song": 329,
+   "summary_wins": false,
+   "text_path_pred_current": 329,
+   "text_path_pred_fixed": 329
+  },
+  {
+   "id": "sum-song330-full",
+   "song": 330,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 330
+  },
+  {
+   "id": "sum-song330-half",
+   "song": 330,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 119
+  },
+  {
+   "id": "sum-song331-full",
+   "song": 331,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 331
+  },
+  {
+   "id": "sum-song331-half",
+   "song": 331,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 250
+  },
+  {
+   "id": "sum-song332-full",
+   "song": 332,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 332
+  },
+  {
+   "id": "sum-song332-half",
+   "song": 332,
+   "summary_wins": false,
+   "text_path_pred_current": 63,
+   "text_path_pred_fixed": 63
+  },
+  {
+   "id": "sum-song333-full",
+   "song": 333,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 333
+  },
+  {
+   "id": "sum-song333-half",
+   "song": 333,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 344
+  },
+  {
+   "id": "sum-song334-full",
+   "song": 334,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 334
+  },
+  {
+   "id": "sum-song334-half",
+   "song": 334,
+   "summary_wins": false,
+   "text_path_pred_current": 207,
+   "text_path_pred_fixed": 207
+  },
+  {
+   "id": "sum-song335-full",
+   "song": 335,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 335
+  },
+  {
+   "id": "sum-song335-half",
+   "song": 335,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 393
+  },
+  {
+   "id": "sum-song336-full",
+   "song": 336,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 336
+  },
+  {
+   "id": "sum-song336-half",
+   "song": 336,
+   "summary_wins": false,
+   "text_path_pred_current": 149,
+   "text_path_pred_fixed": 149
+  },
+  {
+   "id": "sum-song337-full",
+   "song": 337,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 337
+  },
+  {
+   "id": "sum-song337-half",
+   "song": 337,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 410
+  },
+  {
+   "id": "sum-song338-full",
+   "song": 338,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 338
+  },
+  {
+   "id": "sum-song338-half",
+   "song": 338,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 338
+  },
+  {
+   "id": "sum-song339-full",
+   "song": 339,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 339
+  },
+  {
+   "id": "sum-song339-half",
+   "song": 339,
+   "summary_wins": false,
+   "text_path_pred_current": 406,
+   "text_path_pred_fixed": 406
+  },
+  {
+   "id": "sum-song340-full",
+   "song": 340,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 340
+  },
+  {
+   "id": "sum-song340-half",
+   "song": 340,
+   "summary_wins": false,
+   "text_path_pred_current": 223,
+   "text_path_pred_fixed": 223
+  },
+  {
+   "id": "sum-song341-full",
+   "song": 341,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 341
+  },
+  {
+   "id": "sum-song341-half",
+   "song": 341,
+   "summary_wins": false,
+   "text_path_pred_current": 341,
+   "text_path_pred_fixed": 341
+  },
+  {
+   "id": "sum-song342-full",
+   "song": 342,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 342
+  },
+  {
+   "id": "sum-song342-half",
+   "song": 342,
+   "summary_wins": false,
+   "text_path_pred_current": 350,
+   "text_path_pred_fixed": 350
+  },
+  {
+   "id": "sum-song343-full",
+   "song": 343,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 343
+  },
+  {
+   "id": "sum-song343-half",
+   "song": 343,
+   "summary_wins": false,
+   "text_path_pred_current": 45,
+   "text_path_pred_fixed": 45
+  },
+  {
+   "id": "sum-song344-full",
+   "song": 344,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 344
+  },
+  {
+   "id": "sum-song344-half",
+   "song": 344,
+   "summary_wins": false,
+   "text_path_pred_current": 443,
+   "text_path_pred_fixed": 443
+  },
+  {
+   "id": "sum-song345-full",
+   "song": 345,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 345
+  },
+  {
+   "id": "sum-song345-half",
+   "song": 345,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 345
+  },
+  {
+   "id": "sum-song346-full",
+   "song": 346,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 346
+  },
+  {
+   "id": "sum-song346-half",
+   "song": 346,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 193
+  },
+  {
+   "id": "sum-song347-full",
+   "song": 347,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 347
+  },
+  {
+   "id": "sum-song347-half",
+   "song": 347,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 262
+  },
+  {
+   "id": "sum-song348-full",
+   "song": 348,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 348
+  },
+  {
+   "id": "sum-song348-half",
+   "song": 348,
+   "summary_wins": false,
+   "text_path_pred_current": 149,
+   "text_path_pred_fixed": 149
+  },
+  {
+   "id": "sum-song349-full",
+   "song": 349,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 349
+  },
+  {
+   "id": "sum-song349-half",
+   "song": 349,
+   "summary_wins": false,
+   "text_path_pred_current": 45,
+   "text_path_pred_fixed": 45
+  },
+  {
+   "id": "sum-song350-full",
+   "song": 350,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 350
+  },
+  {
+   "id": "sum-song350-half",
+   "song": 350,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 350
+  },
+  {
+   "id": "sum-song351-full",
+   "song": 351,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 351
+  },
+  {
+   "id": "sum-song351-half",
+   "song": 351,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 357
+  },
+  {
+   "id": "sum-song352-full",
+   "song": 352,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 352
+  },
+  {
+   "id": "sum-song352-half",
+   "song": 352,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 267
+  },
+  {
+   "id": "sum-song353-full",
+   "song": 353,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 353
+  },
+  {
+   "id": "sum-song353-half",
+   "song": 353,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 219
+  },
+  {
+   "id": "sum-song354-full",
+   "song": 354,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 354
+  },
+  {
+   "id": "sum-song354-half",
+   "song": 354,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 353
+  },
+  {
+   "id": "sum-song355-full",
+   "song": 355,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 355
+  },
+  {
+   "id": "sum-song355-half",
+   "song": 355,
+   "summary_wins": false,
+   "text_path_pred_current": 184,
+   "text_path_pred_fixed": 184
+  },
+  {
+   "id": "sum-song356-full",
+   "song": 356,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 356
+  },
+  {
+   "id": "sum-song356-half",
+   "song": 356,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 356
+  },
+  {
+   "id": "sum-song357-full",
+   "song": 357,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 357
+  },
+  {
+   "id": "sum-song357-half",
+   "song": 357,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 314
+  },
+  {
+   "id": "sum-song358-full",
+   "song": 358,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 358
+  },
+  {
+   "id": "sum-song358-half",
+   "song": 358,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 366
+  },
+  {
+   "id": "sum-song359-full",
+   "song": 359,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 359
+  },
+  {
+   "id": "sum-song359-half",
+   "song": 359,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 410
+  },
+  {
+   "id": "sum-song360-full",
+   "song": 360,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 360
+  },
+  {
+   "id": "sum-song360-half",
+   "song": 360,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 410
+  },
+  {
+   "id": "sum-song361-full",
+   "song": 361,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 361
+  },
+  {
+   "id": "sum-song361-half",
+   "song": 361,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 178
+  },
+  {
+   "id": "sum-song362-full",
+   "song": 362,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 362
+  },
+  {
+   "id": "sum-song362-half",
+   "song": 362,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 58
+  },
+  {
+   "id": "sum-song363-full",
+   "song": 363,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 363
+  },
+  {
+   "id": "sum-song363-half",
+   "song": 363,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 410
+  },
+  {
+   "id": "sum-song364-full",
+   "song": 364,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 364
+  },
+  {
+   "id": "sum-song364-half",
+   "song": 364,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 459
+  },
+  {
+   "id": "sum-song365-full",
+   "song": 365,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 365
+  },
+  {
+   "id": "sum-song365-half",
+   "song": 365,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 410
+  },
+  {
+   "id": "sum-song366-full",
+   "song": 366,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 366
+  },
+  {
+   "id": "sum-song366-half",
+   "song": 366,
+   "summary_wins": false,
+   "text_path_pred_current": 412,
+   "text_path_pred_fixed": 412
+  },
+  {
+   "id": "sum-song367-full",
+   "song": 367,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 367
+  },
+  {
+   "id": "sum-song367-half",
+   "song": 367,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 364
+  },
+  {
+   "id": "sum-song368-full",
+   "song": 368,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 368
+  },
+  {
+   "id": "sum-song368-half",
+   "song": 368,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 250
+  },
+  {
+   "id": "sum-song369-full",
+   "song": 369,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 369
+  },
+  {
+   "id": "sum-song369-half",
+   "song": 369,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 113
+  },
+  {
+   "id": "sum-song370-full",
+   "song": 370,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 370
+  },
+  {
+   "id": "sum-song370-half",
+   "song": 370,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 410
+  },
+  {
+   "id": "sum-song371-full",
+   "song": 371,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 371
+  },
+  {
+   "id": "sum-song371-half",
+   "song": 371,
+   "summary_wins": false,
+   "text_path_pred_current": 416,
+   "text_path_pred_fixed": 416
+  },
+  {
+   "id": "sum-song372-full",
+   "song": 372,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 372
+  },
+  {
+   "id": "sum-song372-half",
+   "song": 372,
+   "summary_wins": false,
+   "text_path_pred_current": 443,
+   "text_path_pred_fixed": 443
+  },
+  {
+   "id": "sum-song373-full",
+   "song": 373,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 373
+  },
+  {
+   "id": "sum-song373-half",
+   "song": 373,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 373
+  },
+  {
+   "id": "sum-song374-full",
+   "song": 374,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 374
+  },
+  {
+   "id": "sum-song374-half",
+   "song": 374,
+   "summary_wins": false,
+   "text_path_pred_current": 304,
+   "text_path_pred_fixed": 304
+  },
+  {
+   "id": "sum-song375-full",
+   "song": 375,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 375
+  },
+  {
+   "id": "sum-song375-half",
+   "song": 375,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 375
+  },
+  {
+   "id": "sum-song376-full",
+   "song": 376,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 376
+  },
+  {
+   "id": "sum-song376-half",
+   "song": 376,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 376
+  },
+  {
+   "id": "sum-song377-full",
+   "song": 377,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 377
+  },
+  {
+   "id": "sum-song377-half",
+   "song": 377,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 377
+  },
+  {
+   "id": "sum-song378-full",
+   "song": 378,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 378
+  },
+  {
+   "id": "sum-song378-half",
+   "song": 378,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 378
+  },
+  {
+   "id": "sum-song379-full",
+   "song": 379,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 379
+  },
+  {
+   "id": "sum-song379-half",
+   "song": 379,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 379
+  },
+  {
+   "id": "sum-song380-full",
+   "song": 380,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 380
+  },
+  {
+   "id": "sum-song380-half",
+   "song": 380,
+   "summary_wins": false,
+   "text_path_pred_current": 45,
+   "text_path_pred_fixed": 45
+  },
+  {
+   "id": "sum-song381-full",
+   "song": 381,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 381
+  },
+  {
+   "id": "sum-song381-half",
+   "song": 381,
+   "summary_wins": false,
+   "text_path_pred_current": 312,
+   "text_path_pred_fixed": 312
+  },
+  {
+   "id": "sum-song382-full",
+   "song": 382,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 382
+  },
+  {
+   "id": "sum-song382-half",
+   "song": 382,
+   "summary_wins": false,
+   "text_path_pred_current": 421,
+   "text_path_pred_fixed": 421
+  },
+  {
+   "id": "sum-song383-full",
+   "song": 383,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 383
+  },
+  {
+   "id": "sum-song383-half",
+   "song": 383,
+   "summary_wins": false,
+   "text_path_pred_current": 45,
+   "text_path_pred_fixed": 45
+  },
+  {
+   "id": "sum-song384-full",
+   "song": 384,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 384
+  },
+  {
+   "id": "sum-song384-half",
+   "song": 384,
+   "summary_wins": false,
+   "text_path_pred_current": 345,
+   "text_path_pred_fixed": 345
+  },
+  {
+   "id": "sum-song385-full",
+   "song": 385,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 385
+  },
+  {
+   "id": "sum-song385-half",
+   "song": 385,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 410
+  },
+  {
+   "id": "sum-song386-full",
+   "song": 386,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 386
+  },
+  {
+   "id": "sum-song386-half",
+   "song": 386,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 271
+  },
+  {
+   "id": "sum-song387-full",
+   "song": 387,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 387
+  },
+  {
+   "id": "sum-song387-half",
+   "song": 387,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 108
+  },
+  {
+   "id": "sum-song388-full",
+   "song": 388,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 388
+  },
+  {
+   "id": "sum-song388-half",
+   "song": 388,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 410
+  },
+  {
+   "id": "sum-song389-full",
+   "song": 389,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 389
+  },
+  {
+   "id": "sum-song389-half",
+   "song": 389,
+   "summary_wins": false,
+   "text_path_pred_current": 88,
+   "text_path_pred_fixed": 88
+  },
+  {
+   "id": "sum-song390-full",
+   "song": 390,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 390
+  },
+  {
+   "id": "sum-song390-half",
+   "song": 390,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 459
+  },
+  {
+   "id": "sum-song391-full",
+   "song": 391,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 391
+  },
+  {
+   "id": "sum-song391-half",
+   "song": 391,
+   "summary_wins": false,
+   "text_path_pred_current": 252,
+   "text_path_pred_fixed": 252
+  },
+  {
+   "id": "sum-song392-full",
+   "song": 392,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 392
+  },
+  {
+   "id": "sum-song392-half",
+   "song": 392,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 162
+  },
+  {
+   "id": "sum-song393-full",
+   "song": 393,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 393
+  },
+  {
+   "id": "sum-song393-half",
+   "song": 393,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 267
+  },
+  {
+   "id": "sum-song394-full",
+   "song": 394,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 394
+  },
+  {
+   "id": "sum-song394-half",
+   "song": 394,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 394
+  },
+  {
+   "id": "sum-song395-full",
+   "song": 395,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 395
+  },
+  {
+   "id": "sum-song395-half",
+   "song": 395,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 395
+  },
+  {
+   "id": "sum-song396-full",
+   "song": 396,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 396
+  },
+  {
+   "id": "sum-song396-half",
+   "song": 396,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 410
+  },
+  {
+   "id": "sum-song397-full",
+   "song": 397,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 397
+  },
+  {
+   "id": "sum-song397-half",
+   "song": 397,
+   "summary_wins": false,
+   "text_path_pred_current": 140,
+   "text_path_pred_fixed": 140
+  },
+  {
+   "id": "sum-song398-full",
+   "song": 398,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 398
+  },
+  {
+   "id": "sum-song398-half",
+   "song": 398,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 410
+  },
+  {
+   "id": "sum-song399-full",
+   "song": 399,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 399
+  },
+  {
+   "id": "sum-song399-half",
+   "song": 399,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 399
+  },
+  {
+   "id": "sum-song400-full",
+   "song": 400,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 400
+  },
+  {
+   "id": "sum-song400-half",
+   "song": 400,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 400
+  },
+  {
+   "id": "sum-song401-full",
+   "song": 401,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 401
+  },
+  {
+   "id": "sum-song401-half",
+   "song": 401,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 410
+  },
+  {
+   "id": "sum-song402-full",
+   "song": 402,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 402
+  },
+  {
+   "id": "sum-song402-half",
+   "song": 402,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 410
+  },
+  {
+   "id": "sum-song403-full",
+   "song": 403,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 403
+  },
+  {
+   "id": "sum-song403-half",
+   "song": 403,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 385
+  },
+  {
+   "id": "sum-song404-full",
+   "song": 404,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 404
+  },
+  {
+   "id": "sum-song404-half",
+   "song": 404,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 400
+  },
+  {
+   "id": "sum-song405-full",
+   "song": 405,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 405
+  },
+  {
+   "id": "sum-song405-half",
+   "song": 405,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 405
+  },
+  {
+   "id": "sum-song406-full",
+   "song": 406,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 406
+  },
+  {
+   "id": "sum-song406-half",
+   "song": 406,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 406
+  },
+  {
+   "id": "sum-song407-full",
+   "song": 407,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 407
+  },
+  {
+   "id": "sum-song407-half",
+   "song": 407,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 410
+  },
+  {
+   "id": "sum-song408-full",
+   "song": 408,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 408
+  },
+  {
+   "id": "sum-song408-half",
+   "song": 408,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 408
+  },
+  {
+   "id": "sum-song409-full",
+   "song": 409,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 409
+  },
+  {
+   "id": "sum-song409-half",
+   "song": 409,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 409
+  },
+  {
+   "id": "sum-song410-full",
+   "song": 410,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 410
+  },
+  {
+   "id": "sum-song410-half",
+   "song": 410,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 410
+  },
+  {
+   "id": "sum-song411-full",
+   "song": 411,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 411
+  },
+  {
+   "id": "sum-song411-half",
+   "song": 411,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 411
+  },
+  {
+   "id": "sum-song412-full",
+   "song": 412,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 412
+  },
+  {
+   "id": "sum-song412-half",
+   "song": 412,
+   "summary_wins": true,
+   "text_path_pred_current": 1,
+   "text_path_pred_fixed": 171
+  },
+  {
+   "id": "sum-song413-full",
+   "song": 413,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 413
+  },
+  {
+   "id": "sum-song413-half",
+   "song": 413,
+   "summary_wins": false,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 5
+  },
+  {
+   "id": "sum-song414-full",
+   "song": 414,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 414
+  },
+  {
+   "id": "sum-song414-half",
+   "song": 414,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 119
+  },
+  {
+   "id": "sum-song415-full",
+   "song": 415,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 415
+  },
+  {
+   "id": "sum-song415-half",
+   "song": 415,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 262
+  },
+  {
+   "id": "sum-song416-full",
+   "song": 416,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 416
+  },
+  {
+   "id": "sum-song416-half",
+   "song": 416,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 250
+  },
+  {
+   "id": "sum-song417-full",
+   "song": 417,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 417
+  },
+  {
+   "id": "sum-song417-half",
+   "song": 417,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 119
+  },
+  {
+   "id": "sum-song418-full",
+   "song": 418,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 418
+  },
+  {
+   "id": "sum-song418-half",
+   "song": 418,
+   "summary_wins": false,
+   "text_path_pred_current": 363,
+   "text_path_pred_fixed": 363
+  },
+  {
+   "id": "sum-song419-full",
+   "song": 419,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 419
+  },
+  {
+   "id": "sum-song419-half",
+   "song": 419,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 419
+  },
+  {
+   "id": "sum-song420-full",
+   "song": 420,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 420
+  },
+  {
+   "id": "sum-song420-half",
+   "song": 420,
+   "summary_wins": false,
+   "text_path_pred_current": 260,
+   "text_path_pred_fixed": 260
+  },
+  {
+   "id": "sum-song421-full",
+   "song": 421,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 421
+  },
+  {
+   "id": "sum-song421-half",
+   "song": 421,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 308
+  },
+  {
+   "id": "sum-song422-full",
+   "song": 422,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 422
+  },
+  {
+   "id": "sum-song422-half",
+   "song": 422,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 422
+  },
+  {
+   "id": "sum-song423-full",
+   "song": 423,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 423
+  },
+  {
+   "id": "sum-song423-half",
+   "song": 423,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 423
+  },
+  {
+   "id": "sum-song424-full",
+   "song": 424,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 424
+  },
+  {
+   "id": "sum-song424-half",
+   "song": 424,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 430
+  },
+  {
+   "id": "sum-song425-full",
+   "song": 425,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 425
+  },
+  {
+   "id": "sum-song425-half",
+   "song": 425,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 410
+  },
+  {
+   "id": "sum-song426-full",
+   "song": 426,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 426
+  },
+  {
+   "id": "sum-song426-half",
+   "song": 426,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 262
+  },
+  {
+   "id": "sum-song427-full",
+   "song": 427,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 427
+  },
+  {
+   "id": "sum-song427-half",
+   "song": 427,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 427
+  },
+  {
+   "id": "sum-song428-full",
+   "song": 428,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 428
+  },
+  {
+   "id": "sum-song428-half",
+   "song": 428,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 428
+  },
+  {
+   "id": "sum-song429-full",
+   "song": 429,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 429
+  },
+  {
+   "id": "sum-song429-half",
+   "song": 429,
+   "summary_wins": true,
+   "text_path_pred_current": 2,
+   "text_path_pred_fixed": 250
+  },
+  {
+   "id": "sum-song430-full",
+   "song": 430,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 430
+  },
+  {
+   "id": "sum-song430-half",
+   "song": 430,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 430
+  },
+  {
+   "id": "sum-song431-full",
+   "song": 431,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 431
+  },
+  {
+   "id": "sum-song431-half",
+   "song": 431,
+   "summary_wins": false,
+   "text_path_pred_current": 332,
+   "text_path_pred_fixed": 332
+  },
+  {
+   "id": "sum-song432-full",
+   "song": 432,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 432
+  },
+  {
+   "id": "sum-song432-half",
+   "song": 432,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 432
+  },
+  {
+   "id": "sum-song433-full",
+   "song": 433,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 433
+  },
+  {
+   "id": "sum-song433-half",
+   "song": 433,
+   "summary_wins": false,
+   "text_path_pred_current": 234,
+   "text_path_pred_fixed": 234
+  },
+  {
+   "id": "sum-song434-full",
+   "song": 434,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 434
+  },
+  {
+   "id": "sum-song434-half",
+   "song": 434,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 434
+  },
+  {
+   "id": "sum-song435-full",
+   "song": 435,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 435
+  },
+  {
+   "id": "sum-song435-half",
+   "song": 435,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 435
+  },
+  {
+   "id": "sum-song436-full",
+   "song": 436,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 436
+  },
+  {
+   "id": "sum-song436-half",
+   "song": 436,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 436
+  },
+  {
+   "id": "sum-song437-full",
+   "song": 437,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 437
+  },
+  {
+   "id": "sum-song437-half",
+   "song": 437,
+   "summary_wins": false,
+   "text_path_pred_current": 234,
+   "text_path_pred_fixed": 234
+  },
+  {
+   "id": "sum-song438-full",
+   "song": 438,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 438
+  },
+  {
+   "id": "sum-song438-half",
+   "song": 438,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 438
+  },
+  {
+   "id": "sum-song439-full",
+   "song": 439,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 439
+  },
+  {
+   "id": "sum-song439-half",
+   "song": 439,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 439
+  },
+  {
+   "id": "sum-song440-full",
+   "song": 440,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 440
+  },
+  {
+   "id": "sum-song440-half",
+   "song": 440,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 410
+  },
+  {
+   "id": "sum-song441-full",
+   "song": 441,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 441
+  },
+  {
+   "id": "sum-song441-half",
+   "song": 441,
+   "summary_wins": false,
+   "text_path_pred_current": 441,
+   "text_path_pred_fixed": 441
+  },
+  {
+   "id": "sum-song442-full",
+   "song": 442,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 442
+  },
+  {
+   "id": "sum-song442-half",
+   "song": 442,
+   "summary_wins": false,
+   "text_path_pred_current": 336,
+   "text_path_pred_fixed": 336
+  },
+  {
+   "id": "sum-song443-full",
+   "song": 443,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 443
+  },
+  {
+   "id": "sum-song443-half",
+   "song": 443,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 113
+  },
+  {
+   "id": "sum-song444-full",
+   "song": 444,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 444
+  },
+  {
+   "id": "sum-song444-half",
+   "song": 444,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 410
+  },
+  {
+   "id": "sum-song445-full",
+   "song": 445,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 445
+  },
+  {
+   "id": "sum-song445-half",
+   "song": 445,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 445
+  },
+  {
+   "id": "sum-song446-full",
+   "song": 446,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 446
+  },
+  {
+   "id": "sum-song446-half",
+   "song": 446,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 263
+  },
+  {
+   "id": "sum-song447-full",
+   "song": 447,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 447
+  },
+  {
+   "id": "sum-song447-half",
+   "song": 447,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 447
+  },
+  {
+   "id": "sum-song448-full",
+   "song": 448,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 448
+  },
+  {
+   "id": "sum-song448-half",
+   "song": 448,
+   "summary_wins": false,
+   "text_path_pred_current": 184,
+   "text_path_pred_fixed": 184
+  },
+  {
+   "id": "sum-song449-full",
+   "song": 449,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 449
+  },
+  {
+   "id": "sum-song449-half",
+   "song": 449,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 449
+  },
+  {
+   "id": "sum-song450-full",
+   "song": 450,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 450
+  },
+  {
+   "id": "sum-song450-half",
+   "song": 450,
+   "summary_wins": true,
+   "text_path_pred_current": 0,
+   "text_path_pred_fixed": 38
+  },
+  {
+   "id": "sum-song451-full",
+   "song": 451,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 451
+  },
+  {
+   "id": "sum-song451-half",
+   "song": 451,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 451
+  },
+  {
+   "id": "sum-song452-full",
+   "song": 452,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 452
+  },
+  {
+   "id": "sum-song452-half",
+   "song": 452,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 410
+  },
+  {
+   "id": "sum-song453-full",
+   "song": 453,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 453
+  },
+  {
+   "id": "sum-song453-half",
+   "song": 453,
+   "summary_wins": true,
+   "text_path_pred_current": 3,
+   "text_path_pred_fixed": 263
+  },
+  {
+   "id": "sum-song454-full",
+   "song": 454,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 454
+  },
+  {
+   "id": "sum-song454-half",
+   "song": 454,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 449
+  },
+  {
+   "id": "sum-song455-full",
+   "song": 455,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 455
+  },
+  {
+   "id": "sum-song455-half",
+   "song": 455,
+   "summary_wins": true,
+   "text_path_pred_current": 4,
+   "text_path_pred_fixed": 315
+  },
+  {
+   "id": "sum-song456-full",
+   "song": 456,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 456
+  },
+  {
+   "id": "sum-song456-half",
+   "song": 456,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 456
+  },
+  {
+   "id": "sum-song457-full",
+   "song": 457,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 457
+  },
+  {
+   "id": "sum-song457-half",
+   "song": 457,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 457
+  },
+  {
+   "id": "sum-song458-full",
+   "song": 458,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 458
+  },
+  {
+   "id": "sum-song458-half",
+   "song": 458,
+   "summary_wins": true,
+   "text_path_pred_current": 5,
+   "text_path_pred_fixed": 405
+  },
+  {
+   "id": "sum-song459-full",
+   "song": 459,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 459
+  },
+  {
+   "id": "sum-song459-half",
+   "song": 459,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 459
+  },
+  {
+   "id": "sum-song460-full",
+   "song": 460,
+   "summary_wins": true,
+   "text_path_pred_current": 6,
+   "text_path_pred_fixed": 460
+  },
+  {
+   "id": "sum-song460-half",
+   "song": 460,
+   "summary_wins": false,
+   "text_path_pred_current": 234,
+   "text_path_pred_fixed": 234
+  }
+ ]
+}

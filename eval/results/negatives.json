@@ -1,0 +1,722 @@
+[
+ {
+  "id": "neg-ko-0",
+  "lang": "ko",
+  "lyric_score": 0.852825,
+  "summary_score": 0.726509,
+  "summary_idx": 178,
+  "lyric_line_idx": 6979
+ },
+ {
+  "id": "neg-ko-1",
+  "lang": "ko",
+  "lyric_score": 0.822125,
+  "summary_score": 0.738947,
+  "summary_idx": 178,
+  "lyric_line_idx": 4608
+ },
+ {
+  "id": "neg-ko-2",
+  "lang": "ko",
+  "lyric_score": 0.722525,
+  "summary_score": 0.498975,
+  "summary_idx": 40,
+  "lyric_line_idx": 7015
+ },
+ {
+  "id": "neg-ko-3",
+  "lang": "ko",
+  "lyric_score": 0.747482,
+  "summary_score": 0.682727,
+  "summary_idx": 178,
+  "lyric_line_idx": 6979
+ },
+ {
+  "id": "neg-ko-4",
+  "lang": "ko",
+  "lyric_score": 0.791954,
+  "summary_score": 0.711861,
+  "summary_idx": 178,
+  "lyric_line_idx": 1662
+ },
+ {
+  "id": "neg-ko-5",
+  "lang": "ko",
+  "lyric_score": 0.685603,
+  "summary_score": 0.389226,
+  "summary_idx": 335,
+  "lyric_line_idx": 6912
+ },
+ {
+  "id": "neg-ko-6",
+  "lang": "ko",
+  "lyric_score": 0.753511,
+  "summary_score": 0.652369,
+  "summary_idx": 122,
+  "lyric_line_idx": 12280
+ },
+ {
+  "id": "neg-ko-7",
+  "lang": "ko",
+  "lyric_score": 0.691318,
+  "summary_score": 0.646984,
+  "summary_idx": 410,
+  "lyric_line_idx": 6979
+ },
+ {
+  "id": "neg-ko-8",
+  "lang": "ko",
+  "lyric_score": 0.69453,
+  "summary_score": 0.600239,
+  "summary_idx": 178,
+  "lyric_line_idx": 6979
+ },
+ {
+  "id": "neg-ko-9",
+  "lang": "ko",
+  "lyric_score": 0.780622,
+  "summary_score": 0.726741,
+  "summary_idx": 410,
+  "lyric_line_idx": 2834
+ },
+ {
+  "id": "neg-ko-10",
+  "lang": "ko",
+  "lyric_score": 0.878516,
+  "summary_score": 0.841025,
+  "summary_idx": 178,
+  "lyric_line_idx": 6979
+ },
+ {
+  "id": "neg-ko-11",
+  "lang": "ko",
+  "lyric_score": 0.868186,
+  "summary_score": 0.847305,
+  "summary_idx": 410,
+  "lyric_line_idx": 2590
+ },
+ {
+  "id": "neg-ko-12",
+  "lang": "ko",
+  "lyric_score": 0.696447,
+  "summary_score": 0.493825,
+  "summary_idx": 178,
+  "lyric_line_idx": 18462
+ },
+ {
+  "id": "neg-ko-13",
+  "lang": "ko",
+  "lyric_score": 0.653898,
+  "summary_score": 0.44923,
+  "summary_idx": 335,
+  "lyric_line_idx": 7274
+ },
+ {
+  "id": "neg-ko-14",
+  "lang": "ko",
+  "lyric_score": 0.929906,
+  "summary_score": 0.898849,
+  "summary_idx": 410,
+  "lyric_line_idx": 2590
+ },
+ {
+  "id": "neg-ko-15",
+  "lang": "ko",
+  "lyric_score": 0.809414,
+  "summary_score": 0.770193,
+  "summary_idx": 410,
+  "lyric_line_idx": 2843
+ },
+ {
+  "id": "neg-ko-16",
+  "lang": "ko",
+  "lyric_score": 0.77176,
+  "summary_score": 0.650017,
+  "summary_idx": 178,
+  "lyric_line_idx": 5690
+ },
+ {
+  "id": "neg-ko-17",
+  "lang": "ko",
+  "lyric_score": 0.592313,
+  "summary_score": 0.36661,
+  "summary_idx": 460,
+  "lyric_line_idx": 20012
+ },
+ {
+  "id": "neg-ko-18",
+  "lang": "ko",
+  "lyric_score": 0.765382,
+  "summary_score": 0.732682,
+  "summary_idx": 178,
+  "lyric_line_idx": 2834
+ },
+ {
+  "id": "neg-ko-19",
+  "lang": "ko",
+  "lyric_score": 0.778596,
+  "summary_score": 0.731697,
+  "summary_idx": 335,
+  "lyric_line_idx": 2834
+ },
+ {
+  "id": "neg-en-0",
+  "lang": "en",
+  "lyric_score": 0.438516,
+  "summary_score": 0.194977,
+  "summary_idx": 374,
+  "lyric_line_idx": 14431
+ },
+ {
+  "id": "neg-en-1",
+  "lang": "en",
+  "lyric_score": 0.431763,
+  "summary_score": 0.08582,
+  "summary_idx": 97,
+  "lyric_line_idx": 19682
+ },
+ {
+  "id": "neg-en-2",
+  "lang": "en",
+  "lyric_score": 0.455859,
+  "summary_score": 0.169255,
+  "summary_idx": 87,
+  "lyric_line_idx": 10242
+ },
+ {
+  "id": "neg-en-3",
+  "lang": "en",
+  "lyric_score": 0.690141,
+  "summary_score": 0.206316,
+  "summary_idx": 406,
+  "lyric_line_idx": 7014
+ },
+ {
+  "id": "neg-en-4",
+  "lang": "en",
+  "lyric_score": 0.468919,
+  "summary_score": 0.045586,
+  "summary_idx": 402,
+  "lyric_line_idx": 13226
+ },
+ {
+  "id": "neg-en-5",
+  "lang": "en",
+  "lyric_score": 0.587771,
+  "summary_score": 0.085905,
+  "summary_idx": 377,
+  "lyric_line_idx": 10518
+ },
+ {
+  "id": "neg-en-6",
+  "lang": "en",
+  "lyric_score": 0.455244,
+  "summary_score": 0.159453,
+  "summary_idx": 366,
+  "lyric_line_idx": 12034
+ },
+ {
+  "id": "neg-en-7",
+  "lang": "en",
+  "lyric_score": 0.364206,
+  "summary_score": 0.031157,
+  "summary_idx": 62,
+  "lyric_line_idx": 2746
+ },
+ {
+  "id": "neg-en-8",
+  "lang": "en",
+  "lyric_score": 0.566922,
+  "summary_score": 0.169577,
+  "summary_idx": 311,
+  "lyric_line_idx": 15070
+ },
+ {
+  "id": "neg-en-9",
+  "lang": "en",
+  "lyric_score": 0.746324,
+  "summary_score": 0.29418,
+  "summary_idx": 248,
+  "lyric_line_idx": 21564
+ },
+ {
+  "id": "neg-en-10",
+  "lang": "en",
+  "lyric_score": 0.289148,
+  "summary_score": 0.017084,
+  "summary_idx": 379,
+  "lyric_line_idx": 19367
+ },
+ {
+  "id": "neg-en-11",
+  "lang": "en",
+  "lyric_score": 0.740941,
+  "summary_score": 0.484509,
+  "summary_idx": 199,
+  "lyric_line_idx": 15450
+ },
+ {
+  "id": "neg-en-12",
+  "lang": "en",
+  "lyric_score": 0.384201,
+  "summary_score": 0.122614,
+  "summary_idx": 289,
+  "lyric_line_idx": 14421
+ },
+ {
+  "id": "neg-en-13",
+  "lang": "en",
+  "lyric_score": 0.62057,
+  "summary_score": 0.294196,
+  "summary_idx": 418,
+  "lyric_line_idx": 899
+ },
+ {
+  "id": "neg-en-14",
+  "lang": "en",
+  "lyric_score": 0.462734,
+  "summary_score": -0.028942,
+  "summary_idx": 192,
+  "lyric_line_idx": 1167
+ },
+ {
+  "id": "neg-en-15",
+  "lang": "en",
+  "lyric_score": 0.586846,
+  "summary_score": 0.199934,
+  "summary_idx": 252,
+  "lyric_line_idx": 15177
+ },
+ {
+  "id": "neg-en-16",
+  "lang": "en",
+  "lyric_score": 0.41729,
+  "summary_score": 0.138911,
+  "summary_idx": 350,
+  "lyric_line_idx": 15070
+ },
+ {
+  "id": "neg-en-17",
+  "lang": "en",
+  "lyric_score": 0.571365,
+  "summary_score": 0.042943,
+  "summary_idx": 148,
+  "lyric_line_idx": 18593
+ },
+ {
+  "id": "neg-en-18",
+  "lang": "en",
+  "lyric_score": 0.527252,
+  "summary_score": 0.154033,
+  "summary_idx": 429,
+  "lyric_line_idx": 13226
+ },
+ {
+  "id": "neg-en-19",
+  "lang": "en",
+  "lyric_score": 0.469595,
+  "summary_score": 0.000257,
+  "summary_idx": 460,
+  "lyric_line_idx": 12997
+ },
+ {
+  "id": "neg-ja-0",
+  "lang": "ja",
+  "lyric_score": 0.541984,
+  "summary_score": 0.167522,
+  "summary_idx": 148,
+  "lyric_line_idx": 19711
+ },
+ {
+  "id": "neg-ja-1",
+  "lang": "ja",
+  "lyric_score": 0.729802,
+  "summary_score": 0.307929,
+  "summary_idx": 406,
+  "lyric_line_idx": 6921
+ },
+ {
+  "id": "neg-ja-2",
+  "lang": "ja",
+  "lyric_score": 0.589552,
+  "summary_score": 0.22883,
+  "summary_idx": 44,
+  "lyric_line_idx": 14431
+ },
+ {
+  "id": "neg-ja-3",
+  "lang": "ja",
+  "lyric_score": 0.520564,
+  "summary_score": 0.160448,
+  "summary_idx": 406,
+  "lyric_line_idx": 20505
+ },
+ {
+  "id": "neg-ja-4",
+  "lang": "ja",
+  "lyric_score": 0.61725,
+  "summary_score": 0.17633,
+  "summary_idx": 304,
+  "lyric_line_idx": 7808
+ },
+ {
+  "id": "neg-ja-5",
+  "lang": "ja",
+  "lyric_score": 0.58202,
+  "summary_score": 0.263976,
+  "summary_idx": 460,
+  "lyric_line_idx": 926
+ },
+ {
+  "id": "neg-ja-6",
+  "lang": "ja",
+  "lyric_score": 0.757102,
+  "summary_score": 0.164014,
+  "summary_idx": 38,
+  "lyric_line_idx": 6175
+ },
+ {
+  "id": "neg-ja-7",
+  "lang": "ja",
+  "lyric_score": 0.58053,
+  "summary_score": 0.261084,
+  "summary_idx": 178,
+  "lyric_line_idx": 18203
+ },
+ {
+  "id": "neg-ja-8",
+  "lang": "ja",
+  "lyric_score": 0.660558,
+  "summary_score": 0.218297,
+  "summary_idx": 104,
+  "lyric_line_idx": 4716
+ },
+ {
+  "id": "neg-ja-9",
+  "lang": "ja",
+  "lyric_score": 0.438728,
+  "summary_score": 0.313975,
+  "summary_idx": 386,
+  "lyric_line_idx": 22540
+ },
+ {
+  "id": "neg-ja-10",
+  "lang": "ja",
+  "lyric_score": 0.786723,
+  "summary_score": 0.272789,
+  "summary_idx": 460,
+  "lyric_line_idx": 19007
+ },
+ {
+  "id": "neg-ja-11",
+  "lang": "ja",
+  "lyric_score": 0.794398,
+  "summary_score": 0.44256,
+  "summary_idx": 148,
+  "lyric_line_idx": 18964
+ },
+ {
+  "id": "neg-ja-12",
+  "lang": "ja",
+  "lyric_score": 0.493409,
+  "summary_score": 0.1376,
+  "summary_idx": 97,
+  "lyric_line_idx": 15214
+ },
+ {
+  "id": "neg-ja-13",
+  "lang": "ja",
+  "lyric_score": 0.755728,
+  "summary_score": 0.391292,
+  "summary_idx": 289,
+  "lyric_line_idx": 6747
+ },
+ {
+  "id": "neg-ja-14",
+  "lang": "ja",
+  "lyric_score": 0.5116,
+  "summary_score": 0.220479,
+  "summary_idx": 38,
+  "lyric_line_idx": 16804
+ },
+ {
+  "id": "neg-ja-15",
+  "lang": "ja",
+  "lyric_score": 0.459446,
+  "summary_score": 0.173117,
+  "summary_idx": 374,
+  "lyric_line_idx": 6130
+ },
+ {
+  "id": "neg-ja-16",
+  "lang": "ja",
+  "lyric_score": 0.731703,
+  "summary_score": 0.242047,
+  "summary_idx": 178,
+  "lyric_line_idx": 10117
+ },
+ {
+  "id": "neg-ja-17",
+  "lang": "ja",
+  "lyric_score": 0.663304,
+  "summary_score": 0.259066,
+  "summary_idx": 460,
+  "lyric_line_idx": 20012
+ },
+ {
+  "id": "neg-ja-18",
+  "lang": "ja",
+  "lyric_score": 0.45766,
+  "summary_score": 0.138413,
+  "summary_idx": 155,
+  "lyric_line_idx": 15789
+ },
+ {
+  "id": "neg-ja-19",
+  "lang": "ja",
+  "lyric_score": 0.706032,
+  "summary_score": 0.434068,
+  "summary_idx": 460,
+  "lyric_line_idx": 10342
+ },
+ {
+  "id": "neg-zh-0",
+  "lang": "zh",
+  "lyric_score": 0.536275,
+  "summary_score": 0.243414,
+  "summary_idx": 15,
+  "lyric_line_idx": 18462
+ },
+ {
+  "id": "neg-zh-1",
+  "lang": "zh",
+  "lyric_score": 0.59222,
+  "summary_score": 0.24495,
+  "summary_idx": 38,
+  "lyric_line_idx": 6132
+ },
+ {
+  "id": "neg-zh-2",
+  "lang": "zh",
+  "lyric_score": 0.562041,
+  "summary_score": 0.245159,
+  "summary_idx": 406,
+  "lyric_line_idx": 1931
+ },
+ {
+  "id": "neg-zh-3",
+  "lang": "zh",
+  "lyric_score": 0.46018,
+  "summary_score": 0.092926,
+  "summary_idx": 148,
+  "lyric_line_idx": 14155
+ },
+ {
+  "id": "neg-zh-4",
+  "lang": "zh",
+  "lyric_score": 0.649713,
+  "summary_score": 0.272488,
+  "summary_idx": 460,
+  "lyric_line_idx": 4107
+ },
+ {
+  "id": "neg-zh-5",
+  "lang": "zh",
+  "lyric_score": 0.686672,
+  "summary_score": 0.269585,
+  "summary_idx": 460,
+  "lyric_line_idx": 5737
+ },
+ {
+  "id": "neg-zh-6",
+  "lang": "zh",
+  "lyric_score": 0.560696,
+  "summary_score": 0.145074,
+  "summary_idx": 453,
+  "lyric_line_idx": 6104
+ },
+ {
+  "id": "neg-zh-7",
+  "lang": "zh",
+  "lyric_score": 0.602551,
+  "summary_score": 0.240062,
+  "summary_idx": 54,
+  "lyric_line_idx": 15070
+ },
+ {
+  "id": "neg-zh-8",
+  "lang": "zh",
+  "lyric_score": 0.689567,
+  "summary_score": 0.316237,
+  "summary_idx": 28,
+  "lyric_line_idx": 7605
+ },
+ {
+  "id": "neg-zh-9",
+  "lang": "zh",
+  "lyric_score": 0.660214,
+  "summary_score": 0.315002,
+  "summary_idx": 335,
+  "lyric_line_idx": 10242
+ },
+ {
+  "id": "neg-europe-0",
+  "lang": "europe",
+  "lyric_score": 0.525455,
+  "summary_score": 0.179756,
+  "summary_idx": 148,
+  "lyric_line_idx": 4191
+ },
+ {
+  "id": "neg-europe-1",
+  "lang": "europe",
+  "lyric_score": 0.722212,
+  "summary_score": 0.412613,
+  "summary_idx": 460,
+  "lyric_line_idx": 1638
+ },
+ {
+  "id": "neg-europe-2",
+  "lang": "europe",
+  "lyric_score": 0.778383,
+  "summary_score": 0.276989,
+  "summary_idx": 406,
+  "lyric_line_idx": 8674
+ },
+ {
+  "id": "neg-europe-3",
+  "lang": "europe",
+  "lyric_score": 0.579905,
+  "summary_score": 0.247544,
+  "summary_idx": 453,
+  "lyric_line_idx": 10902
+ },
+ {
+  "id": "neg-europe-4",
+  "lang": "europe",
+  "lyric_score": 0.449365,
+  "summary_score": 0.085805,
+  "summary_idx": 386,
+  "lyric_line_idx": 6104
+ },
+ {
+  "id": "neg-europe-5",
+  "lang": "europe",
+  "lyric_score": 0.743754,
+  "summary_score": 0.377836,
+  "summary_idx": 185,
+  "lyric_line_idx": 18599
+ },
+ {
+  "id": "neg-europe-6",
+  "lang": "europe",
+  "lyric_score": 0.576267,
+  "summary_score": 0.201516,
+  "summary_idx": 439,
+  "lyric_line_idx": 18461
+ },
+ {
+  "id": "neg-europe-7",
+  "lang": "europe",
+  "lyric_score": 0.508946,
+  "summary_score": 0.158913,
+  "summary_idx": 451,
+  "lyric_line_idx": 8014
+ },
+ {
+  "id": "neg-europe-8",
+  "lang": "europe",
+  "lyric_score": 0.632331,
+  "summary_score": 0.240575,
+  "summary_idx": 406,
+  "lyric_line_idx": 10635
+ },
+ {
+  "id": "neg-europe-9",
+  "lang": "europe",
+  "lyric_score": 0.464106,
+  "summary_score": 0.170659,
+  "summary_idx": 178,
+  "lyric_line_idx": 12920
+ },
+ {
+  "id": "neg-noise-0",
+  "lang": "noise",
+  "lyric_score": 0.39988,
+  "summary_score": 0.155493,
+  "summary_idx": 355,
+  "lyric_line_idx": 5340
+ },
+ {
+  "id": "neg-noise-1",
+  "lang": "noise",
+  "lyric_score": 0.304292,
+  "summary_score": 0.225782,
+  "summary_idx": 408,
+  "lyric_line_idx": 4676
+ },
+ {
+  "id": "neg-noise-2",
+  "lang": "noise",
+  "lyric_score": 0.567095,
+  "summary_score": 0.378929,
+  "summary_idx": 459,
+  "lyric_line_idx": 1232
+ },
+ {
+  "id": "neg-noise-3",
+  "lang": "noise",
+  "lyric_score": 0.524821,
+  "summary_score": 0.20189,
+  "summary_idx": 185,
+  "lyric_line_idx": 22292
+ },
+ {
+  "id": "neg-noise-4",
+  "lang": "noise",
+  "lyric_score": 0.293729,
+  "summary_score": 0.167512,
+  "summary_idx": 312,
+  "lyric_line_idx": 4677
+ },
+ {
+  "id": "neg-noise-5",
+  "lang": "noise",
+  "lyric_score": 0.971665,
+  "summary_score": 0.903237,
+  "summary_idx": 178,
+  "lyric_line_idx": 2590
+ },
+ {
+  "id": "neg-noise-6",
+  "lang": "noise",
+  "lyric_score": 0.677517,
+  "summary_score": 0.536797,
+  "summary_idx": 178,
+  "lyric_line_idx": 15272
+ },
+ {
+  "id": "neg-noise-7",
+  "lang": "noise",
+  "lyric_score": 0.512812,
+  "summary_score": 0.152885,
+  "summary_idx": 84,
+  "lyric_line_idx": 10194
+ },
+ {
+  "id": "neg-noise-8",
+  "lang": "noise",
+  "lyric_score": 0.672958,
+  "summary_score": 0.507874,
+  "summary_idx": 335,
+  "lyric_line_idx": 10242
+ },
+ {
+  "id": "neg-noise-9",
+  "lang": "noise",
+  "lyric_score": 0.761091,
+  "summary_score": 0.563631,
+  "summary_idx": 178,
+  "lyric_line_idx": 5569
+ }
+]

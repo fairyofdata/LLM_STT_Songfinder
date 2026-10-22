@@ -5,7 +5,7 @@ one content word (with prefixes/suffixes) plus the particles and auxiliaries
 that follow it. Latin words are one unit each. A noise level r changes
 max(1, round(r * n)) of the n units, always leaving one unit intact.
 
-Types (each targets a kind of memory error; see README for the caveats):
+Types (each targets a kind of memory error; caveats in docs/EVALUATION.md):
 - meaning_sub    content word -> Japanese WordNet synonym that fits the context
                  (synonyms of every sense that also occur in the lyric DB and differ in
                  reading, ranked by masked-LM likelihood in place)

@@ -48,7 +48,7 @@ git push https://huggingface.co/spaces/fairyofdata/JPOP_STT_Module master:main
    ```bash
    venv\Scripts\python eval/review_sheet.py ingest
    ```
-4. `docs/PORTFOLIO.md`의 「(판정 후 채움)」 자리와 README의 교란 해석 문장을 그 결과로 갱신합니다.
+4. `docs/PORTFOLIO.md`의 「(판정 후 채움)」 자리와 `docs/EVALUATION.md`의 교란 해석 문장을 그 결과로 갱신합니다.
 
 ## 재개 방법
 
@@ -57,7 +57,7 @@ C:\Users\fairy\LocalTTS\venv\Scripts\python.exe -m localtts serve --port 8880
 ```
 
 - 위 명령은 로컬 음성 실험을 다시 돌릴 때만 필요합니다. Claude Code 데스크톱에서는 `.claude/launch.json`의 `localtts` 설정으로 미리보기 서버로 띄울 수 있습니다. 이 파일은 커밋하지 않았습니다.
-- 평가 스크립트는 레포의 `venv`(CPU torch)로 돌리고, 명령은 README 「재현」 절에 있습니다.
+- 평가 스크립트는 레포의 `venv`(CPU torch)로 돌리고, 명령은 [평가 상세](EVALUATION.md)의 「재현」 절에 있습니다.
 - 받아쓰기와 음성은 캐시에 있으므로, 개선안을 바꿔 다시 추정할 때는 서버 없이 다음 명령만 돌리면 됩니다.
   ```bash
   venv\Scripts\python eval/audio_local_eval.py --score

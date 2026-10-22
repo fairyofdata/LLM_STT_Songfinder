@@ -146,7 +146,7 @@
 |---|---|
 | 평가 코드 | `eval/` (common, queries, negatives, run_eval, check_against_app, audio_eval, stats, perturb, run_noise, review_sheet, audio_local_eval, audio_fixes, data_quality, plot) |
 | 결과 | `eval/results/*.json` (가사 없음), 차트 6장 |
-| 문서 | `README.md` 평가 절, `docs/PORTFOLIO.md`, 도식 2장, 이 기록, `docs/adr/`, `docs/NEXT_STEPS.md` |
+| 문서 | `README.md` 개요, `docs/EVALUATION.md`(평가 상세), `docs/PORTFOLIO.md`, 도식 2장, 이 기록, `docs/adr/`, `docs/NEXT_STEPS.md` |
 | 레포 밖 | `C:\Users\fairy\LocalTTS` (로컬 git), `~/.cache/songfinder_eval/` (가사가 담긴 음성·전사문·검수 시트) |
 
 ## 10. 교훈

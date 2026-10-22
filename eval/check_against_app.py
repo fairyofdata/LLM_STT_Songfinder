@@ -1,5 +1,10 @@
 """Check that eval/common.py identifies the same song as app.py.
 
+This targeted the pre-refactor app (up to commit 1d56624): eval/common.py is that
+logic, kept as the "before" baseline. app.py now delegates to search.py, which
+changes multi-line and summary-branch results on purpose; tests/test_search.py and
+eval/compare_impl.py cover the new code.
+
     venv/Scripts/python eval/check_against_app.py
 
 Imports app.py (needs its web dependencies; Spotify credentials get dummy

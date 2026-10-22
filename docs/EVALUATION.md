@@ -196,6 +196,25 @@ TTS·전사 도구는 이번에 함께 만든 로컬 음성 서버 LocalTTS(별�
 
 짧은 줄과 문장부호 줄을 평가 쪽에서 색인에서 빼 보면, 시드 0 질의의 Recall@1이 60.5% → 61.8%로 오릅니다. 새로 맞은 질의가 70개, 새로 틀린 질의가 14개입니다(p = 4×10⁻¹⁰). 음의 대조군 오판정률은 변화가 없습니다. 다만 짧은 후렴구만 기억하는 사용자는 그 줄을 못 찾게 되므로, 삭제보다는 짧은 줄을 앞뒤 줄과 묶어 색인하는 쪽이 낫습니다.
 
+## 서비스 반영 후 실측 (`search.py`)
+
+위 두 개선안을 앱에 넣은 뒤 같은 입력으로 다시 쟀습니다(`eval/compare_impl.py`). 비교 대상은 예전 앱 로직을 재구현한 `eval/common.py`(140/140 대조됨)와, 지금 앱이 쓰는 `search.py`입니다. 결정 내용은 [ADR-0013](adr/0013-search-module-and-voice-fixes.md)에 있습니다.
+
+| 항목 | 예전 → 지금 | 새로 맞음 / 새로 틀림 |
+|---|---|---|
+| 입력 질의, 텍스트 경로 (21,953개, 시드 5개) | 60.6 → 60.6% | 0 / 3 |
+| 요약문 탐침 (461개) | 0.2 → 100% | |
+| DB에 없는 문장 오판정 (판정선 0.4 그대로) | 93.3 → 93.3% | |
+| 음성 A 원어민 5줄 (깨끗한 음질 / 열화) | 47.2 → 73.9% / 42.5 → 67.5% | 121 / 1 · 113 / 1 |
+| 음성 B 한국인 발음 5줄 | 35.6 → 69.0% / 43.7 → 69.5% | 155 / 5 · 120 / 4 |
+| 음성 C 흐릿함 · 원어민 | 30.1 → 41.2% / 26.7 → 36.7% | 51 / 1 · 46 / 1 |
+| 음성 D 흐릿함 · 한국인 발음 | 19.2 → 34.3% / 24.5 → 32.7% | 75 / 7 · 39 / 2 |
+| 음성 S 한 줄만 | 76.2 → 76.6% / 67.9 → 68.2% | 2 / 0 · 1 / 0 |
+
+- **추정치와 실측이 다른 이유:** 처음 그대로 넣었더니 입력 질의에서 원문 일치가 뒤집히고(33건) 오판정이 늘었습니다(98.9%). 그래서 조각 투표를 「질의 전체가 어느 한 줄과도 0.9 미만으로만 맞고, 조각이 3개 이상일 때」로 좁혔고, 판정선 비교는 질의 전체 점수로 되돌렸습니다. 그 대가로 음성 쪽은 추정치(74.4%, 69.3%)보다 조금 낮습니다.
+- **음성 결과의 성격:** 로컬 Whisper large-v3 전사문 기준입니다. 한국어 재전사는 저장된 `language="ja"` 전사문으로 흉내 냈습니다. 앱의 `whisper-1`로는 다시 재야 합니다.
+- **입력 질의 3건:** 원인을 단정하지 못했고, 검색 깊이(k)에 따른 동점 처리 차이로 추정합니다.
+
 ## 한계
 - **합성 질의**입니다. 실제 사용자가 가사를 잘못 기억하는 방식(다른 말로 바꾸기, 잘못 들은 발음, 로마자·한글 표기, 언어 섞기)은 반영하지 못했습니다. 위 수치를 실사용 정확도로 읽으면 안 됩니다.
 - 「원문 줄」은 질의가 색인과 같으므로 100%가 당연한 확인용입니다.
@@ -220,6 +239,7 @@ py -3 -m venv venv && venv\Scripts\python -m pip install torch --index-url https
 - 결과: `eval/results/seed_<n>.json`(질의별 원자료: id·곡 인덱스·원본 줄 인덱스·점수·예측, 가사 문장 없음), `summary.json`(평균 ± 표준편차, 판정선 스윕, 대조군, 버그 탐침), `negatives.json`, `summary_probe.json`
 - `app.py` 대조: `venv\Scripts\python -m pip install -r requirements.txt audioop-lts` 후 `venv\Scripts\python eval/check_against_app.py`
 - 음성 평가 (`whisper-1`): `venv\Scripts\python eval/audio_eval.py`(비용 추정만), `--run`(실행, `.env`나 환경변수의 `openai`/`OPENAI_API_KEY` 사용, 결과 `eval/results/audio.json`. 오디오와 전사문은 저장하지 않음)
+- 서비스 반영 전후: `venv\Scripts\python eval/compare_impl.py` → `service_before_after.json`
 - 교란 곡선: `venv\Scripts\python eval/run_noise.py --seeds 0 1 2` → `noise_seed_<n>.json`, `noise_summary.json`
 - 데이터 품질: `venv\Scripts\python eval/data_quality.py` → `data_quality.json`
 - 로컬 음성 실험: LocalTTS 서버(`python -m localtts serve`)를 띄운 뒤 다음을 실행합니다. 오디오와 전사문은 `~/.cache/songfinder_eval/`(레포 밖)에 둡니다.

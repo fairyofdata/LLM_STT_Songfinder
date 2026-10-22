@@ -1,10 +1,7 @@
 import os
 import uvicorn
 import json
-import faiss
-import numpy as np
 import openai
-from sentence_transformers import SentenceTransformer
 from fastapi import FastAPI, UploadFile, File, HTTPException, Request, Depends, Response, Form
 from fastapi.responses import FileResponse, RedirectResponse, HTMLResponse
 from fastapi.middleware.cors import CORSMiddleware
@@ -14,10 +11,10 @@ from spotipy.oauth2 import SpotifyOAuth
 from itsdangerous import URLSafeSerializer
 from pydantic import BaseModel, Field, AliasChoices
 from typing import List, Dict, Any
-from collections import defaultdict
-import ast
 from pydub import AudioSegment
 import io
+
+from search import SongIndex
 
 basicConfig(level=INFO)
 logger = getLogger(__name__)
@@ -43,35 +40,17 @@ serializer = URLSafeSerializer(SECRET_KEY)
 SESSION_COOKIE_NAME = "spotify-session"
 
 logger.info("서버 시작... 모델 및 데이터베이스를 로드합니다.")
-embedder = SentenceTransformer('paraphrase-multilingual-MiniLM-L12-v2')
 try:
-    with open('line_metadata.json', 'r', encoding='utf-8') as f:
-        line_metadata = json.load(f)
-    with open('song_metadata.json', 'r', encoding='utf-8') as f:
-        song_metadata = json.load(f)
-    
-    line_embeddings = np.load('line_embeddings.npy')
-    song_embeddings = np.load('song_embeddings.npy')
-    summary_embeddings = np.load('summary_embeddings.npy')
-
-    line_index = faiss.IndexFlatIP(line_embeddings.shape[1])
-    line_index.add(line_embeddings)
-    
-    song_index = faiss.IndexFlatIP(song_embeddings.shape[1])
-    song_index.add(song_embeddings)
-    
-    summary_index = faiss.IndexFlatIP(summary_embeddings.shape[1])
-    summary_index.add(summary_embeddings)
-
-    lines_by_song_idx = defaultdict(list)
-    for i, meta in enumerate(line_metadata):
-        lines_by_song_idx[meta['original_song_index']].append(i)
-
-    logger.info(f"DB 로드 완료. {len(song_metadata)}곡, {len(line_metadata)}개의 라인, {len(summary_embeddings)}개의 요약문이 준비되었습니다.")
-
+    index = SongIndex.load(os.getenv("SONGFINDER_DATA_DIR", "."))
+    logger.info(f"DB 로드 완료. {len(index.song_metadata)}곡, {len(index.line_metadata)}개의 라인, "
+                f"{len(index.summary_embeddings)}개의 요약문이 준비되었습니다.")
 except Exception as e:
     logger.error(f"DB 로딩 실패: {e}", exc_info=True)
-    line_index, song_index, summary_index = None, None, None
+    index = None
+
+# Whisper often hears Japanese lyrics read with a Korean accent as Korean and writes Hangul,
+# which the Japanese lyric index cannot match; retry those as Japanese (see docs/EVALUATION.md).
+KO_TO_JA_FALLBACK = os.getenv("SONGFINDER_KO_TO_JA_FALLBACK", "1") == "1"
 
 REDIRECT_URI = os.getenv("SPOTIPY_REDIRECT_URI", "http://localhost:7860/callback")
 sp_oauth = SpotifyOAuth(
@@ -93,211 +72,39 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-def parse_tags(tags_str: str) -> List[str]:
-    if not isinstance(tags_str, str) or not tags_str.startswith('['):
-        return []
-    try:
-        return ast.literal_eval(tags_str)
-    except (ValueError, SyntaxError):
-        return []
-
 def search_pipeline_from_text(query_text: str) -> (Dict[str, Any], str, List[Dict[str, Any]]):
-    if song_index is None:
+    if index is None:
         return None, "", []
-    
-    query_vector = embedder.encode([query_text]).astype('float32')
-    faiss.normalize_L2(query_vector)
-
-    D_summary, I_summary = summary_index.search(query_vector, 1)
-    D_lyric, I_lyric = line_index.search(query_vector, 1)
-    
-    identified_song_idx = -1
-    matched_lyric = ""
-    
-    summary_score = D_summary[0][0] if D_summary.size > 0 else 0
-    lyric_score = D_lyric[0][0] if D_lyric.size > 0 else 0
-
-    if summary_score > 0.4 or lyric_score > 0.4:
-        if summary_score > lyric_score:
-            identified_song_idx = line_metadata[I_summary[0][0]]['original_song_index']
-            matched_lyric = song_metadata[identified_song_idx].get('summary', 'N/A')
-        else:
-            identified_song_idx = line_metadata[I_lyric[0][0]]['original_song_index']
-            matched_lyric = line_metadata[I_lyric[0][0]]['line_text']
+    hit = index.identify_text(query_text)
+    if hit is None:
+        return None, "", []
+    song_idx = hit['song']
+    if hit['via'] == 'summary':
+        matched_lyric = index.song_metadata[song_idx].get('summary', 'N/A')
     else:
-        return None, "", []
-
-    raw_identified_song = song_metadata[identified_song_idx]
-    identified_song = {
-        "songId": raw_identified_song.get('spotify_id'),
-        "songTitle": raw_identified_song.get('title'),
-        "artist": raw_identified_song.get('artist'),
-        "albumCoverUrl": raw_identified_song.get('album_cover_url'),
-        "tagName": parse_tags(raw_identified_song.get('tags_normalized', '[]')),
-        "songDescription": raw_identified_song.get('summary', 'N/A'),
-        "userQuery": query_text
-    }
-
-    song_vector = song_embeddings[identified_song_idx:identified_song_idx+1]
-    
-    candidate_scores = defaultdict(float)
-    recommendation_reasons = defaultdict(list)
-
-    D_song, I_song = song_index.search(song_vector, 10)
-    for i, idx in enumerate(I_song[0]):
-        candidate_scores[idx] += D_song[0][i] * 0.5
-        recommendation_reasons[idx].append("분위기와 장르가 비슷해요.")
-
-    summary_vector = summary_embeddings[identified_song_idx:identified_song_idx+1]
-    D_summary, I_summary = summary_index.search(summary_vector, 10)
-    for i, idx in enumerate(I_summary[0]):
-        candidate_scores[idx] += D_summary[0][i] * 0.3
-        recommendation_reasons[idx].append("곡의 전반적인 감성이 비슷해요.")
-
-    original_tags = set(identified_song['tagName'])
-    for idx in list(candidate_scores.keys()):
-        candidate_tags = set(parse_tags(song_metadata[idx].get('tags_normalized', '[]')))
-        if original_tags.intersection(candidate_tags):
-            candidate_scores[idx] += 0.2
-            recommendation_reasons[idx].append(f"비슷한 태그({', '.join(original_tags.intersection(candidate_tags))})를 공유해요.")
-    
-    sorted_candidates = sorted(candidate_scores.items(), key=lambda item: item[1], reverse=True)
-
-    similar_songs = []
-    seen_song_ids = {identified_song_idx}
-    seen_artist_ids = {identified_song['artist']}
-
-    for idx, score in sorted_candidates:
-        if idx in seen_song_ids or song_metadata[idx].get('artist') in seen_artist_ids:
-            continue
-        if len(similar_songs) >= 3:
-            break
-        
-        song_info = song_metadata[idx]
-        reasons_text = ", ".join(list(set(recommendation_reasons.get(idx, []))))
-
-        similar_songs.append({
-            "songId": song_info.get('spotify_id'),
-            "songTitle": song_info['title'],
-            "artist": song_info['artist'],
-            "albumCoverUrl": song_info.get('album_cover_url'),
-            "tagName": parse_tags(song_info.get('tags_normalized', '[]')),
-            "songDescription": song_info.get('summary', 'N/A'),
-            "matchLine": "", # No direct match line for text search recommendations
-            "recommendationReason": reasons_text
-        })
-        seen_song_ids.add(idx)
-        seen_artist_ids.add(song_info.get('artist'))
-
-    return identified_song, matched_lyric, similar_songs
+        matched_lyric = index.line_metadata[hit['line']]['line_text']
+    return index.song_card(song_idx, query_text), matched_lyric, index.recommend_for_text(song_idx)
 
 
 def search_pipeline_from_audio(query_text: str) -> (Dict[str, Any], str, List[Dict[str, Any]]):
-    if line_index is None:
+    if index is None:
         return None, "", []
+    hit = index.identify_transcript(query_text)
+    song_idx, line_idx = hit['song'], hit['line']
+    return (index.song_card(song_idx, query_text), index.line_metadata[line_idx]['line_text'],
+            index.recommend_for_audio(song_idx, line_idx, query_text))
 
-    query_vector = embedder.encode([query_text]).astype('float32')
-    faiss.normalize_L2(query_vector)
 
-    D, I = line_index.search(query_vector, 1)
-    if not I.size: return None, "", []
-    
-    matched_line_idx = I[0][0]
-    best_match_line_info = line_metadata[matched_line_idx]
-    identified_song_idx = best_match_line_info['original_song_index']
-    matched_lyric = best_match_line_info['line_text']
-
-    raw_identified_song = song_metadata[identified_song_idx]
-    identified_song = {
-        "songId": raw_identified_song.get('spotify_id'),
-        "songTitle": raw_identified_song.get('title'),
-        "artist": raw_identified_song.get('artist'),
-        "albumCoverUrl": raw_identified_song.get('album_cover_url'),
-        "tagName": parse_tags(raw_identified_song.get('tags_normalized', '[]')),
-        "songDescription": raw_identified_song.get('summary', 'N/A'),
-        "userQuery": query_text
-    }
-    
-    num_words = len(query_text.split())
-    weight_song, weight_summary, weight_lyric = (0.5, 0.1, 0.4) if num_words > 5 else (0.6, 0.2, 0.2)
-
-    identified_lyric_vector = line_embeddings[matched_line_idx:matched_line_idx+1]
-    song_vector = song_embeddings[identified_song_idx:identified_song_idx+1]
-    summary_vector = summary_embeddings[identified_song_idx:identified_song_idx+1]
-
-    candidate_scores = defaultdict(float)
-    recommendation_reasons = defaultdict(list)
-
-    D_song, I_song = song_index.search(song_vector, 10)
-    for i, idx in enumerate(I_song[0]):
-        candidate_scores[idx] += D_song[0][i] * weight_song
-        recommendation_reasons[idx].append("분위기와 장르가 비슷해요.")
-
-    D_summary, I_summary = summary_index.search(summary_vector, 10)
-    for i, idx in enumerate(I_summary[0]):
-        candidate_scores[idx] += D_summary[0][i] * weight_summary
-        recommendation_reasons[idx].append("곡의 전반적인 감성이 비슷해요.")
-
-    D_lyric, I_lyric = line_index.search(identified_lyric_vector, 50)
-    for i, line_idx in enumerate(I_lyric[0]):
-        song_idx = line_metadata[line_idx]['original_song_index']
-        if song_idx == identified_song_idx: continue
-        candidate_scores[song_idx] += D_lyric[0][i] * weight_lyric
-        recommendation_reasons[song_idx].append("가사가 비슷한 느낌을 줘요.")
-
-    original_tags = set(identified_song['tagName'])
-    for idx in list(candidate_scores.keys()):
-        candidate_tags = set(parse_tags(song_metadata[idx].get('tags_normalized', '[]')))
-        if original_tags.intersection(candidate_tags):
-            candidate_scores[idx] += 0.1
-            recommendation_reasons[idx].append(f"비슷한 태그({', '.join(original_tags.intersection(candidate_tags))})를 공유해요.")
-
-    for i, idx in enumerate(I_song[0]): candidate_scores[idx] += (10 - i) * 0.005
-    for i, idx in enumerate(I_summary[0]): candidate_scores[idx] += (10 - i) * 0.003
-    for i, line_idx in enumerate(I_lyric[0]):
-        song_idx = line_metadata[line_idx]['original_song_index']
-        candidate_scores[song_idx] += (50 - i) * 0.001
-
-    sorted_candidates = sorted(candidate_scores.items(), key=lambda item: item[1], reverse=True)
-    
-    similar_songs = []
-    seen_song_ids = {identified_song_idx}
-    seen_artist_ids = {identified_song['artist']}
-
-    for idx, score in sorted_candidates:
-        if idx in seen_song_ids or song_metadata[idx].get('artist') in seen_artist_ids:
-            continue
-        
-        if len(similar_songs) >= 3:
-            break
-        
-        song_info = song_metadata[idx]
-        recommended_lyric_snippet = "추천 근거 가사를 찾을 수 없습니다."
-        
-        candidate_line_indices = lines_by_song_idx.get(idx, [])
-        if candidate_line_indices:
-            candidate_vectors = line_embeddings[candidate_line_indices]
-            similarities = np.dot(candidate_vectors, identified_lyric_vector.T).flatten()
-            best_match_in_song_idx = similarities.argmax()
-            original_line_idx = candidate_line_indices[best_match_in_song_idx]
-            recommended_lyric_snippet = line_metadata[original_line_idx]['line_text']
-        
-        reasons_text = ", ".join(list(set(recommendation_reasons.get(idx, []))))
-
-        similar_songs.append({
-            "songId": song_info.get('spotify_id'),
-            "songTitle": song_info['title'],
-            "artist": song_info['artist'],
-            "albumCoverUrl": song_info.get('album_cover_url'),
-            "tagName": parse_tags(song_info.get('tags_normalized', '[]')),
-            "songDescription": song_info.get('summary', 'N/A'),
-            "matchLine": recommended_lyric_snippet,
-            "recommendationReason": reasons_text
-        })
-        seen_song_ids.add(idx)
-        seen_artist_ids.add(song_info.get('artist'))
-
-    return identified_song, matched_lyric, similar_songs
+def transcribe(filename: str, audio_bytes: bytes, content_type: str) -> str:
+    def run(**kwargs):
+        return client.audio.transcriptions.create(model="whisper-1", file=(filename, audio_bytes, content_type),
+                                                  response_format="verbose_json", **kwargs)
+    transcript = run()
+    language = (getattr(transcript, "language", "") or "").lower()
+    if KO_TO_JA_FALLBACK and language in ("korean", "ko"):
+        logger.info("Whisper detected Korean; transcribing again as Japanese.")
+        transcript = run(language="ja")
+    return transcript.text
 
 @app.get("/")
 def read_root(): return {"message": "API is running."}
@@ -356,8 +163,7 @@ async def speech_to_text_and_search(audio_file: UploadFile = File(...)):
         audio = AudioSegment.from_file(io.BytesIO(audio_bytes))
         if (len(audio) / 1000.0) < 5.0:
             raise HTTPException(status_code=400, detail="오디오 파일은 최소 5초 이상이어야 합니다.")
-        transcript = client.audio.transcriptions.create(model="whisper-1", file=(audio_file.filename, audio_bytes, audio_file.content_type))
-        transcribed_text = transcript.text
+        transcribed_text = transcribe(audio_file.filename, audio_bytes, audio_file.content_type)
         if not transcribed_text.strip():
             raise HTTPException(status_code=400, detail="음성을 인식하지 못했습니다.")
         

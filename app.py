@@ -59,7 +59,7 @@ sp_oauth = SpotifyOAuth(
     redirect_uri=REDIRECT_URI,
     scope="streaming user-read-private user-read-email user-read-playback-state user-modify-playback-state user-read-currently-playing playlist-modify-public playlist-modify-private")
 
-api_key = os.getenv("openai")
+api_key = os.getenv("OPENAI_API_KEY") or os.getenv("openai")  # README documents OPENAI_API_KEY
 client = openai.OpenAI(api_key=api_key) if api_key else None
 
 app = FastAPI()

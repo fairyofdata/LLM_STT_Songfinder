@@ -48,7 +48,7 @@ URFIT은 "음성인식 기반 AI 플레이리스트 생성 커뮤니티"로, 머
 
 ![Voice path before and after two fixes](./eval/results/voice_fixes.png)
 
-상세: [평가 상세](docs/EVALUATION.md) · [연구개발 기록](docs/RESEARCH_LOG.md) · [결정 기록(ADR)](docs/adr/README.md) · [이어서 할 일](docs/NEXT_STEPS.md)
+상세: [평가 상세](docs/EVALUATION.md) · [데이터 안내](docs/DATA.md) · [연구개발 기록](docs/RESEARCH_LOG.md) · [결정 기록(ADR)](docs/adr/README.md) · [이어서 할 일](docs/NEXT_STEPS.md)
 
 -----
 
@@ -81,6 +81,7 @@ URFIT은 "음성인식 기반 AI 플레이리스트 생성 커뮤니티"로, 머
 3. [Spotify Developer Dashboard](https://developer.spotify.com/dashboard)에서 앱 생성 및 `Client ID`, `Client Secret` 획득
    * **Redirect URI** 설정 필수: `http://localhost:7860/callback` (주의: https가 아닌 http 사용)
 4. `.env` 파일 (또는 환경변수) 설정: `OPENAI_API_KEY`, `SPOTIPY_CLIENT_ID`, `SPOTIPY_CLIENT_SECRET`, `SPOTIPY_REDIRECT_URI=http://localhost:7860/callback`
+5. 가사 데이터: 저작권 때문에 이 레포에 없습니다. `line_metadata.json`, `song_metadata.json`을 레포 루트에 두거나 `SONGFINDER_DATA_DIR`로 위치를 지정해야 앱이 동작합니다([데이터 안내](docs/DATA.md)).
 
 ### 원클릭 실행 (Windows 전용)
 바탕화면 등에 제공된 `Start_JPOP_Finder.bat` 파일을 더블클릭하면 프론트엔드와 백엔드가 동시에 실행됩니다. (최초 실행 시 AI 모델 다운로드로 인해 1~2분 소요될 수 있습니다.)

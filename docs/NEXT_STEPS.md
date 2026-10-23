@@ -1,16 +1,20 @@
-# 이어서 할 일 (2026-10-22 기준)
+# 이어서 할 일 (2026-10-24 기준)
 
 평가 작업의 현재 상태와 재개 방법입니다. 배경은 [연구개발 기록](RESEARCH_LOG.md), 결정은 [ADR](adr/README.md)에 있습니다.
 
 ## 현재 상태
 
+- **2026-10-24 가사 데이터 분리:** `line_metadata.json`, `song_metadata.json`을 비공개 레포 `LLM_STT_Songfinder-data`로 옮겼습니다.
+  - 공개 레포는 git 기록 전체에서 두 파일을 지우고 강제 push했습니다. 그래서 모든 커밋 번호가 바뀌었습니다.
+  - 재작성 전 전체 백업은 `C:\Users\fairy\LLM_STT_Songfinder_backup_2026-10-24.bundle`에 있습니다.
+  - 자세한 내용은 [DATA.md](DATA.md)에 있습니다.
 - **2026-10-23 서비스 단계 시작:** 브랜치 `service/search-quality`에서 검색을 `search.py`로 분리하고, 요약 분기 버그와 음성 개선 두 가지를 반영했습니다. 테스트 10개(`tests/`)와 전후 실측(`eval/compare_impl.py`)을 붙였습니다. 판정선, 짧은 줄 색인, 가사가 붙은 곡은 다음 단계입니다.
 
 - **Songfinder:** 평가 코드, 결과, README, 포트폴리오 초안, 기록 문서를 모두 커밋했습니다.
   - **GitHub에 push 완료** (2026-10-22, `origin/master`).
-  - **Hugging Face Space에는 아직 반영 전**입니다(아래 「사용자가 할 일」).
+  - **Hugging Face Space**는 가사가 든 옛 기록을 그대로 갖고 있어 비공개로 전환합니다(아래 「사용자가 할 일」).
 - **LocalTTS** (`C:\Users\fairy\LocalTTS`): 별도 git 저장소이고 원격이 없습니다. 로컬 커밋만 했습니다.
-- **앱 코드** (`app.py`, `frontend/`)와 데이터 파일: 수정하지 않았습니다.
+- **앱 코드:** 2026-10-23부터 서비스 단계로 수정 중입니다([ADR-0013](adr/0013-search-module-and-voice-fixes.md)).
 - **OpenAI API 사용:** 약 $0.50(`whisper-1` 음성 시험 1회)이 전부입니다.
 - **LocalTTS 서버:** 정지했습니다(GPU 메모리 반환).
 
@@ -26,17 +30,13 @@
 | 줄로 나뉘지 않은 곡 1개 | `eval/results/data_quality.json`의 `unsplit_lines` | 데이터 정제 단계에서 줄 나누기 |
 | 기존 README의 콧노래·흥얼거림 문구 | 앱은 가사를 받아 적어 검색하므로 성립하지 않는 주장 | 2026-10-22 「가사를 말하거나 입력」으로 정정함. 되돌릴지만 결정 |
 | `whisper-1` 교차 확인 | 로컬 Whisper와 앱 STT의 차이 확인. 일부 표본으로 약 $0.7 | 실행 / 생략 |
-| 공개 레포의 가사 메타데이터 | 이번 작업 범위 밖 (사용자가 따로 처리하기로 함) | — |
+| 공개 레포의 가사 메타데이터 | 2026-10-24 비공개 레포로 분리하고 공개 레포 기록에서 제거 | 완료 |
 
-## 사용자가 할 일: Hugging Face Space 반영
+## 사용자가 할 일: Hugging Face Space 비공개 전환
 
-Space(`fairyofdata/JPOP_STT_Module`)는 이 레포의 사본입니다. Space의 커밋(`df8e601`)이 현재 `master`의 조상이라, 기존 기록 위에 그대로 이어 붙는 push가 됩니다. 이번 변경은 `eval/`, `docs/`, README뿐이고 `app.py`와 Space 설정은 같으므로, 다시 빌드돼도 앱 동작은 같습니다.
-
-자동 실행 권한에서 막혀 아래 명령은 직접 실행해야 합니다. Hugging Face 로그인(쓰기 토큰)이 필요합니다.
-
-```bash
-git push https://huggingface.co/spaces/fairyofdata/JPOP_STT_Module master:main
-```
+Space(`fairyofdata/JPOP_STT_Module`)에는 가사 데이터 파일이 든 옛 기록(커밋 `df8e601`까지)이 공개돼 있습니다.
+- Space 설정(Settings) → **Change visibility → Private**로 바꿔 주세요.
+- 공개 레포의 기록을 다시 썼기 때문에, 예전에 안내한 「이어 붙이는 push」는 더 이상 맞지 않습니다. 실행하지 마세요.
 
 ## 사용자가 할 일: 사람 검수
 
